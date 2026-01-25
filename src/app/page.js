@@ -152,7 +152,7 @@ export default function HomePage() {
                  </div>
 
                  <p className="text-lg text-gray-400 max-w-lg line-clamp-3 leading-relaxed border-l-2 border-primary pl-4">
-                   {featuredChar.trait?.description || "A powerful simulacrum recently added to the database. Check out their full capabilities."}
+                   {featuredChar.description || featuredChar.trait?.description || "A powerful simulacrum..."}
                  </p>
 
                  <div className="flex flex-wrap gap-4 pt-6">

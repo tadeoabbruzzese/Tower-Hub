@@ -288,7 +288,7 @@ const handleLogout = async () => {
                 <h4 className="font-bold text-energy mb-1 flex items-center gap-2">
                   <Zap size={16} className="animate-pulse" /> Estado del Servidor
                 </h4>
-                <p className="text-sm text-foreground/70">Warp Server está actualmente <span className="text-success font-bold">ONLINE</span></p>
+                <p className="text-sm text-foreground/70">El servidor está actualmente <span className="text-success font-bold">ONLINE</span></p>
                 <p className="text-xs text-foreground/40 mt-1">Ping promedio: 45ms</p>
               </div>
               <div className="w-2 h-2 rounded-full bg-success animate-ping"></div>
@@ -307,7 +307,7 @@ const handleLogout = async () => {
             Únete al Discord <ExternalLink size={16} />
           </a>
           <p className="text-center text-[10px] text-foreground/30 mt-4 uppercase tracking-widest">
-            Aida Reforged © 2025
+            Tower Hub © 2026
           </p>
         </div>
 

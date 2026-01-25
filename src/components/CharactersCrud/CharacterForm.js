@@ -58,6 +58,7 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
     weaponName: "",        // Nombre del arma (Ej: Calm Waters)
     rarity: "SSR",
     releaseDate: "",
+    description: "",
     
     // Datos de Combate
     element: "Ice-Volt",   // Elemento (Simple o Dual)
@@ -168,6 +169,20 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
           />
         </div>
 
+{/* NUEVO: Descripción para Home/Hero (Ocupa todo el ancho) */}
+        <div className="col-span-full space-y-1 pt-2">
+          <label className="text-xs font-bold text-cyan-400 uppercase flex justify-between">
+            <span>Descripción (Para Hero Section)</span>
+            <span className="text-gray-600 normal-case font-normal text-[10px]">Breve resumen de lore o identidad</span>
+          </label>
+          <textarea
+            value={form.description}
+            onChange={(e) => handleChange("description", e.target.value)}
+            placeholder="Ej: La oficial a cargo de la seguridad de Mirroria. Una experta espadachina que valora el deber por encima de todo..."
+            rows={3}
+            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded focus:border-cyan-500 outline-none resize-none"
+          />
+        </div>
       </section>
 
       {/* 2. DATOS DE COMBATE (Elementos y Resonancia) */}
