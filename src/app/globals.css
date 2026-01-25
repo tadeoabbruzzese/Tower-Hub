@@ -1,26 +1,183 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ===============================
+   TEMA Y VARIABLES (Configuración v4)
+   =============================== */
+@theme {
+  /* FUENTES */
+  --font-sans: "Inter", system-ui, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* DEFINICIÓN DE COLORES (Mapeo a variables HSL) */
+  /* Esto genera automáticamente bg-primary, text-accent, border-error, etc. */
+  --color-primary: hsl(var(--primary));
+  --color-primary-light: hsl(var(--primary-light));
+  --color-primary-dark: hsl(var(--primary-dark));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-accent: hsl(var(--accent));
+  --color-accent-light: hsl(var(--accent-light));
+  --color-accent-dark: hsl(var(--accent-dark));
+
+  --color-energy: hsl(var(--energy));
+  --color-energy-light: hsl(var(--energy-light));
+  --color-energy-dark: hsl(var(--energy-dark));
+
+  --color-success: hsl(var(--success));
+  --color-warning: hsl(var(--warning));
+  --color-error: hsl(var(--error));
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-hover: hsl(var(--card-hover));
+  --color-border: hsl(var(--border));
+
+  /* ANIMACIONES PERSONALIZADAS */
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ===============================
+   VARIABLES RAW (HSL)
+   =============================== */
+/* Mantenemos los valores aquí para poder cambiarlos dinámicamente si usas JS (modo oscuro/claro) */
+:root {
+  /* PRIMARIOS */
+  --primary: 221 83% 53%;
+  --primary-light: 217 91% 60%;
+  --primary-dark: 224 76% 48%;
+
+  /* ACCENT */
+  --accent: 268 70% 64%;
+  --accent-light: 268 70% 74%;
+  --accent-dark: 268 70% 54%;
+
+  /* ENERGY */
+  --energy: 48 96% 53%;
+  --energy-light: 48 96% 63%;
+  --energy-dark: 48 96% 43%;
+
+  /* FEEDBACK */
+  --success: 142 72% 50%;
+  --warning: 34 100% 50%;
+  --error: 0 84% 60%;
+
+  /* BACKGROUND SYSTEM */
+  --background: 240 10% 4%;
+  --foreground: 240 10% 97%;
+  --card: 240 10% 7%;
+  --card-hover: 240 10% 12%;
+  --border: 240 10% 20%;
+}
+
+/* ===============================
+   BASE STYLES
+   =============================== */
+
+@layer base {
+  html {
+    /* Usamos las nuevas utilidades generadas por el tema */
+    @apply bg-background text-foreground font-sans scroll-smooth;
+  }
+
+  body {
+    @apply antialiased min-h-screen;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight leading-tight;
+  }
+
+  h1 { @apply text-4xl md:text-5xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+}
+
+/* ===============================
+   COMPONENTS
+   =============================== */
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 max-w-7xl;
+  }
+  
+  /* Ahora usamos las clases limpias en lugar de valores arbitrarios */
+  .card {
+    @apply rounded-lg border transition-all duration-300
+           bg-card border-border;
+  }
+
+  .card-hover {
+    @apply hover:bg-card-hover
+           hover:border-primary/50
+           hover:shadow-lg hover:shadow-primary/10;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300
+           inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply text-white bg-primary
+           hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply border border-border
+           hover:border-primary/50 hover:bg-card-hover;
+  }
+
+  /* TIER LIST COMPONENTS */
+  .tier-row {
+    @apply flex flex-col sm:flex-row border border-border
+           rounded-md mb-4 overflow-hidden;
+  }
+
+  .tier-label {
+    @apply p-4 text-xl font-bold flex items-center justify-center
+           min-w-20 sm:min-h-36;
+  }
+
+  .tier-characters {
+    @apply flex-1 flex flex-wrap p-4 min-h-36 bg-card-hover/50;
+  }
+
+  .tier-s { @apply text-background bg-energy; }
+  .tier-a { @apply text-background bg-success; }
+  .tier-b { @apply text-white bg-primary; }
+  .tier-c { @apply text-white bg-accent; }
+  .tier-d { @apply text-white bg-error; }
+}
+
+/* ===============================
+   UTILITIES & SCROLLBAR
+   =============================== */
+
+/* Las clases de animación .fade-in y .slide-up ahora son redundantes 
+   porque Tailwind v4 generó `animate-fade-in` y `animate-slide-up`, 
+   pero las dejamos por compatibilidad si las usas en HTML */
+
+.fade-in { @apply animate-fade-in; }
+.slide-up { @apply animate-slide-up; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { @apply bg-card; }
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/70;
 }
