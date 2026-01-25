@@ -47,27 +47,28 @@ const FilterPill = ({ label, active, onClick, icon: Icon }) => (
 );
 
 const SimulacraCard = ({ data }) => {
-  // ✅ 1. Lógica para elemento dual (Volt-Ice -> usa color Volt)
+  // 1. Lógica para elemento dual
   const mainElement = data.element ? data.element.split('-')[0] : 'Altered';
   const elConfig = ELEMENT_CONFIG[mainElement] || ELEMENT_CONFIG.Altered;
 
-  // ✅ 2. Normalización de Rol para icono
+  // 2. Normalización de Rol
   let roleKey = data.resonance || "DPS"; 
-  // Mapeamos lo que viene de DB a las keys de ROLE_CONFIG si es necesario
   const RoleIcon = ROLE_CONFIG[roleKey]?.icon || Crosshair; 
-  
-  // ✅ 3. Mapeo de nombre de rol para mostrar (Attack -> DPS)
   const displayRole = roleKey === "Attack" ? "DPS" : roleKey === "Fortitude" ? "Tank" : roleKey === "Benediction" ? "Support" : roleKey;
 
   return (
-    <div className="group relative h-[450px] w-full rounded-2xl overflow-hidden bg-card border border-border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    // CAMBIO 1: El contenedor principal ahora es un LINK. 
+    // "block" asegura que ocupe todo el espacio y sea clickeable.
+    <Link 
+      href={`/simulacra/${data.id}`}
+      className="block w-full group relative h-[450px] rounded-2xl overflow-hidden bg-card border border-border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
+    >
       
       {/* Glow Hover Effect */}
       <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-t from-${elConfig.bg.split('-')[1]} via-transparent to-transparent`}></div>
 
       {/* Imagen de Fondo */}
       <div className="absolute inset-0 z-0">
-        {/* ✅ CAMBIO: data.image -> data.images.character */}
         {data.images?.character ? (
            <img src={data.images.character} alt={data.simulacrumName} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 object-top" />
         ) : (
@@ -79,9 +80,8 @@ const SimulacraCard = ({ data }) => {
       {/* Contenido (Info) */}
       <div className="relative z-10 h-full flex flex-col justify-end p-6">
         
-        {/* Top Badges (Flotantes) */}
+        {/* Top Badges */}
         <div className="absolute top-4 right-4 flex flex-col items-end gap-2 translate-y-[-10px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-           {/* ✅ CAMBIO: data.stats.charge -> data.charge (numérico) */}
            <span className="px-2 py-1 rounded bg-black/50 backdrop-blur text-[10px] font-mono text-white border border-white/10">
              CHRG: <span className={elConfig.color}>{Number(data.charge || 0).toFixed(2)}</span>
            </span>
@@ -97,40 +97,35 @@ const SimulacraCard = ({ data }) => {
                 <elConfig.icon size={14} />
              </span>
              <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                {/* ✅ CAMBIO: Mostrar elemento limpio y rol mapeado */}
                 {mainElement} / {displayRole}
              </span>
           </div>
-          {/* ✅ CAMBIO: data.name -> data.simulacrumName */}
           <h3 className="text-3xl font-black text-white uppercase italic tracking-tighter">{data.simulacrumName}</h3>
-          {/* ✅ CAMBIO: data.title -> data.trait.title (o weaponName) */}
-          <p className="text-sm text-gray-400 font-medium">{data.trait?.title || data.weaponName}</p>
+          <p className="text-sm text-gray-400 font-medium">{data.weaponName || data.weaponName}</p>
         </div>
         
         <div className={`h-0.5 w-full bg-gradient-to-r from-${elConfig.bg.split('-')[1]} to-transparent my-4 opacity-50 transition-opacity duration-500 group-hover:opacity-100`}></div>
         
         <div className="group-hover:opacity-0 transition-opacity duration-300 text-xs text-muted-foreground font-mono flex items-center gap-2">
-            {/* ✅ CAMBIO: data.weapon -> data.weaponName */}
-            <RoleIcon size={12} /> Weapon: {data.weaponName}
+            <RoleIcon size={12} /> Release : {data.releaseDate}
         </div>
         
         {/* OVERLAY ANIMADA */}
         <div className="absolute bottom-0 left-0 right-0 h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 pointer-events-none">
           <p className="text-sm text-gray-200 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500 delay-75 ease-out line-clamp-3">
-            {/* ✅ CAMBIO: data.description -> data.trait.description */}
-            {data.trait?.description || "Sin descripción disponible."}
+            {data.description || "Sin descripción disponible."}
           </p>
 
-          <Link
-            href={`/simulacra/${data.id}`}
-            className={`opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500 delay-150 ease-out pointer-events-auto text-center w-full py-2 rounded-md font-bold text-xs uppercase tracking-widest ${elConfig.bg} text-background hover:brightness-110`}
+          {/* CAMBIO 2: Esto ya no es un Link, es un span visual porque todo el padre es un link */}
+          <span
+            className={`opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500 delay-150 ease-out block text-center w-full py-2 rounded-md font-bold text-xs uppercase tracking-widest ${elConfig.bg} text-background hover:brightness-110`}
           >
             Ver Perfil Completo
-          </Link>
+          </span>
         </div>
 
       </div>
-    </div>
+    </Link>
   );
 };
 

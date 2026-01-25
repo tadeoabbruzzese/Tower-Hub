@@ -119,7 +119,7 @@ export default function HomePage() {
                     <img 
   src={featuredChar.images.character} 
   alt="Hero Character" 
-  className="w-full h-full object-cover 
+  className="object-cover 
              brightness-90 contrast-110 saturate-110
              transition-all duration-1000"
 />
