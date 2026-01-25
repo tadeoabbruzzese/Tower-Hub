@@ -117,10 +117,12 @@ export default function HomePage() {
                  <div className="relative w-full h-full">
                     {/* Corrección de imagen solicitada anteriormente */}
                     <img 
-                      src={featuredChar.images.character} 
-                      alt="Hero Character" 
-                      className="w-full h-full object-cover object-[50%_25%] opacity-60 md:opacity-100 transition-opacity duration-1000"
-                    />
+  src={featuredChar.images.character} 
+  alt="Hero Character" 
+  className="w-full h-full object-cover 
+             brightness-90 contrast-110 saturate-110
+             transition-all duration-1000"
+/>
                     
                     <div className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-gradient-to-r from-background via-background/80 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />

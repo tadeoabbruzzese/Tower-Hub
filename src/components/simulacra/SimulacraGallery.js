@@ -18,14 +18,15 @@ const ELEMENT_CONFIG = {
 };
 
 const ROLE_CONFIG = {
-  DPS:      { icon: Crosshair },
-  Attack:   { icon: Crosshair }, // ✅ Compatibilidad DB
-  Tank:     { icon: Shield },
-  Fortitude:{ icon: Shield },    // ✅ Compatibilidad DB
-  Support:  { icon: HeartPulse },
-  Benediction: { icon: HeartPulse } // ✅ Compatibilidad DB
+  DPS:      { icon: Crosshair, style: "bg-red-600 shadow-red-900/50 text-white", border: "border-red-500" },
+  Attack:   { icon: Crosshair, style: "bg-red-600 shadow-red-900/50 text-white", border: "border-red-500" },
+  Tank:     { icon: Shield,    style: "bg-amber-500 shadow-amber-900/50 text-black", border: "border-amber-500" },
+  Fortitude:{ icon: Shield,    style: "bg-amber-500 shadow-amber-900/50 text-black", border: "border-amber-500" },
+  Support:  { icon: HeartPulse,style: "bg-emerald-500 shadow-emerald-900/50 text-white", border: "border-emerald-500" },
+  Benediction:{ icon: HeartPulse,style: "bg-emerald-500 shadow-emerald-900/50 text-white", border: "border-emerald-500" },
+  // Estilo por defecto para "All"
+  All:      { icon: Filter,    style: "bg-white shadow-white/20 text-black", border: "border-white" }
 };
-
 // ==========================================
 // COMPONENTES INTERNOS
 // ==========================================
@@ -211,17 +212,39 @@ const SimulacraGallery = () => {
                <FilterPill key={elm} label={elm} active={filterElement === elm} onClick={() => setFilterElement(elm)} icon={ELEMENT_CONFIG[elm].icon}/>
             ))}
           </div>
+{/* Filtro Roles (MEJORADO) */}
+          <div className="flex p-1 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 gap-1 overflow-x-auto">
+            {['All', 'DPS', 'Tank', 'Support'].map(role => {
+              // Obtenemos la config (Icono y Colores)
+              const config = ROLE_CONFIG[role] || ROLE_CONFIG.All; 
+              const Icon = config.icon;
+              const isActive = filterRole === role;
 
-          <div className="flex items-center bg-card rounded-lg p-1 border border-border">
-            {['All', 'DPS', 'Tank', 'Support'].map(role => (
-              <button
-                key={role}
-                onClick={() => setFilterRole(role)}
-                className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase transition-all ${filterRole === role ? 'bg-background shadow text-white' : 'text-muted-foreground hover:text-white'}`}
-              >
-                {role}
-              </button>
-            ))}
+              return (
+                <button
+                  key={role}
+                  onClick={() => setFilterRole(role)}
+                  className={`
+                    relative px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 ease-out
+                    flex items-center gap-2 border
+                    ${isActive 
+                      ? `${config.style} ${config.border} shadow-lg scale-105 z-10` 
+                      : 'bg-transparent text-gray-500 border-transparent hover:bg-white/5 hover:text-gray-300'
+                    }
+                  `}
+                >
+                  {/* Icono (Si está activo se ve sólido, si no un poco transparente) */}
+                  <Icon size={14} className={isActive ? "opacity-100" : "opacity-70"} />
+                  
+                  {role}
+
+                  {/* Indicador de "Luz" inferior cuando está activo */}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-white/50 rounded-full blur-[1px]"></span>
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -258,7 +281,7 @@ const SimulacraGallery = () => {
 
         <div className="mt-12 pt-8 border-t border-border flex justify-between items-center text-xs text-muted-foreground font-mono uppercase">
            <span>Displaying {filteredData.length} entries</span>
-           <span>Warp Server Database // Ver 2.4.5</span>
+           <span>TOWER OF FANTASY // Ver 5.6.2</span>
         </div>
       </div>
 
