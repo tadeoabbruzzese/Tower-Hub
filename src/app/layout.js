@@ -3,6 +3,7 @@ import { Inter, Sora } from "next/font/google"
 import { AuthProvider } from "@/context/AuthContext"
 import Navbar from "@/components/Navbar"
 import { SimulacraProvider } from "@/context/SimulacraContext"
+import { NewsProvider } from "@/context/NewsContext"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,8 +31,10 @@ export default function RootLayout({ children }) {
       <body className="antialiased bg-[#020617] text-white">
         <AuthProvider>
           <SimulacraProvider>
+            <NewsProvider>
           <Navbar />
           {children}
+          </NewsProvider>
           </SimulacraProvider>
         </AuthProvider>
       </body>

@@ -6,6 +6,7 @@ import {
   Sparkles,
   Settings,
   ShieldCheck,
+  Twitter, // Importamos icono de Twitter
 } from "lucide-react"
 
 export default function AdminPage() {
@@ -36,7 +37,7 @@ export default function AdminPage() {
         ================================ */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           
-          {/* CHARACTERS */}
+          {/* CHARACTERS (ACTIVO) */}
           <Link
             href="/admin/characters"
             className="card card-hover p-8 group animate-slide-up"
@@ -60,6 +61,37 @@ export default function AdminPage() {
 
             <div className="flex items-center justify-between text-sm font-bold uppercase tracking-widest text-primary">
               <span>Manage</span>
+              <span className="opacity-50 group-hover:opacity-100 transition-opacity">
+                →
+              </span>
+            </div>
+          </Link>
+
+          {/* NEWS / TWITTER (NUEVO - ACTIVO) */}
+          <Link
+            href="/admin/news"
+            className="card card-hover p-8 group animate-slide-up hover:border-[#1DA1F2]/50 hover:bg-[#1DA1F2]/5 transition-all"
+            style={{ animationDelay: '100ms' }}
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#1DA1F2]/20 border border-[#1DA1F2]/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Twitter className="text-[#1DA1F2]" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-white group-hover:text-[#1DA1F2] transition-colors">Hykros Comms</h2>
+                <p className="text-sm text-foreground/50 uppercase tracking-widest">
+                  News Feed
+                </p>
+              </div>
+            </div>
+
+            <p className="text-foreground/70 leading-relaxed mb-6">
+              Gestiona las noticias oficiales y actualizaciones. 
+              Publica tweets y anuncios para el feed del Home.
+            </p>
+
+            <div className="flex items-center justify-between text-sm font-bold uppercase tracking-widest text-[#1DA1F2]">
+              <span>Broadcast</span>
               <span className="opacity-50 group-hover:opacity-100 transition-opacity">
                 →
               </span>
