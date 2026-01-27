@@ -76,6 +76,11 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
       matrix: ""
     },
 
+    // --- NUEVAS SECCIONES DE COMBATE ---
+    attacks: [],     // Normal Attacks (Secuencias)
+    dodges: [],      // Esquives
+    skills: [],      // Habilidades
+    discharges: [],  // Descargas
     // Datos Dinámicos
     scaling: "ATK_HP_CRIT",
     passives: [], 
@@ -110,6 +115,30 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
     setForm(prev => ({ ...prev, advancements: newAdvancements }))
   }
 
+  // 1. Modificar un item de una lista
+  const handleListChange = (listName, index, field, value) => {
+    const newList = [...form[listName]]
+    newList[index] = { ...newList[index], [field]: value }
+    setForm(prev => ({ ...prev, [listName]: newList }))
+  }
+
+  // --- LÓGICA DE LISTAS (Unificada para Pasivas, Attacks, Dodges, Skills, Discharges) ---
+
+  // 2. Agregar item vacío a una lista
+  const addItem = (listName) => {
+    setForm(prev => ({
+      ...prev,
+      [listName]: [...prev[listName], { title: "", description: "" }]
+    }))
+  }
+
+  // 3. Eliminar item de una lista
+  const removeItem = (listName, index) => {
+    setForm(prev => ({
+      ...prev,
+      [listName]: prev[listName].filter((_, i) => i !== index)
+    }))
+  }
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-8 bg-[#0b0c15] text-gray-100 min-h-screen font-sans">
       
@@ -368,6 +397,57 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
               />
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* =================================================================================
+          5. MECÁNICAS DE COMBATE (NORMAL, DODGE, SKILL, DISCHARGE)
+         ================================================================================= */}
+      <section className="space-y-6">
+        <h2 className="text-xl font-bold text-white border-b border-gray-800 pb-2">Mecánicas de Combate</h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          {/* A. Normal Attacks */}
+          <DynamicList 
+            label="Normal Attacks" 
+            items={form.attacks} 
+            color="blue"
+            onItemChange={(idx, field, val) => handleListChange("attacks", idx, field, val)}
+            onAddItem={() => addItem("attacks")}
+            onRemoveItem={(idx) => removeItem("attacks", idx)}
+          />
+
+          {/* B. Dodge */}
+          <DynamicList 
+            label="Dodge (Esquivar)" 
+            items={form.dodges} 
+            color="green"
+            onItemChange={(idx, field, val) => handleListChange("dodges", idx, field, val)}
+            onAddItem={() => addItem("dodges")}
+            onRemoveItem={(idx) => removeItem("dodges", idx)}
+          />
+
+          {/* C. Skill */}
+          <DynamicList 
+            label="Skill (Habilidad)" 
+            items={form.skills} 
+            color="orange"
+            onItemChange={(idx, field, val) => handleListChange("skills", idx, field, val)}
+            onAddItem={() => addItem("skills")}
+            onRemoveItem={(idx) => removeItem("skills", idx)}
+          />
+
+          {/* D. Discharge */}
+          <DynamicList 
+            label="Discharge (Descarga)" 
+            items={form.discharges} 
+            color="purple"
+            onItemChange={(idx, field, val) => handleListChange("discharges", idx, field, val)}
+            onAddItem={() => addItem("discharges")}
+            onRemoveItem={(idx) => removeItem("discharges", idx)}
+          />
+
         </div>
       </section>
 

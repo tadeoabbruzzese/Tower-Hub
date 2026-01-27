@@ -1,6 +1,7 @@
 import { db } from "@/lib/firebase"
 import { doc, getDoc } from "firebase/firestore"
 import { notFound } from "next/navigation"
+import { Sword, Wind, Zap, Activity, Star } from "lucide-react" // IMPORTAR ICONOS
 
 // --- 1. FUNCIÓN PARA BUSCAR EL PERSONAJE ---
 async function getCharacter(id) {
@@ -14,9 +15,8 @@ async function getCharacter(id) {
   return { id: docSnap.id, ...docSnap.data() }
 }
 
-// --- 2. HELPER PARA COLORES SEGÚN ELEMENTO (Estética) ---
+// --- 2. HELPER PARA COLORES SEGÚN ELEMENTO (Estética de Fondos) ---
 const getElementColor = (element) => {
-  // Manejo de fallbacks por si element viene undefined
   const mainElement = element ? element.split("-")[0].toLowerCase() : "altered"
   
   const colors = {
@@ -29,7 +29,78 @@ const getElementColor = (element) => {
   return colors[mainElement] || colors.altered
 }
 
-// --- 3. COMPONENTE PRINCIPAL DE LA PÁGINA ---
+// --- 3. NUEVO: HELPER PARA FORMATEAR TEXTO (Colores y Negritas) ---
+// --- 3. HELPER PARA FORMATEAR TEXTO (Colores, Negritas y Custom Keywords) ---
+const formatDescription = (text) => {
+  if (!text) return null;
+
+  // Regex Explicación:
+  // 1. (\[.*?\]) -> Detecta cualquier cosa entre corchetes: [frase a resaltar]
+  // 2. (Volt|Frost|Ice|Flame|Physical) -> Detecta Elementos fijos
+  // 3. (\d+(?:\.\d+)?%?) -> Detecta Números
+  const regex = /(\[.*?\]|Volt|Frost|Ice|Flame|Physical|\d+(?:\.\d+)?%?)/gi;
+
+  const parts = text.split(regex);
+
+  return parts.map((part, index) => {
+    // A. Si es un Custom Keyword entre corchetes [] (Ej: [Hyperbody])
+    if (part.startsWith('[') && part.endsWith(']')) {
+      // Quitamos los corchetes y pintamos
+      const content = part.slice(1, -1); 
+      // Usamos 'text-cyan-200' (o el color que prefieras para keywords especiales)
+      // O si quieres que sea dinámico según el elemento del personaje, tendríamos que pasarle el color a esta función.
+      // Por defecto, un color "dorado/neutro" o "cyan" suele quedar bien para keywords de mecánicas.
+      return <span key={index} className="text-yellow-200 font-bold tracking-wide">{content}</span>;
+    }
+
+    // B. Si es un Número
+    if (/^\d+(?:\.\d+)?%?$/.test(part)) {
+      return <span key={index} className="text-blue-400 font-bold font-mono">{part}</span>;
+    }
+
+    // C. Si es un Elemento
+    const lower = part.toLowerCase();
+    switch (lower) {
+      case 'volt': return <span key={index} className="text-purple-400 font-bold uppercase">Volt</span>;
+      case 'frost': return <span key={index} className="text-cyan-400 font-bold uppercase">Frost</span>;
+      case 'ice': return <span key={index} className="text-cyan-400 font-bold uppercase">Ice</span>;
+      case 'flame': return <span key={index} className="text-orange-400 font-bold uppercase">Flame</span>;
+      case 'physical': return <span key={index} className="text-yellow-400 font-bold uppercase">Physical</span>;
+      default: return part; 
+    }
+  });
+};
+
+// --- COMPONENTES INTERNOS ---
+const CombatSection = ({ title, items, color, icon }) => {
+  if (!items || items.length === 0) return null;
+
+  return (
+    <div className="mb-8">
+      <h3 className={`text-lg font-bold uppercase tracking-widest mb-4 flex items-center gap-2 text-${color}-400`}>
+        <span className={`p-1.5 rounded bg-${color}-900/30 border border-${color}-500/30`}>{icon}</span>
+        {title}
+      </h3>
+      <div className="space-y-3">
+        {items.map((item, i) => (
+          <div key={i} className="group bg-[#13131a] border border-white/5 hover:border-white/10 p-5 rounded-lg transition-all duration-300">
+            <div className="flex justify-between items-start mb-3">
+              <h4 className="text-gray-100 font-bold text-base group-hover:text-white transition-colors">
+                {item.title}
+              </h4>
+            </div>
+            {/* Usamos formatDescription aquí */}
+            <p className="text-sm text-gray-400 leading-relaxed whitespace-pre-line border-l-2 border-gray-700 pl-4">
+              {formatDescription(item.description)}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// --- 4. COMPONENTE PRINCIPAL ---
 export default async function SimulacrumPage({ params }) {
   const { id } = await params 
   const char = await getCharacter(id)
@@ -41,35 +112,28 @@ export default async function SimulacrumPage({ params }) {
   const themeClass = getElementColor(char.element)
 
   return (
-    // CAMBIO 1: lg:flex-row-reverse pone la imagen a la DERECHA en escritorio
     <main className={`min-h-screen bg-black text-gray-100 flex flex-col lg:flex-row-reverse font-sans selection:bg-cyan-500 selection:text-black`}>
       
-      {/* --- COLUMNA DERECHA (IMAGEN ESTÁTICA) --- */}
-      {/* CAMBIO: border-l (borde izquierdo) en lugar de border-r */}
+      {/* --- COLUMNA DERECHA (IMAGEN) --- */}
       <aside className="w-full lg:w-[45%] lg:h-screen lg:sticky lg:top-0 relative h-[50vh] overflow-hidden border-l border-white/10 order-first lg:order-last">
-        
         <div className={`absolute inset-0 bg-gradient-to-b ${themeClass} opacity-40`} />
-        
         {char.images.character ? (
            <img 
              src={char.images.character} 
              alt={char.simulacrumName}
-             // Alineación ajustada para que se vea bien a la derecha
              className="absolute inset-0 w-full h-full object-cover object-top lg:object-center mix-blend-lighten hover:scale-105 transition-transform duration-700"
            />
         ) : (
           <div className="flex items-center justify-center h-full text-gray-700">Sin Imagen</div>
         )}
-
-        
       </aside>
 
-      {/* --- COLUMNA IZQUIERDA (CONTENIDO SCROLLABLE) --- */}
+      {/* --- COLUMNA IZQUIERDA (CONTENIDO) --- */}
       <div className="flex-1 w-full lg:w-[55%] bg-[#0b0c15]">
         
         <div className="p-6 md:p-12 lg:p-16 space-y-16 max-w-4xl mx-auto">
           
-          {/* 1. HEADER INFO */}
+          {/* HEADER INFO */}
           <header className="space-y-4">
              <div className="flex items-center gap-3">
                 <span className={`px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-widest ${themeClass.split(' ')[2]}`}>
@@ -80,14 +144,13 @@ export default async function SimulacrumPage({ params }) {
                 </span>
              </div>
              
-             <h1 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tight">
+             <h1 className="text-5xl md:text-6xl font-black text-white uppercase italic tracking-tight">
                {char.simulacrumName}
              </h1>
              <p className="text-xl text-gray-400 font-light">
                Portador del arma: <span className="text-white font-medium">{char.weaponName}</span>
              </p>
 
-             {/* Stats Rápidos */}
              <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="bg-gray-900/50 p-4 rounded-lg border border-white/5">
                   <span className="text-xs text-gray-500 uppercase font-bold">Shatter</span>
@@ -100,7 +163,7 @@ export default async function SimulacrumPage({ params }) {
              </div>
           </header>
 
-          {/* 2. TRAIT */}
+          {/* TRAIT */}
           <section>
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <span className="w-1 h-8 bg-purple-500 rounded-full"></span>
@@ -108,23 +171,22 @@ export default async function SimulacrumPage({ params }) {
             </h2>
             <div className="bg-gradient-to-r from-gray-900 to-transparent p-6 rounded-xl border-l-4 border-purple-500">
               <h3 className="text-lg font-bold text-white mb-2">{char.trait.title}</h3>
+              {/* Aplicamos el formateador aquí también por si acaso */}
               <p className="text-gray-300 leading-relaxed whitespace-pre-line">
-                {char.trait.description}
+                {formatDescription(char.trait.description)}
               </p>
             </div>
           </section>
 
-          {/* 3. ARMA & PASIVAS */}
+          {/* ARMA & PASIVAS (AQUÍ ESTÁ EL CAMBIO IMPORTANTE) */}
           <section>
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <span className="w-1 h-8 bg-cyan-500 rounded-full"></span>
               Mecánicas del Arma
             </h2>
             
-            {/* CAMBIO 2: Arreglo de pixelado de imagen de arma */}
             {char.images.weapon && (
               <div className="mb-8 w-full h-64 relative rounded-lg overflow-hidden border border-white/10 bg-gradient-to-b from-gray-900 to-black group flex items-center justify-center p-4">
-                {/* Usamos object-contain para que no se recorte ni se estire (adiós pixelado) */}
                 <img 
                   src={char.images.weapon} 
                   alt="Weapon" 
@@ -146,8 +208,12 @@ export default async function SimulacrumPage({ params }) {
                          {passive.title}
                        </h3>
                      </div>
-                     <p className="text-sm text-gray-400 pl-8 leading-relaxed border-l border-gray-800 ml-1.5">
-                       {passive.description}
+                     {/* CAMBIO CLAVE: 
+                        1. whitespace-pre-line: Respeta los saltos de línea de la DB
+                        2. formatDescription(): Aplica los colores
+                     */}
+                     <p className="text-sm text-gray-400 pl-8 leading-relaxed border-l border-gray-800 ml-1.5 whitespace-pre-line">
+                       {formatDescription(passive.description)}
                      </p>
                   </div>
                 ))
@@ -156,8 +222,52 @@ export default async function SimulacrumPage({ params }) {
               )}
             </div>
           </section>
+          {/* =================================================================================
+              NUEVA SECCIÓN: MECÁNICAS DE COMBATE (ATTACKS, DODGE, SKILL, DISCHARGE)
+             ================================================================================= */}
+          <section>
+            <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
+              <span className="w-1 h-8 bg-red-500 rounded-full"></span>
+              Moveset & Habilidades
+            </h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* COLUMNA 1: BÁSICOS */}
+              <div>
+                <CombatSection 
+                  title="Normal Attacks" 
+                  items={char.attacks} 
+                  color="blue" 
+                  icon={<Sword size={16} />} 
+                />
+                <CombatSection 
+                  title="Dodge" 
+                  items={char.dodges} 
+                  color="green" 
+                  icon={<Wind size={16} />} 
+                />
+                <CombatSection 
+                  title="Discharge" 
+                  items={char.discharges} 
+                  color="purple" 
+                  icon={<Activity size={16} />} 
+                />
+              </div>
 
-          {/* 4. MATRICES (CAMBIO 3: INCLUIR FOTO) */}
+              {/* COLUMNA 2: ESPECIALES */}
+              <div>
+                <CombatSection 
+                  title="Skills" 
+                  items={char.skills} 
+                  color="orange" 
+                  icon={<Zap size={16} />} 
+                />
+                
+              </div>
+            </div>
+          </section>
+
+          {/* MATRICES */}
           <section>
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <span className="w-1 h-8 bg-yellow-500 rounded-full"></span>
@@ -165,8 +275,6 @@ export default async function SimulacrumPage({ params }) {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-               
-               {/* COLUMNA 1: FOTO MATRIZ */}
                <div className="md:col-span-1">
                  {char.images.matrix ? (
                     <div className="aspect-square w-full rounded-lg overflow-hidden border border-yellow-500/20 bg-gray-900 relative group">
@@ -187,41 +295,62 @@ export default async function SimulacrumPage({ params }) {
                  )}
                </div>
 
-               {/* COLUMNA 2: DESCRIPCIONES (Ocupa 2/3 del espacio) */}
                <div className="md:col-span-2 space-y-4">
-                  {/* 2 Piezas */}
                   <div className="bg-[#111] p-5 rounded-lg border border-gray-800 hover:border-yellow-500/30 transition-colors">
                       <span className="text-yellow-500 text-xs font-bold uppercase mb-2 block">Set de 2 Piezas</span>
-                      <p className="text-gray-300 text-sm leading-relaxed">{char.matrices.pc2 || "Sin descripción"}</p>
+                      <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
+                        {formatDescription(char.matrices.pc2) || "Sin descripción"}
+                      </p>
                   </div>
-                  {/* 4 Piezas */}
                   <div className="bg-[#111] p-5 rounded-lg border border-gray-800 hover:border-yellow-500/30 transition-colors">
                       <span className="text-yellow-500 text-xs font-bold uppercase mb-2 block">Set de 4 Piezas</span>
-                      <p className="text-gray-300 text-sm leading-relaxed">{char.matrices.pc4 || "Sin descripción"}</p>
+                      <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
+                        {formatDescription(char.matrices.pc4) || "Sin descripción"}
+                      </p>
                   </div>
                </div>
-
             </div>
           </section>
 
-          {/* 5. AVANCES */}
+          {/* AVANCES (STACK VERTICAL CENTRADO) */}
           <section className="pb-20">
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
               <span className="w-1 h-8 bg-orange-500 rounded-full"></span>
-              Avances (Stars)
+              Avances
             </h2>
-            <div className="space-y-3">
+            
+            {/* Contenedor: Columna vertical centrada con ancho limitado */}
+            <div className="flex flex-col gap-4 max-w-3xl mx-auto">
               {char.advancements.map((desc, i) => (
                  desc && (
-                   <div key={i} className="flex gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
-                      <div className="flex-shrink-0">
-                         <div className="w-10 h-10 rounded-full bg-gray-900 border border-orange-500/30 flex items-center justify-center text-orange-500 font-bold font-mono">
-                           A{i+1}
+                   <div key={i} className="group bg-[#111] border border-gray-800 hover:border-orange-500/40 p-6 rounded-xl transition-all duration-300 relative overflow-hidden">
+                      
+                      {/* Glow decorativo */}
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+                      <div className="flex flex-col sm:flex-row gap-6 items-start">
+                         
+                         {/* Header: Icono Estrella + Título (Lado Izquierdo) */}
+                         <div className="flex-shrink-0 flex items-center gap-4 sm:w-40">
+                           <div className="w-12 h-12 flex-shrink-0 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-500 shadow-[0_0_15px_-3px_rgba(249,115,22,0.3)] group-hover:scale-110 transition-transform duration-500">
+                             <Star size={20} fill="currentColor" />
+                           </div>
+                           <div>
+                             <h3 className="text-xl font-black text-white italic uppercase tracking-wider group-hover:text-orange-400 transition-colors">
+                               {i+1} Star
+                             </h3>
+                             <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Active</span>
+                           </div>
                          </div>
+
+                         {/* Contenido (Lado Derecho con Línea) */}
+                         <div className="flex-1 pl-6 border-l-2 border-gray-800 group-hover:border-orange-500/30 transition-colors">
+                           <p className="text-sm text-gray-300 leading-relaxed whitespace-pre-line">
+                             {formatDescription(desc)}
+                           </p>
+                         </div>
+
                       </div>
-                      <p className="text-sm text-gray-300 pt-2 leading-relaxed">
-                        {desc}
-                      </p>
                    </div>
                  )
               ))}
