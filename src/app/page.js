@@ -292,6 +292,23 @@ export default function HomePage() {
                </div>
             </Link>
 
+            {/* CARD 3: TIER LIST */}
+            <Link href="/tierlist" className="group card card-hover p-8 relative overflow-hidden h-64 flex flex-col justify-end ">
+               <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                  <Activity size={80} className="text-energy" />
+               </div>
+               <div className="relative z-10 ">
+                  <div className="w-12 h-12 bg-energy/20 rounded-lg flex items-center justify-center mb-4 text-energy border border-energy/20">
+                    <Shield size={24} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Meta Tier List</h3>
+                  <p className="text-sm text-gray-400 mb-4">Clasificación actual del meta para DPS, Tank y Support.</p>
+                  <span className="text-xs font-bold uppercase tracking-widest text-energy flex items-center gap-2">
+                    Access Module <ArrowRight size={14}/>
+                  </span>
+               </div>
+            </Link>
+
             {/* CARD 2: RELIQUIAS (NUEVO) */}
             <div className="group card card-hover p-8 relative overflow-hidden h-64 flex flex-col justify-end border-border/50">
                <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-50 transition-all duration-500">
@@ -309,22 +326,7 @@ export default function HomePage() {
                </div>
             </div>
 
-            {/* CARD 3: TIER LIST */}
-            <div className="group card card-hover p-8 relative overflow-hidden h-64 flex flex-col justify-end border-border/50">
-               <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-50 transition-all duration-500">
-                  <Activity size={80} className="text-energy" />
-               </div>
-               <div className="relative z-10 opacity-70">
-                  <div className="w-12 h-12 bg-energy/20 rounded-lg flex items-center justify-center mb-4 text-energy border border-energy/20">
-                    <Shield size={24} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Meta Tier List</h3>
-                  <p className="text-sm text-gray-400 mb-4">Clasificación actual del meta para DPS, Tank y Support.</p>
-                  <span className="text-xs font-bold uppercase tracking-widest text-energy flex items-center gap-2">
-                    Coming Soon
-                  </span>
-               </div>
-            </div>
+            
 
           </div>
         </div>
