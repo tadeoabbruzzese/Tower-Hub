@@ -103,119 +103,90 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =====================================================================================
-          SECCIÓN 1: HERO BANNER (COLOR ADAPTATIVO)
+       {/* =====================================================================================
+          SECCIÓN 1: HERO BANNER (Estilo Cinemático - Referencia 1)
          ===================================================================================== */}
-      <section id="latest-arrival" className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-[#050505] border-b border-border scroll-mt-20 group">
+      <section className="relative w-full h-screen min-h-[800px] flex items-center overflow-hidden border-b border-white/5">
         
-        {/* Helper de colores interno */}
-        {(() => {
-           // 1. Detectar Elemento
-           const elementKey = featuredChar?.element?.split("-")[0] || "Altered";
-           
-           // 2. Configuración de Texto y Bordes (Tu configuración actual)
-           const themeColor = {
-             Flame: "text-orange-500 border-orange-500",
-             Volt:  "text-purple-500 border-purple-500",
-             Ice:   "text-cyan-400 border-cyan-400",
-             Frost: "text-cyan-400 border-cyan-400", // Alias para Ice
-             Physical: "text-yellow-400 border-yellow-400",
-             Altered: "text-green-400 border-green-400",
-           }[elementKey] || "text-white border-white";
+        {/* Grid de Fondo */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-20 pointer-events-none"></div>
 
-           // 3. Configuración del BOTÓN (FIX DEL BUG)
-           // Definimos explícitamente el color de fondo al hacer hover
-           const btnHoverColor = {
-             Flame: "hover:bg-orange-500",
-             Volt:  "hover:bg-purple-500",
-             Ice:   "hover:bg-cyan-400",
-             Frost: "hover:bg-cyan-400",
-             Physical: "hover:bg-yellow-400",
-             Altered: "hover:bg-green-400",
-           }[elementKey] || "hover:bg-zinc-800"; // <= Fallback Oscuro para que se lea el texto blanco
+        {(() => {
+           const elementKey = featuredChar?.element?.split("-")[0] || "Altered";
+           // Configuración de colores
+           const themeConfig = {
+             Flame: { text: "text-orange-500", glow: "shadow-orange-500/50", bg: "bg-orange-500" },
+             Volt:  { text: "text-purple-500", glow: "shadow-purple-500/50", bg: "bg-purple-500" },
+             Ice:   { text: "text-cyan-400", glow: "shadow-cyan-400/50", bg: "bg-cyan-400" },
+             Frost: { text: "text-cyan-400", glow: "shadow-cyan-400/50", bg: "bg-cyan-400" },
+             Physical: { text: "text-yellow-400", glow: "shadow-yellow-400/50", bg: "bg-yellow-400" },
+             Altered: { text: "text-green-400", glow: "shadow-green-400/50", bg: "bg-green-400" },
+           }[elementKey] || { text: "text-white", glow: "shadow-white/50", bg: "bg-white" };
 
            return (
              <>
-                {/* FONDOS */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] opacity-20"></div>
-                <div className={`absolute top-0 right-0 w-[800px] h-[800px] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none opacity-10 ${themeColor.replace('text-', 'bg-').split(' ')[0]}`} />
+                {/* Spot Light Ambiental */}
+                <div className={`absolute top-0 right-0 w-[800px] h-[800px] rounded-full blur-[150px] opacity-10 pointer-events-none ${themeConfig.bg}`} />
 
                 {featuredChar ? (
                   <>
-                     {/* --- CAPA 0: NOMBRE GIGANTE EN EL FONDO --- */}
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 select-none overflow-hidden">
-                        <h1 className={`text-[15vw] md:text-[12vw] font-black uppercase leading-none tracking-tighter whitespace-nowrap blur-sm scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out opacity-10 ${themeColor.split(' ')[0]}`}>
+                     {/* --- CAPA 0: TEXTO GIGANTE FONDO (SALLY Style) --- */}
+                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 select-none overflow-hidden pointer-events-none">
+                        <h1 className="text-[18vw] font-black uppercase leading-none tracking-tighter text-white/5 scale-110 whitespace-nowrap">
                           {featuredChar.simulacrumName}
                         </h1>
                      </div>
 
                      {/* --- CAPA 1: IMAGEN DEL PERSONAJE --- */}
-                     <div className="absolute inset-0 md:w-[60%] md:left-auto md:right-0 h-full z-10 pointer-events-none">
+                     <div className="absolute inset-0 md:w-[65%] md:left-auto md:right-[-5%] h-full z-10 pointer-events-none">
                        {featuredChar.images?.character && (
                          <div className="relative w-full h-full">
                             <img 
                               src={featuredChar.images.character} 
                               alt="Hero Character" 
-                              className="w-full h-full object-cover object-[50%_20%] md:object-contain md:object-right-bottom scale-110 drop-shadow-2xl"
+                              className="w-full h-full object-cover object-[50%_20%] md:object-contain md:object-right-bottom drop-shadow-2xl animate-fade-in"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#050505] via-[#050505]/40 to-transparent" />
-                            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
+                            {/* Fusión con el fondo */}
+                            
                          </div>
                        )}
                      </div>
 
-                     {/* --- CAPA 2: INFO PANEL --- */}
-                     <div className="container relative z-20 px-6 h-full flex flex-col justify-end pb-24 md:justify-center md:pb-0">
-                       <div className="max-w-xl">
+                     {/* --- CAPA 2: INFO PANEL (Izquierda) --- */}
+                     <div className="container relative z-20 px-6 h-full flex flex-col justify-center">
+                       <div className="max-w-2xl space-y-6">
                          
-                         <div className="flex items-center gap-2 mb-6">
-                            <div className={`h-[2px] w-8 ${themeColor.replace('text-', 'bg-').split(' ')[0]}`}></div>
-                            <span className={`text-xs font-mono uppercase tracking-[0.2em] ${themeColor.split(' ')[0]}`}>Latest Simulacra</span>
+                         <div className="flex items-center gap-3 animate-slide-up">
+                            <span className="px-2 py-1 bg-white/10 border border-white/20 rounded text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-md">
+                              New Arrival
+                            </span>
+                            <div className={`h-px w-20 ${themeConfig.bg}`}></div>
                          </div>
 
-                         {/* Título Principal */}
-                         <h1 className={`text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-2 drop-shadow-lg text-white`}>
+                         <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] drop-shadow-lg animate-slide-up" style={{animationDelay: '100ms'}}>
                            {featuredChar.simulacrumName}
                          </h1>
                          
-                         <div className="flex items-center gap-4 mb-8">
-                            <span className="px-3 py-1 bg-white text-black font-bold text-sm uppercase tracking-wider rounded-sm">
-                              {featuredChar.rarity || "SSR"}
-                            </span>
-                            <span className="text-2xl font-light text-gray-300">
-                              {featuredChar.weaponName}
-                            </span>
-                            <div className="h-4 w-[1px] bg-gray-600"></div>
-                            <span className={`text-sm font-mono border px-2 py-0.5 rounded bg-black/40 backdrop-blur ${themeColor}`}>
+                         <div className="flex items-center gap-4 text-xl md:text-2xl font-light text-gray-400 animate-slide-up" style={{animationDelay: '200ms'}}>
+                            <span className="text-white font-bold">{featuredChar.weaponName}</span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-gray-600"></span>
+                            <span className={`${themeConfig.text} font-mono uppercase tracking-widest text-sm border border-current px-3 py-1 rounded`}>
                               {featuredChar.element}
                             </span>
                          </div>
 
-                         {/* Descripción */}
-                         <div className={`p-6 rounded-l-xl border-l-2 bg-white/5 backdrop-blur-sm mb-8 ${themeColor.split(' ')[1]}`}>
-                           <p className="text-gray-300 text-sm md:text-base leading-relaxed line-clamp-3">
-                             {featuredChar.description || featuredChar.trait?.description || "Datos clasificados. Simulacrum de alto nivel detectado."}
-                           </p>
-                         </div>
+                         <p className="text-gray-400 max-w-lg leading-relaxed border-l-2 border-white/10 pl-6 animate-slide-up" style={{animationDelay: '300ms'}}>
+                           {featuredChar.description || "Simulacrum de alto nivel detectado en la base de datos de Hykros. Sincronización disponible."}
+                         </p>
 
-                         <div className="flex flex-wrap gap-4">
-                           {/* BOTÓN CORREGIDO: 
-                              Usamos `btnHoverColor` directamente en lugar de hacer replaces raros.
-                           */}
+                         <div className="flex flex-wrap gap-4 pt-4 animate-slide-up" style={{animationDelay: '400ms'}}>
                            <Link 
                              href={`/simulacra/${featuredChar.id}`} 
-                             className={`group relative px-8 py-4 bg-white text-black font-black uppercase tracking-wider text-sm transition-all hover:text-white ${btnHoverColor}`}
+                             className={`group relative px-8 py-4 bg-white text-black font-bold uppercase tracking-wider text-sm transition-all hover:scale-105 hover:${themeConfig.glow}`}
                            >
                              <span className="relative z-10 flex items-center gap-2">
-                               Ver Simulacra <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
+                               Initiate Analysis <ArrowRight size={16} />
                              </span>
-                           </Link>
-                           
-                           <Link 
-                             href="/simulacra" 
-                             className="px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white/10 transition-colors"
-                           >
-                             + Ver todos
                            </Link>
                          </div>
 
@@ -223,115 +194,165 @@ export default function HomePage() {
                      </div>
                   </>
                 ) : (
-                  <div className="container relative z-10 flex flex-col justify-center h-full text-center">
-                     <h1 className="text-6xl font-black text-foreground/20">SYSTEM OFFLINE</h1>
+                  <div className="container relative z-10 flex justify-center">
+                     <h1 className="text-6xl font-black text-gray-800">OFFLINE</h1>
                   </div>
                 )}
              </>
            );
         })()}
-        
       </section>
 
       {/* =====================================================================================
-          SECCIÓN 2: STATS BAR
+          SECCIÓN 2: STATS BAR (REDISEÑADO)
          ===================================================================================== */}
-      <div className="w-full border-b border-border bg-card/50 backdrop-blur-sm hidden md:block">
-        <div className="container py-6 grid grid-cols-4 gap-8">
-           <div className="flex flex-col border-l border-border pl-6">
-              <span className="text-3xl font-mono font-bold text-white">{characters.length}</span>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">Simulacra</span>
+      <div className="w-full border-y border-white/5 bg-[#050505] hidden md:block relative z-20">
+        <div className="container py-8 grid grid-cols-4 gap-8">
+           
+           {/* STAT 1: SIMULACRA */}
+           <div className="flex flex-col border-l-2 border-white/10 pl-6 group hover:border-primary/50 transition-colors duration-300">
+              <span className="text-4xl md:text-5xl font-black text-white tracking-tighter group-hover:text-primary transition-colors">
+                {characters.length}
+              </span>
+              <span className="text-[10px] font-bold font-mono text-gray-500 uppercase tracking-[0.25em] mt-1">
+                Database Entries
+              </span>
            </div>
-           <div className="flex flex-col border-l border-border pl-6">
-              <span className="text-3xl font-mono font-bold text-energy">v5.6.2</span>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">Game Version</span>
+
+           {/* STAT 2: VERSION */}
+           <div className="flex flex-col border-l-2 border-white/10 pl-6 group hover:border-energy/50 transition-colors duration-300">
+              <span className="text-4xl md:text-5xl font-black text-white tracking-tighter group-hover:text-energy transition-colors">
+                v5.6.2
+              </span>
+              <span className="text-[10px] font-bold font-mono text-gray-500 uppercase tracking-[0.25em] mt-1">
+                System Version
+              </span>
            </div>
-           <div className="flex flex-col border-l border-border pl-6">
-              <span className="text-3xl font-mono font-bold text-accent">Active</span>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">Status</span>
+
+           {/* STAT 3: STATUS */}
+           <div className="flex flex-col border-l-2 border-white/10 pl-6 group hover:border-accent/50 transition-colors duration-300">
+              <div className="flex items-center gap-3">
+                 <span className="text-4xl md:text-5xl font-black text-white tracking-tighter group-hover:text-accent transition-colors">
+                   ACTIVE
+                 </span>
+                 
+              </div>
+              <span className="text-[10px] font-bold font-mono text-gray-500 uppercase tracking-[0.25em] mt-1">
+                Server Status
+              </span>
            </div>
-           <div className="flex flex-col border-l border-border pl-6">
-              <span className="text-3xl font-mono font-bold text-success">Online</span>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">Database</span>
+
+           {/* STAT 4: DATABASE */}
+           <div className="flex flex-col border-l-2 border-white/10 pl-6 group hover:border-green-500/50 transition-colors duration-300">
+              <span className="text-4xl md:text-5xl font-black text-white tracking-tighter group-hover:text-green-400 transition-colors">
+                ONLINE
+              </span>
+              <span className="text-[10px] font-bold font-mono text-gray-500 uppercase tracking-[0.25em] mt-1">
+                Hykros Link
+              </span>
            </div>
+
         </div>
       </div>
 
       {/* =====================================================================================
-          SECCIÓN 3: FEATURE CARDS (NAVEGACIÓN)
+          SECCIÓN 3: FEATURE CARDS (MODULES)
          ===================================================================================== */}
-      <section className="py-24 bg-background relative">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_hsl(var(--primary)/0.1),_transparent_50%)] pointer-events-none"></div>
-
-        <div className="container relative z-10">
+      <section className="py-24 bg-[#0a0a0a] relative border-b border-white/5">
+        <div className="container">
+          
           <div className="flex items-end justify-between mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-black uppercase mb-2">
+              <h2 className="text-3xl md:text-4xl font-black uppercase text-white mb-2 flex items-center gap-2">
                 System <span className="text-primary">Modules</span>
               </h2>
-              <p className="text-muted-foreground">Acceso rápido a las herramientas de la base de datos.</p>
+              <p className="text-gray-500 font-mono text-sm">Acceso rápido a las herramientas de la base de datos.</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            {/* CARD 1: SIMULACRA */}
-            <Link href="/simulacra" className="group card card-hover p-8 relative overflow-hidden h-64 flex flex-col justify-end">
-               <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                  <Database size={80} className="text-primary" />
+            {/* 1. SIMULACRA DB */}
+            <Link href="/simulacra" className="group relative h-72 rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+               {/* Background Image */}
+               <div className="absolute inset-0 bg-[#111]">
+                 {featuredChar?.images?.character ? (
+                   <img 
+                     src={featuredChar.images.character} 
+                     alt="Simulacra BG" 
+                     className="w-full h-full object-cover object-top opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700" 
+                   />
+                 ) : (
+                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-20"></div>
+                 )}
+                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
                </div>
-               <div className="relative z-10">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4 text-primary border border-primary/20">
-                    <LayoutGrid size={24} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Simulacra DB</h3>
-                  <p className="text-sm text-gray-400 mb-4">Lista completa de personajes, armas, habilidades y matrices.</p>
-                  <span className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2">
-                    Access Module <ArrowRight size={14}/>
-                  </span>
+
+               {/* Content */}
+               <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4 text-primary border border-primary/20 backdrop-blur-md">
+                   <Database size={24} />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-primary transition-colors">Simulacra DB</h3>
+                 <p className="text-sm text-gray-400 mb-6 line-clamp-2">Base de datos completa de personajes, armas y habilidades.</p>
+                 <span className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 group-hover:gap-3 transition-all">
+                   Access Module <ArrowRight size={14} />
+                 </span>
                </div>
             </Link>
 
-            {/* CARD 3: TIER LIST */}
-            <Link href="/tierlist" className="group card card-hover p-8 relative overflow-hidden h-64 flex flex-col justify-end ">
-               <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                  <Activity size={80} className="text-energy" />
+            {/* 2. RELIQUIAS (Sin imagen dinámica por ahora, usamos abstracta) */}
+            <Link href="/relics" className="group relative h-72 rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+               <div className="absolute inset-0 bg-[#111]">
+                 {/* Patrón Tech de fondo para Reliquias */}
+                 <div className="absolute inset-0 opacity-20 bg-[linear-gradient(45deg,transparent_25%,rgba(234,179,8,0.1)_50%,transparent_75%,transparent_100%)] bg-[size:20px_20px]"></div>
+                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+                 {/* Icono gigante de fondo */}
+                 <Box className="absolute -top-4 -right-4 text-yellow-500/10 w-48 h-48 transform rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-700" />
                </div>
-               <div className="relative z-10 ">
-                  <div className="w-12 h-12 bg-energy/20 rounded-lg flex items-center justify-center mb-4 text-energy border border-energy/20">
-                    <Shield size={24} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Meta Tier List</h3>
-                  <p className="text-sm text-gray-400 mb-4">Clasificación actual del meta para DPS, Tank y Support.</p>
-                  <span className="text-xs font-bold uppercase tracking-widest text-energy flex items-center gap-2">
-                    Access Module <ArrowRight size={14}/>
-                  </span>
+
+               <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                 <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 text-yellow-500 border border-yellow-500/20 backdrop-blur-md">
+                   <Box size={24} />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-yellow-500 transition-colors">Relics Arsenal</h3>
+                 <p className="text-sm text-gray-400 mb-6 line-clamp-2">Catálogo de equipamiento SSR y SR para combate.</p>
+                 <span className="text-xs font-bold uppercase tracking-widest text-yellow-500 flex items-center gap-2 group-hover:gap-3 transition-all">
+                   Access Module <ArrowRight size={14} />
+                 </span>
                </div>
             </Link>
 
-            {/* CARD 2: RELIQUIAS (NUEVO) */}
-            <div className="group card card-hover p-8 relative overflow-hidden h-64 flex flex-col justify-end border-border/50">
-               <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-50 transition-all duration-500">
-                  <Box size={80} className="text-accent" />
+            {/* 3. TIER LIST (Imagen de Arma de fondo) */}
+            <Link href="/tierlist" className="group relative h-72 rounded-2xl overflow-hidden border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+               <div className="absolute inset-0 bg-[#111]">
+                 {featuredChar?.images?.weapon ? (
+                   <img 
+                     src={featuredChar.images.weapon} 
+                     alt="Weapon BG" 
+                     className="w-full h-full object-contain p-8 opacity-40 group-hover:opacity-60 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700" 
+                   />
+                 ) : (
+                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-energy)_0%,_transparent_60%)] opacity-20"></div>
+                 )}
+                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                </div>
-               <div className="relative z-10 opacity-70">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4 text-accent border border-accent/20">
-                    <Zap size={24} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Relics & Gadgets</h3>
-                  <p className="text-sm text-gray-400 mb-4">Base de datos de reliquias SSR y SR para exploración y combate.</p>
-                  <span className="text-xs font-bold uppercase tracking-widest text-accent flex items-center gap-2">
-                    Coming Soon
-                  </span>
-               </div>
-            </div>
 
-            
+               <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                 <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 text-red-500 border border-red-500/20 backdrop-blur-md">
+                   <Activity size={24} />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-red-500 transition-colors">Meta Tier List</h3>
+                 <p className="text-sm text-gray-400 mb-6 line-clamp-2">Análisis de eficiencia y clasificaciones actuales.</p>
+                 <span className="text-xs font-bold uppercase tracking-widest text-red-500 flex items-center gap-2 group-hover:gap-3 transition-all">
+                   Access Module <ArrowRight size={14} />
+                 </span>
+               </div>
+            </Link>
 
           </div>
         </div>
       </section>
-
       
 
       {/* =====================================================================================

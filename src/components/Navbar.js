@@ -32,26 +32,19 @@ const navSections = [
     category: "Principal",
     items: [
       { name: "Inicio", path: "/", icon: Home },
-      { name: "Simulacras", path: "/simulacra", icon: Users },
-      { name: "Tier List", path: "/tierlist", icon: BarChart2 },
+      
     ]
   },
   {
     category: "Base de Datos",
     items: [
+      { name: "Simulacras", path: "/simulacra", icon: Users },
       { name: "Reliquias", path: "/relics", icon: Shield },
-      { name: "Matrices", path: "/matrices", icon: Disc }, // Asumiendo que tendrás esto
       { name: "Guías & Wiki", path: "/guides", icon: BookOpen },
+      { name: "Tier List", path: "/tierlist", icon: BarChart2 },
     ]
   },
-  {
-    category: "Warp Server",
-    items: [
-      { name: "Noticias", path: "/news", icon: Newspaper },
-      { name: "Estado del Servidor", path: "/status", icon: Server },
-      { name: "Descargar Cliente", path: "/download", icon: Download },
-    ]
-  }
+  
 ];
 
 export default function Navbar() {
@@ -280,20 +273,7 @@ const handleLogout = async () => {
             </div>
           ))}
 
-          {/* Banner Promocional Interno */}
-          <div className="mt-8 relative overflow-hidden rounded-xl border border-energy/30 bg-energy/5 p-5 group cursor-pointer">
-            <div className="absolute inset-0 bg-gradient-to-r from-energy/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div className="flex items-start justify-between relative z-10">
-              <div>
-                <h4 className="font-bold text-energy mb-1 flex items-center gap-2">
-                  <Zap size={16} className="animate-pulse" /> Estado del Servidor
-                </h4>
-                <p className="text-sm text-foreground/70">El servidor está actualmente <span className="text-success font-bold">ONLINE</span></p>
-                <p className="text-xs text-foreground/40 mt-1">Ping promedio: 45ms</p>
-              </div>
-              <div className="w-2 h-2 rounded-full bg-success animate-ping"></div>
-            </div>
-          </div>
+          
         </div>
 
         {/* --- FOOTER DEL SIDEBAR --- */}

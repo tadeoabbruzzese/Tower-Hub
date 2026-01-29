@@ -4,6 +4,7 @@ import { AuthProvider } from "@/context/AuthContext"
 import Navbar from "@/components/Navbar"
 import { SimulacraProvider } from "@/context/SimulacraContext"
 import { NewsProvider } from "@/context/NewsContext"
+import { RelicsProvider } from "@/context/RelicsContext"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,10 +32,12 @@ export default function RootLayout({ children }) {
       <body className="antialiased bg-[#020617] text-white">
         <AuthProvider>
           <SimulacraProvider>
+          <RelicsProvider>
             <NewsProvider>
           <Navbar />
           {children}
           </NewsProvider>
+          </RelicsProvider>
           </SimulacraProvider>
         </AuthProvider>
       </body>

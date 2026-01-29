@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import ImageUpload from "@/components/ImageKit/ImageUpload"
+import { parseCharacterJson } from "@/lib/formHelpers" // <--- AGREGAR ESTO
+import { Copy, Check, FileJson } from "lucide-react" // Opcional: para un icono bonito
 // --- COMPONENTES AUXILIARES ---
 
 // Componente para listas dinámicas (Pasivas) - Igual que antes
@@ -89,6 +91,28 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
     ...initialData,
   })
 
+  // Estado temporal para el texto del JSON
+  const [jsonInput, setJsonInput] = useState("");
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyJson = () => {
+    const jsonString = JSON.stringify(form, null, 2)
+    navigator.clipboard.writeText(jsonString)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000) // Vuelve al estado normal después de 2 seg
+  }
+
+// Función para procesar la carga
+  const handleJsonImport = () => {
+    // Usamos 'form' como base (defaultState) para no perder la estructura
+    const newData = parseCharacterJson(jsonInput, form);
+    if (newData) {
+      setForm(newData);
+      setJsonInput(""); // Limpiar el input si tuvo éxito
+      alert("¡Datos cargados correctamente!");
+    }
+  }
+
   // Helpers de estado
   const handleChange = (name, value) => {
     setForm(prev => ({ ...prev, [name]: value }))
@@ -147,6 +171,33 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
           Base de Datos: Simulacrum
         </h1>
       </header>
+
+      {/* --- ZONA DE IMPORTACIÓN JSON (AUTOCOMPLETE) --- */}
+      <details className="bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden mb-8">
+        <summary className="flex items-center gap-2 p-4 cursor-pointer hover:bg-gray-800 transition-colors text-cyan-400 font-bold uppercase tracking-wider text-xs">
+          <FileJson size={16} /> Importar datos desde JSON
+        </summary>
+        
+        <div className="p-4 space-y-3 border-t border-gray-800">
+          <p className="text-xs text-gray-500">
+            Pega aquí el objeto JSON del personaje para autocompletar todos los campos.
+          </p>
+          <textarea
+            value={jsonInput}
+            onChange={(e) => setJsonInput(e.target.value)}
+            placeholder='{ "simulacrumName": "Roslyn", ... }'
+            rows={5}
+            className="w-full px-4 py-3 bg-black border border-gray-700 rounded text-green-400 font-mono text-xs resize-y focus:border-cyan-500 outline-none"
+          />
+          <button
+            type="button"
+            onClick={handleJsonImport}
+            className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold uppercase rounded border border-gray-600 transition-all"
+          >
+            Cargar Datos
+          </button>
+        </div>
+      </details>
 
      {/* 1. IDENTIDAD, RAREZA Y FECHA */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -470,10 +521,37 @@ export default function ToFCharacterForm({ initialData = {}, onSave }) {
         </button>
       </div>
 
-      {/* DEBUG PREVIEW (Para que veas como queda el JSON) */}
-      <details className="text-xs font-mono text-gray-500 bg-black p-4 rounded">
-        <summary className="cursor-pointer mb-2">Ver JSON resultante</summary>
-        <pre>{JSON.stringify(form, null, 2)}</pre>
+      {/* --- DEBUG & EXPORT --- */}
+      <details className="group border border-gray-800 rounded-xl overflow-hidden bg-black mt-8">
+        <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-900 transition-colors">
+          <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-500 group-open:text-cyan-500">
+            <FileJson size={16} /> Ver / Exportar JSON
+          </span>
+          <span className="text-[10px] text-gray-600">Click para desplegar</span>
+        </summary>
+        
+        <div className="relative bg-[#050505] p-6 border-t border-gray-800">
+          
+          {/* Botón de Copiar (Flotante) */}
+          <button
+            onClick={handleCopyJson}
+            className={`
+              absolute top-4 right-4 flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-bold uppercase tracking-wider transition-all
+              ${copied 
+                ? "bg-green-500/10 border-green-500 text-green-500" 
+                : "bg-gray-800 border-gray-700 text-gray-400 hover:text-white hover:border-gray-500"
+              }
+            `}
+          >
+            {copied ? <Check size={14} /> : <Copy size={14} />}
+            {copied ? "Copiado!" : "Copiar JSON"}
+          </button>
+
+          {/* El JSON */}
+          <pre className="text-xs font-mono text-green-400/80 overflow-x-auto whitespace-pre-wrap max-h-96 pr-28">
+            {JSON.stringify(form, null, 2)}
+          </pre>
+        </div>
       </details>
     </div>
   )
