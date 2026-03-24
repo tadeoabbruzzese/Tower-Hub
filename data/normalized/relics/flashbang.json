@@ -1,0 +1,13 @@
+{
+  "name": "Flashbang",
+  "description": "Throw a flashbang forwards, causing a 2.5-second AoE flash effect upon hitting the ground.",
+  "rarity": "C",
+  "image": "",
+  "advancements": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ]
+}

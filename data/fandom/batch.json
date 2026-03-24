@@ -1,0 +1,708 @@
+[
+  {
+    "id": "agleia",
+    "simulacrumName": "Agleia",
+    "weaponName": "Chrono Heart",
+    "rarity": "SSR",
+    "releaseDate": "",
+    "description": "Before the Cataclysm, Agleia ran away from home after a disagreement with her father. She took part in the Wednesday's operation to steal Aurora's classified documents. After the incident, she was sent to Kailo, which allowed her to escape the Cataclysm itself. But, in doing so, she lost nearly everyone she held dear.",
+    "element": "Frost/Volt",
+    "resonance": "Attack",
+    "shatter": 16,
+    "charge": 14,
+    "trait": {
+      "title": "Virtual Carry",
+      "description": "Increase final damage by 18%. Reduces stamina cost of flying around using Cluster Computation by 50%. Domain Veil's aim mode no longer costs stamina."
+    },
+    "images": {
+      "character": "https://static.wikia.nocookie.net/toweroffantasy/images/f/fc/Simulacrum_Agleia_Prototype.png/revision/latest/scale-to-width-down/267?cb=20260316152948",
+      "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/9/9a/Icon_Item_Chrono_Heart.png/revision/latest/scale-to-width-down/268?cb=20260316152728",
+      "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/9/9e/Icon_Matrix_Agleia.png/revision/latest/scale-to-width-down/268?cb=20260322165046"
+    },
+    "attacks": [
+      {
+        "title": "Protocol Decryption",
+        "description": "Press Normal Attack to launch four consecutive strikes while on the ground.\nFirst strike: Deals damage equal to 739% of ATK + 693 to targets and causes a short hitstun to those without Hyperbody;\nSecond strike: Deals damage equal to 1,024% of ATK + 961 to targets and slightly knocks back those without Hyperbody;\nThird strike: Deals damage equal to 985% of ATK + 924 to targets and slightly knocks back those without Hyperbody;\nFourth strike: Deals damage equal to 1,387% of ATK + 1,302 to targets and knocks back those without Hyperbody.\nUsing Protocol Decryption's second, third, and fourth strikes grants 2 Encrypted Data if Hostile Intruder is active. Press Normal Attack during the fourth strike to cancel the attack wind-down and launch the second strike."
+      },
+      {
+        "title": "Process Injection",
+        "description": "Press Normal Attack while airborne and Super Administrator is active to unleash three consecutive strikes in mid-air.\nFirst strike: Deals damage up to 2,003% of ATK + 1,880 to targets and causes a short hitstun to those without Hyperbody;\nSecond strike: Deals damage up to 1,860% of ATK + 1,745 to targets and knocks them back.\nThird strike: Deals damage up to 1,947% of ATK + 1,827 to targets and knocks them up.\nUsing Process Injection's first, second, and third strikes consumes 1 Target Address. If Super Administrator is active, press Normal Attack during the third strike to cancel the attack wind-down and launch the first strike"
+      },
+      {
+        "title": "Hot Patch Bomb",
+        "description": "Press Normal Attack while airborne, or use Normal Attack while climbing, jumping backward, or using Jetpack to trigger Falling Attack Hot Patch Bomb.\nDuring the fall, each hit on the target deals damage equal to 139% of ATK + 130.Upon landing, deals damage equal to 1,802% of ATK + 1,691 to nearby targets."
+      },
+      {
+        "title": "Domain Veil",
+        "description": "Hold Normal Attack while airborne and when Super Administrator is inactive to enter Aim Mode. Aim Mode consumes Endurance and locks onto targets within line of sight.\nIn Aim Mode movement is directed toward the aiming direction. A significant amount of Endurance is consumed when releasing Normal Attack without a locked target. A small amount of Endurance is consumed to inflict Digital Camouflage on a locked target. The ability tracks and redirects to the target's location while continuously consuming Endurance.\nSpecial Skill deactivates Digital Camouflage. It detonates System Loopholes on nearby enemies. It deals damage equal to 554% of ATK + 520. It ends target tracking and teleports the caster to the nearest reachable location.\nDigital Camouflage ends if the tracked player also enters Digital Camouflage. It ends if their Endurance is depleted. It ends if the tracked target is defeated or destroyed."
+      }
+    ],
+    "dodges": [
+      {
+        "title": "Address Spoofing",
+        "description": "Triggers Phantasia upon dodging before being hit, slowing the action speed of targets within range. Grants immunity to hitstun while dodging.\nInterrupts the Normal Attack sequence temporarily upon casting Address Spoofing during Protocol Decryption or Process Injection. The original sequence then determines the action during the upcoming Command Reload."
+      },
+      {
+        "title": "Command Reload",
+        "description": "Press Normal Attack during the short period after dodging to trigger Command Reload:\nIf there's no log from Address Spoofing and Super Administrator is inactive, the character will launch Protocol Decryption's first strike or Hot Patch Bomb depending on whether they are airborne or on the ground.\nIf there's no log from Address Spoofing and Super Administrator is active, the character will launch Process Injection's first strike.\nIf there's a Protocol Decryption log from Address Spoofing, the character will launch the next strike in the logged Protocol Decryption sequence.\nIf there's a Process Injection log from Address Spoofing and Super Administrator is active, the character will launch the next strike in the logged Process Injection sequence.\nIf there's a Process Injection log from Address Spoofing and Super Administrator is inactive, the character will launch Hot Patch Bomb."
+      },
+      {
+        "title": "Cluster Computation",
+        "description": "Hold Dodge during the perfect dodge window (using a directional dodge) to activate Cluster Computation and take flight (not applicable in Apex League). Use directional buttons to move in the air, continuously consuming Stamina; the character will hover in place if the buttons are released. Hold Jump to ascend quickly at an increased Stamina cost. The character is unaffected by any Speed bonuses while flying.\nPress Dodge during Cluster Computation flight to descend. Press Normal Attack during Cluster Computation flight while Super Administrator is active to launch Process Injection. Press Normal Attack during Cluster Computation flight while Super Administrator is inactive to launch Hot Patch Bomb."
+      }
+    ],
+    "skills": [
+      {
+        "title": "Data Vortex",
+        "description": "Deals damage equal to 3,000% of ATK + 18,947 to targets in range and inflicts Force Impact on them.\nGrants Hyperbody for 25s and activates Hostile Intruder lasting for 25s. Cooldown: 25s.\nHostile Intruder grants 2 Encrypted Data upon the second, third, and fourth strike of Protocol Decryption.\nPermission Breach unlocks upon collecting 18 Encrypted Data. Press Normal Attack during Data Vortex to cancel the wind-down and launch Protocol Decryption's second strike.\nDeactivates Hostile Intruder and Permission Breach, and clears all Encrypted Data when Chrono Heart is switched to the off-hand slot."
+      },
+      {
+        "title": "Permission Breach",
+        "description": "Deals damage equal to 3,600% of ATK + 22,737 to targets in range and upgrades Hostile Intruder to Super Administrator, granting 12 Target Addresses. This skill will be removed upon taking effect. Press Normal Attack during Permission Breach while Super Administrator is active to cancel the skill wind-down and launch Process Injection.\nWhile Super Administrator is active, aerial attack upgrades to Process Injection. The first, second, and third strikes of Process Injection consume 1 Target Address upon hit. Grants 3 stacks of DLL Hijack, up to 6, for every 6 Target Addresses consumed. Every 3 stacks of DLL Hijack grants 1 use of Data Current.\nDeactivates 'Super Administrator', clears remaining 'Target Addresses' and 'DLL Hijack' stacks, and revokes 'Data Current' permissions when 'Chrono Heart' is switched to the off-hand slot."
+      },
+      {
+        "title": "Data Current",
+        "description": "Deals damage equal to 3,900% of ATK + 24,632 to targets in range. This skill removes 3 stacks of DLL Hijack upon use. While Super Administrator is active, press Normal Attack during Data Current to cancel the skill wind-down and launch Process Injection.\nPress Normal Attack while airborne and Super Administrator is active to unleash three consecutive strikes in mid-air.\nFirst strike: Deals damage up to 2,003% of ATK + 12,651 to targets and causes a short hitstun to those without Hyperbody\nSecond strike: Deals damage up to 1,860% of ATK + 11,747 to targets and knocks them back.\nThird strike: Deals damage up to 1% of ATK + 9 to targets and knocks them up."
+      }
+    ],
+    "discharges": [
+      {
+        "title": "Recursive Storm",
+        "description": "When weapon charge is full or Phantasia is triggered, switching to this weapon removes all debuffs from the caster and deals damage equal to 9,702% of ATK plus 9,105 to enemies in front. Also grants immunity for 5.4 seconds (not applicable in Apex League; removed when the Discharge Skill is cancelled).\nPress Skill during the short window after triggering this Discharge Skill to cancel it early and cast Data Vortex if it isn't on cooldown."
+      }
+    ],
+    "scaling": "ATK_HP_CRIT",
+    "passives": [
+      {
+        "title": "Force Impact",
+        "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+      },
+      {
+        "title": "Fusion of Frost and Volt",
+        "description": "When the weapon deals damage, damage is calculated using the highest equipped frost/volt base ATK, the highest equipped frost/volt ATK percentage, and the highest equipped frost/volt damage boost, and the weapon is considered both a frost and volt weapon."
+      },
+      {
+        "title": "Frost Resonance",
+        "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. (Cannot stack with other Frost Resonance or Frost Reaction effects. Frost Resonance takes priority)."
+      },
+      {
+        "title": "Volt Resonance",
+        "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. (Cannot stack with other Volt Resonance or Volt Reaction effects. Volt Resonance takes priority)."
+      },
+      {
+        "title": "Zero Breach: On-field",
+        "description": "Deals damage equal to 256% of frost ATK plus 3.6% of your Max HP plus 133% of the sum of all the Wanderer's resistance types plus 4.9% of Crit Damage after landing any hit with Chrono Heart. This effect can be triggered up to 1 time every 1.5s. This damage counts as normal attack damage. If there is 1 flame/physical weapon of any kind equipped, this damage is multiplied by 1.3 times. In addition, Zero Breach damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+      }
+    ],
+    "advancements": [
+      "Increases Frost Damage by 9%. Launching the second, third, and fourth strikes of Protocol Decryption now grants 3 Encrypted Data instead of 2. Increases Data Vortex's damage multiplier to 5,400%.",
+      "Increases the current weapon's Base ATK growth by 16%.",
+      "Ignores 25% of the target's Resistances (up to 50% for any single Element) upon dealing damage. Recovers 5% of Max HP when Super Administrator is active.",
+      "Increases the current weapon's Base ATK growth by 32%.",
+      "Increases Frost Damage by 9%. Doubles the Target Addresses cost by the first, second, and third strikes of Process Injection. Increases Permission Breach's damage to 6,900%.",
+      "Increases Final Damage by 30% and Frost Damage by 9%. Chrono Heart's skills inflict a 2-second Freeze upon enemies on hit, as well as a 99% Phantasia Slow (only on monsters)."
+    ],
+    "matrices": {
+      "pc2": "Increases Frost ATK by 26% / 28% / 30% / 32% and Data Current's damage multiplier to 8100%.Active in the off-hand slot, and the only highest star rating effect is applied.",
+      "pc4": "Increases Frost damage by 35% / 46% / 58% / 70%. Equipping Chrono Heart grants an additional 15% Final Damage. Active in the off-hand slot, and the only highest star rating effect is applied."
+    },
+    "source": {
+      "simulacrumPage": "Agleia",
+      "weaponPage": "Chrono Heart",
+      "matrixPage": "Agleia (Matrix Set)",
+      "releaseVersion": "5.7",
+      "scrapedAt": "2026-03-23T23:31:00.352Z"
+    }
+  },
+  {
+    "id": "antoria",
+    "simulacrumName": "Antoria",
+    "weaponName": "Requiem",
+    "rarity": "SSR",
+    "releaseDate": "",
+    "description": "As Commander of the Second Army Corps and head of the Temporal Anomaly Response Force within the Norns Federation, she carries the weight of a mission that transcends time itself. Tasked with the delicate operation of Reality Reshaping, a military endeavor designed to eliminate temporal anomalies threatening the Aida world, she answers to Kira, the Federation's leader.",
+    "element": "Volt/Frost",
+    "resonance": "Attack",
+    "shatter": 16,
+    "charge": 14,
+    "trait": {
+      "title": "Reshaping the Future",
+      "description": "Increase final damage by 18%. When equipping Requiem, each Volt weapon grants 5% Volt Damage bonus."
+    },
+    "images": {
+      "character": "https://static.wikia.nocookie.net/toweroffantasy/images/4/44/Simulacrum_Antoria_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250218100510",
+      "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/9/9f/Icon_Weapon_Requiem.png/revision/latest/scale-to-width-down/268?cb=20250219130532",
+      "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/8/8a/Icon_Matrix_Antoria.png/revision/latest/scale-to-width-down/268?cb=20250219201112"
+    },
+    "attacks": [
+      {
+        "title": "General Attack - A",
+        "description": "While on the ground, use normal attack to launch five consecutive strikes.\nFirst strike: Deals 246% of ATK +13 damage, knocking targets back.\nSecond strike: Deals 408% of ATK +21 damage, knocking targets back.\nThird strike: Deals 420% of ATK +22 damage, knocking targets up.\nFourth strike: Deals 522% of ATK +27 damage, drawing in targets.\nFifth strike: Deals 890% of ATK +47 damage, knocking targets up.\nDuring Skill - Alpha Attack, the scouting ability of the first, third, and fifth normal attacks is enhanced."
+      },
+      {
+        "title": "General Attack - B",
+        "description": "While airborne, use a normal attack to unleash five consecutive strikes, consuming Endurance.\nFirst strike: Deals 221% of ATK +12 damage, knocking targets back.\nSecond strike: Deals 367% of ATK +19 damage, knocking targets back.\nThird strike: Deals 378% of ATK +20 damage, knocking targets up.\nFourth strike: Deals 470% of ATK +25 damage, drawing in targets.\nFifth strike: Deals 728% of ATK +38 damage, knocking targets up."
+      },
+      {
+        "title": "Special Attack - Thunderbringer",
+        "description": "While on the ground, for the first to fourth normal attacks, hold the normal attack button to trigger the Special Attack – Thunderbringer.\nDeals 270% of ATK +14 damage to nearby enemies."
+      },
+      {
+        "title": "Alpha Attack - B",
+        "description": "While airborne and enhanced, use a normal attack to launch five consecutive strikes, consuming Endurance.\nFirst strike: Deals 234% of ATK +12 damage, knocking targets up.\nSecond strike: Deals 282% of ATK +15 damage, knocking targets back.\nThird strike: Deals 383% of ATK +20 damage, knocking targets back.\nFourth strike: Deals damage up to 363% of ATK +19, knocking targets back.\nFifth strike: Deals 535% of ATK +28 damage, knocking targets back."
+      },
+      {
+        "title": "Special Attack - Rainstorm",
+        "description": "Can be activated by consuming Alpha Energy during Skill - Alpha Attack. While airborne or using the first to fifth normal attacks in air, hold the normal attack button to trigger Special Attack - Rainstorm, consuming 1 Alpha Energy.\nDeals 7800% of ATK +411 damage to nearby enemies (counts as skill damage)."
+      },
+      {
+        "title": "General Attack - Lightning Strike",
+        "description": "While airborne, hold the normal attack button, or use normal attack while climbing, jumping backward, or using the Jetback to trigger General Attack – Lightning Strike.\nDuring the fall, each hit on the target deals 178% of ATK +9 damage. Upon landing, deal damage equal to 502% of ATK +26 damage.\nWhen possessing Alpha Energy upon landing, consumes 1 Alpha Energy to deal 6900% of ATK +363 damage (counts as skill damage) and restore 1 Dodge attempt. During Skill - Alpha Attack, the skill's scouting ability is enhanced."
+      }
+    ],
+    "dodges": [
+      {
+        "title": "Guerilla Attack - Cirrus",
+        "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger a pre-dodge attack, dealing damage up to 389% of ATK plus 20 to targets ahead.\nWhen possessing Alpha Energy, consumes 1 Alpha Energy to deal 6900% of ATK +363 damage (counts as skill damage) and restore 1 Dodge attempt. During Skill - Alpha Attack, the skill's scouting ability is enhanced."
+      },
+      {
+        "title": "Guerilla Attack - Typhoon",
+        "description": "Using a normal attack shortly after dodging triggers a post-dodge attack, dealing up to 714% of ATK +38 damage to enemies in front (counts as skill damage). Restores 1 dodge attempt.\nWhen possessing Alpha Energy, consumes 1 Alpha Energy to deal 6900% of ATK +363 damage (counts as skill damage) and restore 1 Dodge attempt."
+      },
+      {
+        "title": "Highspeed Cruise Mode - Cloud",
+        "description": "Hold the dodge button within the perfect dodge window (use the movement button before dodging) to activate Highspeed Cruise Mode - Cloud (not applicable in Apex League), continuously consuming Endurance. While in Highspeed Cruise Mode - Cloud, holding the jump button enables rapid ascent at an increased Endurance cost, and the Wanderer is unaffected by any Speed bonuses."
+      }
+    ],
+    "skills": [
+      {
+        "title": "Extreme Attack Switch - Thunderclap",
+        "description": "Activating Alpha Attack deals 1500% of ATK +79 damage to nearby enemies, granting temporary Invincibility, 4% Volt Damage bonus, 10% Final Damage bonus, and Hyperbody for 20 seconds.\nIf Requiem is equipped in the main slot, enabling Alpha Charge grants 1 Alpha Energy every 8 seconds, up to 4 Energy. However, Alpha Charge and Alpha Energy will be removed when Alpha Attack is deactivated or when Requiem is switched to the off-hand slot. Additionally, during Alpha Attack, upon first acquisition of Alpha Energy, grants a casting attempt for Extreme Attack - Windward (can only be cast during Alpha Attack). Switching weapons prevents acquiring and using Extreme Attack - Windward.\nIf Requiem is equipped in the off-hand slot during Alpha Attack, S.A.S Support Strike automatically attacks nearby enemies every 5 seconds, dealing 2,100% of ATK Volt Damage (counts as skill damage). Cooldown: 20 seconds (not affected by cooldown reduction, resetting, or changes)."
+      },
+      {
+        "title": "Extreme Attack - Windward",
+        "description": "Can be activated during Skill - Alpha Attack. Deals 1259% of ATK +66 damage to nearby enemies.\nWhen possessing Alpha Energy, consumes 1 Alpha Energy to deal 7200% of ATK +379 damage (counts as skill damage)."
+      }
+    ],
+    "discharges": [
+      {
+        "title": "Ultra Attack - Cataclysm",
+        "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon from another, removes all debuffs from the Wanderer, dealing 4500% of ATK +237 damage to nearby enemies. During the skill, gains damage immunity for 1.5 seconds (not applicable in Apex League)."
+      }
+    ],
+    "scaling": "ATK_HP_CRIT",
+    "passives": [
+      {
+        "title": "Force Impact",
+        "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+      },
+      {
+        "title": "Fusion of Frost and Volt",
+        "description": "When the weapon deals damage, damage is calculated using the highest equipped volt/frost base ATK, the highest equipped volt/frost ATK percentage, and the highest equipped volt/frost damage boost, and the weapon is considered both a volt and frost weapon."
+      },
+      {
+        "title": "Volt Resonance",
+        "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. Cannot stack with other Volt Resonance or Volt Reaction effects, with Volt Resonance taking precedence."
+      },
+      {
+        "title": "Frost Resonance",
+        "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. Cannot stack with other Frost Resonance or Frost Reaction effects, with Frost Resonance taking precedence."
+      },
+      {
+        "title": "Nimbus: Unload",
+        "description": "After using Extreme Attack Switch - Thunderclap, deals damage equal to 137% of Volt ATK + 19.5% of the caster’s Max HP + 70% of the sum of all elemental resistances + 264% of Crit to the target every second for 30 seconds. Multiple Unload damages do not stack; and Nimbus damage is counted as skill damage. If any 1 Flame/Physical weapon is equipped, Nimbus damage is boosted by a factor of 1.3. Nimbus damage is unaffected by other damage bonuses, except for rare stats from Titan equipment, and will not trigger additional attack effects."
+      }
+    ],
+    "advancements": [
+      "During Alpha Attack mode, the Alpha Energy acquisition interval is reduced to 4 seconds, and the S.A.S Support Strike trigger interval is reduced to 3 seconds.",
+      "Increase the current weapon's base ATK growth by 16%.",
+      "Ignore 15% of the target’s Volt Resistance (effect applies in off-hand slot). Total resistance ignored by each element cannot exceed 50%. When consuming Alpha Energy, increases movement speed by 15% for 10 seconds (Unstackable).",
+      "Increase the current weapon's base ATK growth by 32%.",
+      "Consumes Alpha Energy to restore 15% of the caster’s Max HP. Activating Skill - S.A.S Support Strike restores an additional 10% of the caster’s Max HP. Enhanced skills consuming Alpha Energy apply an additional 3-second 65% Delay effect to the target (Unstackable; does not apply in team status).",
+      "Increases Volt Damage bonus from Skill - Extreme Attack Switch - Thunderclap to 28% and when casting Skill - S.A.S Support Strike on multiple targets, deals an additional 15% damage."
+    ],
+    "matrices": {
+      "pc2": "Increases Volt Attack by 24% / 26% / 28% / 30%. Increases S.A.S Support Strike damage to 2,700% of ATK. Reduces endurance consumption for Dodge - Highspeed Cruise Mode - Cloud by 20%. This effect applies in the off-hand slot, and only the set with the highest star rating takes effect.",
+      "pc4": "Increases Volt Damage by 18% / 22% / 26% / 30%. When equipping Requiem, increases Final Damage by 12%. This set effect applies in the off-hand slot, and only the set with the highest star rating takes effect."
+    },
+    "source": {
+      "simulacrumPage": "Antoria",
+      "weaponPage": "Requiem",
+      "matrixPage": "Antoria (Matrix Set)",
+      "releaseVersion": "4.7",
+      "scrapedAt": "2026-03-23T23:31:08.254Z"
+    }
+  },
+  {
+    "id": "carrot",
+    "simulacrumName": "Carrot",
+    "weaponName": "SLAP",
+    "rarity": "SSR",
+    "releaseDate": "",
+    "description": "Unexpected Guests from Kailo. After the Asher was attacked by an unknown force, one of its crew members, Carrot, escaped in an escape pod and accidentally crashed-landed in Aesperia's Banges. There, she was found by Hilda.",
+    "element": "Flame/Physical",
+    "resonance": "Attack",
+    "shatter": 16,
+    "charge": 14,
+    "trait": {
+      "title": "Carrot Seed",
+      "description": "Increase final damage by 18%. SLAP casts Dodge: Haaa-yaa! with no cooldown remaining."
+    },
+    "images": {
+      "character": "https://static.wikia.nocookie.net/toweroffantasy/images/e/e8/Simulacrum_Carrot_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250303074606",
+      "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/3/32/Icon_Weapon_SLAP.png/revision/latest/scale-to-width-down/268?cb=20250326065145",
+      "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/1/1b/Icon_Matrix_Carrot.png/revision/latest/scale-to-width-down/268?cb=20250327153123"
+    },
+    "attacks": [
+      {
+        "title": "Tornado SLAP",
+        "description": "Use normal attack to launch 5 consecutive attacks while on the ground.\nFirst Attack: Deals damage equal to 277% of ATK plus 15 and knocks the target back.\nSecond Attack: Deals damage equal to 509% of ATK plus 27 and knocks the target back.\nThird Attack: Deals damage equal to up to 254% of ATK plus 13 and knocks the target back.\nFourth Attack: Deals damage up to 1,155% of ATK plus 61 and knocks the target back.\nFifth Attack: Deals damage equal to 974% of ATK plus 51 and knocks the target back."
+      },
+      {
+        "title": "Soaring Palm",
+        "description": "While the Wanderer is airborne, use normal attack to launch 5 consecutive attacks in mid-air, consuming END.\nFirst Attack: Deal damage equal to 437% ATK plus 23 damage, and knock the target back.\nSecond Attack: Deal damage equal to 462% ATK plus 24 damage, and knock the target back.\nThird Attack: Deal damage equal to 1,194% ATK plus 63 damage, and knock the target back.\nFourth Attack: Deal damage equal to 616% ATK plus 32 damage, and knock the target back.\nFifth Attack: Deal damage equal to 1,487% ATK plus 78 damage, and knock the target back."
+      },
+      {
+        "title": "Lucky Wheel",
+        "description": "Tap and hold normal attack during the 1st to 4th normal attacks to trigger Lucky Wheel while on the ground.\nSLAP transforms to unleash Suppressing Fire in a cone-shaped area in front, dealing damage equal to up to 1,398% of ATK plus 74."
+      },
+      {
+        "title": "Frenzy Smack",
+        "description": "Tap and hold normal attack to trigger Frenzy Smack while on the ground.\nFires a shot in the aimed direction, dealing damage equal to 77% of ATK plus 4 to the target with each hit."
+      },
+      {
+        "title": "Super Glide",
+        "description": "Tap and hold normal attack while airborne (tap when a target is available), or use normal attack while climbing, jumping backward, or using a Jetpack to trigger Super Glide.\nFalls down from mid-air. During the course of landing, each hit on an enemy deals damage equal to 308% of ATK plus 16. Deals damage equal to 616% of ATK plus 32 to nearby targets after landing."
+      }
+    ],
+    "dodges": [
+      {
+        "title": "Dodge",
+        "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area. Become immune to hitstun while dodging."
+      },
+      {
+        "title": "Spinning Strike",
+        "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger Spinning Strike, dealing damage equal to 744% of ATK plus 39 to targets ahead."
+      },
+      {
+        "title": "Recoil Rush",
+        "description": "Use normal attack during the short period after dodging to trigger Recoil Rush, dealing damage equal to 616% of ATK plus 32 to targets ahead."
+      },
+      {
+        "title": "Flap & SLAP",
+        "description": "Hold Dodge to trigger Flap & SLAP, flying horizontally with SLAP."
+      },
+      {
+        "title": "Haaa-yaa!",
+        "description": "Tap and hold normal attack right after dodging to trigger Haaa-yaa! Aim the projection direction by rotating, then release normal attack to launch yourself."
+      }
+    ],
+    "skills": [
+      {
+        "title": "Carrot Kombat",
+        "description": "Deals damage equal to 4,189% of ATK plus 220 to nearby targets. Cooldown: 25s (not affected by other cooldown clearing, resetting, or changing effects). Increases flame damage by 11% for 25s after casting Carrot Kombat, inflicting the locked target with Carrot Grenade for 25s. Launches a Loud Slap at the target with Carrot Grenade for every 60 instances of flame damage they take, dealing a large AoE explosion damage equal to 7,700% of ATK. Triggers up to twice."
+      }
+    ],
+    "discharges": [
+      {
+        "title": "Full Assault",
+        "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon from another, removes all debuffs from the Wanderer, dealing 4,404% of ATK +232 damage to nearby enemies. During the skill, gains damage immunity for 1.5 seconds (not applicable in Apex League)."
+      }
+    ],
+    "scaling": "ATK_HP_CRIT",
+    "passives": [
+      {
+        "title": "Armor Dissolve",
+        "description": "When the weapon is fully charged, the next attack inflicts Armor Dissolve on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+      },
+      {
+        "title": "Fusion of Flame and Mass",
+        "description": "When the weapon deals damage, damage is calculated using the highest equipped physical/flame base ATK, the highest equipped physical/flame ATK percentage, and the highest equipped physical/flame damage boost, and the weapon is considered both a physical and flame weapon."
+      },
+      {
+        "title": "Physical Resonance",
+        "description": "Increases physical ATK by 15% and physical resistance by 25%. Activated by equipping 2 or more physical weapons. This set effect works in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects, with Physical Resonance taking precedence."
+      },
+      {
+        "title": "Flame Resonance",
+        "description": "Increases flame ATK by 15% and flame resistance by 25%. Activated by equipping 2 or more flame weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence."
+      },
+      {
+        "title": "Combustion: Swift Cut",
+        "description": "When SLAP is equipped, any weapon's discharge skill will deal damage equal to 73.2% of Flame ATK plus 1% of Max HP plus 36.6% of the sum of all the Wanderer's resistance types plus 134.3% of crit to nearby targets. While in combat, after every 0.5s, the next Swift Cut damage will be increased by an additional 1 time, up to a maximum of 30 times. When multiple Swift Cut damages exist, the highest initial value is used for calculation. Swift Cut damage is counted as discharge skill damage. If there is 1 frost/volt weapon of any kind equipped, Combustion damage is increased to 1.3 times. In addition, Combustion damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+      }
+    ],
+    "advancements": [
+      "Reduces the required flame damage taken to trigger Loud Slap to 45 times(s), while increasing the maximum trigger attempts to 3.",
+      "Increase the current weapon's base ATK growth by 16%.",
+      "Ignores 15% of target's resistances (each element's total resistance ignored cannot exceed 50%. SLAP's firearm attacks reduce enemy's speed by 70%for 0.2s. Does not apply to PvP or against Bosses.",
+      "Increase the current weapon's base ATK growth by 32%.",
+      "Loud Slap restores the your HP equal to the number of targets hit x 20%.",
+      "Increase final damage by 24%. Deals an additional strike in a small area to targets hit by Loud Slap, dealing damage equal to 1,050% of ATK."
+    ],
+    "matrices": {
+      "pc2": "Increases flame ATK by 26% / 28% / 30% / 32% and Loud Slap damage to 9800%. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect.",
+      "pc4": "Increases Flame damage by 24% / 28% / 32% / 36%. Increases final damage by an extra 10% for 30s after casting Carrot Kombat. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect."
+    },
+    "source": {
+      "simulacrumPage": "Carrot",
+      "weaponPage": "SLAP",
+      "matrixPage": "Carrot (Matrix Set)",
+      "releaseVersion": "4.8",
+      "scrapedAt": "2026-03-23T23:31:06.545Z"
+    }
+  },
+  {
+    "id": "hipper",
+    "simulacrumName": "Hipper",
+    "weaponName": "AF-010 Servion",
+    "rarity": "SSR",
+    "releaseDate": "",
+    "description": "The youngest captain in the Hope Fleet and an elite from the OreZero Zone. Though still a rookie within the Fleet, people easily find themselves compelled by her decisive, commanding presence to follow orders without question.",
+    "element": "Volt/Frost",
+    "resonance": "Attack",
+    "shatter": 16,
+    "charge": 14,
+    "trait": {
+      "title": "",
+      "description": ""
+    },
+    "images": {
+      "character": "https://static.wikia.nocookie.net/toweroffantasy/images/5/5b/Simulacrum_Hipper_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250717084500",
+      "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/3/37/Icon_Weapon_AF-010_Servion.png/revision/latest/scale-to-width-down/268?cb=20250717082047",
+      "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/f/f3/Icon_Matrix_Hipper.png/revision/latest/scale-to-width-down/268?cb=20250721002621"
+    },
+    "attacks": [
+      {
+        "title": "Swift Pursuit",
+        "description": "While on the ground, use normal attack to launch five consecutive strikes.\nFist strike: Deals 151% of ATK + 954 damage.\nSecond strike: Deals up to 333% of ATK + 2,103 damage.\nThird strike: Deals up to 950% of ATK + 6,000 damage.\nFourth strike: Deals up to 916% of ATK + 5,785 damage, launching the target.\nFifth strike: Deals up to 832% of ATK + 5,255 damage launching the target."
+      },
+      {
+        "title": "Swift Pierce",
+        "description": "While airborne, use a normal attack to unleash five consecutive strikes, consuming endurance.\nFirst strike: Deals up to 151% of ATK + 954 damage.\nSecond strike: Deals up to 333% of ATK + 2,103 damage.\nThird strike: Deals up to 950% of ATK + 6,000 damage.\nFourth strike: Deals up to 916% of ATK + 5,785 damage, knocking the target back.\nFifth Strike: Deals up to 832% of ATK + 5,255 damage, knocking the target back."
+      },
+      {
+        "title": "March Sync",
+        "description": "While on the ground and under the Joint Combat, use the normal attack to launch five consecutive enhanced strikes.\nFirst strike: Deals 454% of ATK + 2,867 damage, knocking the target back a short distance.\nSecond strike: Deals up to 998% of ATK + 6,303 damage, knocking the target back a short distance.\nThird strike: Deals up to 2,160% of ATK + 13,642 damage, knocking the target back a short distance.\nFourth strike: Deals up to 2,298% of ATK + 14,514 damage, launching the target.\nFifth strike: Deals up to 2,614% of ATK + 16,509 damage, launching the target."
+      },
+      {
+        "title": "Aerial Aria",
+        "description": "While airborne and under the Joint Combat, use a normal attack to launch five consecutive strikes, consuming Endurance.\nFirst strike: Deals 454% of ATK + 2,867 damage, knocking the target back a short distance.\nSecond strike: Deals up to 998% of ATK + 6,303 damage, knocking the target back a short distance.\nThird strike: Deals up to 2,160% of ATK + 13,642} damage, knocking the target back a short distance.\nFourth strike: Deals up to 2,298% of ATK + 14,514 damage, knocking the target back.\nFifth strike: Deals up to 2,614% of ATK + 16,509 damage, knocking the target back."
+      },
+      {
+        "title": "Stride Lance",
+        "description": "While on the ground, tap and hold the normal attack button during the first to third normal attacks to trigger Stride Lance, Danges to the front of the target, dealing 2,298% of ATK plus 14,514 damage."
+      },
+      {
+        "title": "Starfall Moon",
+        "description": "Tap and hold normal attack while airborne, or use normal attack while climbing, jumping backwards, or using Jetback to trigger Starfall Moon. During the fall, each hit on the target deals 130% of ATK + 821 damage. Upon landing, deal damage equal to 518% of ATK + 3,272 damage to nearby targets."
+      }
+    ],
+    "dodges": [
+      {
+        "title": "Dodge",
+        "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area.\nBecome immune to hitstun while dodging."
+      },
+      {
+        "title": "Bolt Thrust",
+        "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger Bold Thrust, dealing up to 743% of ATK plus 4,693 damage to enemies in front."
+      },
+      {
+        "title": "Blink Strike",
+        "description": "Use normal attack during the short period after dodging to trigger Blink Strike, dealing up to 743% of ATK plus 4,693 damage to enemies in front."
+      },
+      {
+        "title": "Spiral Waltz",
+        "description": "When Instant Raid effect is active, using a normal attack during dodge attack triggers a Spiral Waltz, dealing up to 2,799% of ATK plus 17,678 damage to enemies in front (counts as skill damage). And using a normal attack while casting Spiral Waltz triggers the fifth enhanced normal attack effect."
+      }
+    ],
+    "skills": [
+      {
+        "title": "Field Sync",
+        "description": "Grants temporary invincibility and deals 3,007% of ATK plus 18,992 damage to nearby targets, then enters Joint Combat status for 22 seconds (Cooldown: 21s). Joint Combat: Grants Hyperbody. When AF-010 Servion is equipped, normal attacks are replaced by March Sync, summoning a mecha to assist in combat and providing additional strike instances. After entering Joint Combat for 9 seconds, gains the Instant Raid effect, enabling the dodge attack skill Spiral Waltz and unlocking the Swish Combo. (Switching AF-010 Servion to the off-hand slot removes both Joint Combat and Instance Raid.)"
+      },
+      {
+        "title": "Swish Combo",
+        "description": "Can be activated during the Instant Raid. Deals damage up to 6,048% of ATK plus 38,198 damage to nearby targets. Removes Instant Raid and Joint Combat effects when the skill ends."
+      }
+    ],
+    "discharges": [
+      {
+        "title": "Savage Spiral",
+        "description": "When the weapon charge is full or Phantasia is triggered, upon switching to this weapon, removes all debuffs from the Authorizer, dealing damage up to 7,344% of ATK plus 46,383 to all targets in front. During this period, gains damage immunity for 1.5 seconds (unavailable in Apex League)."
+      }
+    ],
+    "scaling": "ATK_HP_CRIT",
+    "passives": [
+      {
+        "title": "Force Impact",
+        "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+      },
+      {
+        "title": "Volt-Frost Fusion",
+        "description": "When the weapon deals damage, damage is calculated using the highest equipped volt/frost base ATK, the highest equipped volt/frost ATK percentage, and the highest equipped volt/frost damage boost, and the weapon is considered both a volt and frost weapon."
+      },
+      {
+        "title": "Volt Resonance",
+        "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. Cannot stack with other Volt Resonance or Volt Reaction effects, with Volt Resonance taking precedence."
+      },
+      {
+        "title": "Frost Resonance",
+        "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. Cannot stack with other Frost Resonance or Frost Reaction effects, with Frost Resonance taking precedence."
+      },
+      {
+        "title": "Magfield: On-Field",
+        "description": "When AF-010 Servion hits a target, deals damage to nearby enemies equal to 256% of Volt ATK, plus 3.6% of the Authorizer's Max HP, plus 133% of total resistance, and 4.9% of Crit. Can trigger once every 1.5 seconds. This damage counts ad normal attack damage. For each Physical or Flame weapon equipped, On-Field damage is multiplied by 1.3. On-Field damage is unaffected by damage boosts (except rare stats from Titan Equipment) and does not trigger additional attack effects."
+      }
+    ],
+    "advancements": [
+      "Reduces the recharge time for Instant Raid from 9s to 3s. The fifth normal attack places and electrifying stack on enemies hit, which can be triggered by Swish Combo to deal 3,000% additional damage.",
+      "Increase the current weapon's base ATK growth by 16%.",
+      "Increase volt damage by 15%. Each volt damage hit grants a stack of 10% damage reduction, up to 20%, lasting 5 second(s).",
+      "Increase the current weapon's base ATK growth by 32%.",
+      "Ignores 15% of the target's Volt Resistance (each element's total resitance ignored cannot exceed 50%). Continuously restores 2% HP for a duration equal to the time AF-010 Servion was deployed on the field, triggered after switching to another weapon. Max Recovery: 40%.",
+      "Increases Final Damage by 26%. Increases Swish Combo's total damage to 12,528%."
+    ],
+    "matrices": {
+      "pc2": "Increases volt ATK by 26% / 28% / 30% / 32%. Increase the damage of AF-010 Servion's fifth normal attack to 1,588%. Increase the multiplier of the fifth enhanced normal attack to 4,990%.",
+      "pc4": "Increases Volt DMG by 11% / 13% / 15% / 17%. When equipped with AF-010 Servion, increase Crit DMG by 11% / 13% / 15% / 17% and Final DMG by 13%."
+    },
+    "source": {
+      "simulacrumPage": "Hipper",
+      "weaponPage": "AF-010 Servion",
+      "matrixPage": "Hipper (Matrix Set)",
+      "releaseVersion": "5.2",
+      "scrapedAt": "2026-03-23T23:31:03.394Z"
+    }
+  },
+  {
+    "id": "lechesis",
+    "simulacrumName": "Lechesis",
+    "weaponName": "Eternal Salvation",
+    "rarity": "SSR",
+    "releaseDate": "",
+    "description": "A sweet, gentle nurse. That's the first impression every new patient has of her. Always smiling, endlessly patient, event wit hthe most difficult cases. But give it ten minutes, and the ysoon realize how wrong they are.",
+    "element": "Flame/Physical",
+    "resonance": "Benediction",
+    "shatter": 16,
+    "charge": 14,
+    "trait": {
+      "title": "Renascence",
+      "description": "Increase final damage by 18%. Increases Flame DMG by 7% when equipped with Eternal Salvation. Grants 7% Final Damage boost. When activating non-Benediction Resonance, and grants 10,000 basica All Attack when activating Benediction Resonance."
+    },
+    "images": {
+      "character": "https://static.wikia.nocookie.net/toweroffantasy/images/c/c6/Simulacrum_Lechesis_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250728110042",
+      "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/9/96/Icon_Weapon_Eternal_Salvation.png/revision/latest/scale-to-width-down/268?cb=20250816092931",
+      "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/5/54/Icon_Item_Lechesis_%28Matrix_Set%29.png/revision/latest?cb=20250818064034"
+    },
+    "attacks": [
+      {
+        "title": "Twist Reverie",
+        "description": "While on the ground, use normal attack to launch five consecutive strikes.\nFirst strike: Deals up to 294% of ATK +15 damage, knocking targets back.\nSecond strike: Deals up to 582% of ATK +31 damage, knocking targets back.\nThird strike: Deals up to 833% of ATK +44 damage, knocking targets back.\nFourth strike: Deals up to 1,275% of ATK +67, knocking targets back.\nFifth strike: Deals up to 3,685% of ATK +194 damage, knocking targets back."
+      },
+      {
+        "title": "Aerial Prism",
+        "description": "While the Wanderer is airborne, use normal attack to launch 5 consecutive attacks in the air, consuming endurance.\nFirst strike: Deals up to 210% of ATK plus 11 and knock the target back.\nSecond strike: Deals up to 437% of ATK plus 23 and knock the target back.\nThird strike: Deals up to 833% of ATK plus 44 and knock the target back.\nFourth strike: Deals up to 1,159% of ATK plus 61 and knock the target back.\nFifth strike: Deals up to 3,422% of ATK plus 180 and knock the target back."
+      },
+      {
+        "title": "Wraith Dash",
+        "description": "Hold normal attack between the first and second ground attacks to trigger Wraith Dash. Persoms a rapid spinning slash forward, finishing with a downward diagonal strike, dealing damage equal to 1,979% of ATK plus 104 to nearby enemies."
+      },
+      {
+        "title": "Glint Assault",
+        "description": "Hold normal attack between the first and second ground attacks to trigger Glint Assault.\nDashes forward and slash after charging, dealing damage equal to 2,237% of ATK plus 118 to nearby enemies."
+      },
+      {
+        "title": "Neon Crash",
+        "description": "Hold normal attack while airborne (press when the target is available), or use normal attack while climbing, jumping backward, or using the Jetpack to trigger Neon Crash.\nPlunge from the above, dealing damage equal to 84% of ATK plus 4 to hit enemies during the plunge. Upon landing, deals damage equal to 1,196% of ATK plus 63 to nearby targets."
+      }
+    ],
+    "dodges": [
+      {
+        "title": "Dodge",
+        "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area.\nBecome immune to hitstun while dodging."
+      },
+      {
+        "title": "True Strike",
+        "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger True Strike, dealing damage up to 486% of ATK plus 26 to targets ahead."
+      },
+      {
+        "title": "Critical Flash",
+        "description": "Use normal attack during the short period after dodging to trigger Critical Flash, dealing damage up to 651% of ATK plus 34 to targets ahead."
+      }
+    ],
+    "skills": [
+      {
+        "title": "Duskwave Slash",
+        "description": "Launches enemies upward, then performs rapid consecutive slashes forward, dealing damage equal to 5,265% of ATK plus 277 to nearby enemies and inflicting Armor Dissolve. Gains the Sever! Heart Lock state, granting Hyperbody for 25s. Cooldown: 25s (This is not affected by other cooldown clearing, resetting, or changing effects).\nSever! Heart Lock Status: Hold to trigger Love Rhapsody, while in Wraith Dash. After casting Love Rhapsody, hold again under Wraith Dash to trigger Prism Tide. Aster casting Prism Tide, hold once more under Wraith Dash to trigger Radiant Shock. (The Sever! Heart Lock status is removed when switching weapons.) These special attacks can be used a total of 3 times and last for 25s.\nLove Rhapsody: Strikes forward and upward after charging, dealing damage equal to 1,820% of ATK to nearby enemies.\nPrism Tide: Strike powerfully forward and upward after charging, dealing equal to 9,450% of ATK to nearby enemies.\nRadiant Shock: Strike powerfully forward and upward after charging, dealing damage equal to 14,000% of ATK to nearby enemies."
+      }
+    ],
+    "discharges": [
+      {
+        "title": "Nightmare Crusher",
+        "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon from another, removes all debuffs from the Authorizer. Launches a heart-shaped energy wave forward, then slashes the charged wave upon full charge. The wave explodes, dealing damage equal to 5,885% of ATK +310 to nearby enemies. Gains damage immunity for 1.5s during the skill (not applicable in Apex League)."
+      }
+    ],
+    "scaling": "ATK_HP_CRIT",
+    "passives": [
+      {
+        "title": "Armor Dissolve",
+        "description": "When the weapon is fully charged, the next attack inflicts armor dissolve effect on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+      },
+      {
+        "title": "Fusion of Flame and Mass",
+        "description": "When the weapon deals damage, damage is calculated using the currently equipped weapon's highest physical/flame base ATK, the highest equipped physical/flame ATK percentage, and the highest equipped physical/flame damage boost, and the weapon is considered both a physical and flame weapon."
+      },
+      {
+        "title": "Flame Resonance",
+        "description": "Increase Flame ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Flame weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence."
+      },
+      {
+        "title": "Physical Resonance",
+        "description": "Increase Physical ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Physical weapons. This set effect works in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects, with Physical Resonance taking precedence."
+      },
+      {
+        "title": "Eternal Salvation: On-Field",
+        "description": "When landing any hit with Eternal Salvation, it deals damage to nearby targets equal to 256% of Flame ATK plus 3.6% of the Authorizer's Max HP plus 133% of the sum of all the Authorizer's Resistance Types plust 4.9% of Crit. This effect can be triggered up to once every 1.5s. The Eternal Salvation damage counts as Normal Attack damage. If there is 1 Frost/Volt weapon of any kind equipped, Eternal Salvation damage is multiplied by 1.3. In addition, Eternal Salvation damage is not affected by any damage boost effects except from Titan Equipment's rare stats."
+      },
+      {
+        "title": "Exclusive Weapon Passive",
+        "description": "Damage\nTriggers when Eternal Salvation is equipped and battle begins, dealing Flame DMG equal to 17.5% of ATK to nearby enemies every 0.5s. The effect is also active in the off-hand slot and lasts until leaving combat.\nSupport\nTriggers when Eternal Salvation is equipped and battle begins, causing Little Spring to release a light wave every 5s, restoring HP equal to 100% of ATK to allies within range. Lasts until leaving combat."
+      }
+    ],
+    "advancements": [
+      "Increases Final Damage by 8%. Little Spring's light wave deals Flame DMG equal to 21% of current attribute ATK to enemies. Eternal Salvation restores 2% HP to the caster with each normal or dodge attack.",
+      "Increase the current weapon's base ATK growth by 16%.",
+      "Unlocks Prism Tide instantly under Sever! Heart Lock status, allowing a total of 2 special attacks. Converts overhealed Little Spring's healing into a shield, up to 30% of Max HP.",
+      "Increase the current weapon's base ATK growth by 32%.",
+      "Increases Final Damage by 5%. Shortens Little Spring's Light wave interval to every 3s. When Benediction Resonance is active: targets hit by Little Spring's light wave gain Moral Booster, receiving 22% All Elemental Damage boost for 5s (Unstackable).",
+      "Increases Flame DMG by 22%. When Benediction Resonance is active, Duskwave Slash, Love Rhapsody, Prism Tide, and Radiant Shock execute enemies with less than 16% HP."
+    ],
+    "matrices": {
+      "pc2": "Increases flame ATK by 26% / 28% / 30% / 32%, and increases the damage multiplier of Radiant Shock to 19,075%. Increases healing effect by 25%. This set effect works in the off-hand slot, and only the set wit hthe highest star rating will take effect.",
+      "pc4": "Increases Flame damage by 16% / 20% / 24% / 28% when Eternal Salvation is equipped. While non-Benediction Resonance is active, increase all elemental damage by 14%.\nWhile Benediction Resonance is active, increase Final Damage equal to Lechesis' highest attribute base Attack divided by 200,000, capped at 30% across the team (Heartlight Radiance buff)"
+    },
+    "source": {
+      "simulacrumPage": "Lechesis",
+      "weaponPage": "Eternal Salvation",
+      "matrixPage": "Lechesis (Matrix Set)",
+      "releaseVersion": "5.3",
+      "scrapedAt": "2026-03-23T23:31:01.920Z"
+    }
+  },
+  {
+    "id": "lyncis",
+    "simulacrumName": "Lyncis",
+    "weaponName": "Swish",
+    "rarity": "SSR",
+    "releaseDate": "",
+    "description": "Hey hey, I'm Lyncis, your go to outdoor streamer here in the OreZero. Wanna uncover the secret of Kailo? You're in the right place. From wild tales to heartpounding expeditions, just drop a message in the chat and tell me what you want to see. Oh and I run a little shop on the side so don't forget to swing by and show some love.[...]\n--Kailo Sector Special preview",
+    "element": "Frost/Volt",
+    "resonance": "Attack",
+    "shatter": 16,
+    "charge": 14,
+    "trait": {
+      "title": "Legend Streamer",
+      "description": "Increase final damage by 18%When equipped with Swish, deals 10% increased frost damage."
+    },
+    "images": {
+      "character": "https://static.wikia.nocookie.net/toweroffantasy/images/e/eb/Simulacrum_Lyncis_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250414123906",
+      "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/a/ac/Icon_Weapon_Swish.png/revision/latest/scale-to-width-down/268?cb=20250418180842",
+      "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/9/9b/Icon_Matrix_Lyncis.png/revision/latest/scale-to-width-down/268?cb=20250418180757"
+    },
+    "attacks": [
+      {
+        "title": "Gliding Combo",
+        "description": "While on the ground, use normal attack to launch 5 consecutive attacks.\nFirst Attack: Deal damage equal to 735% of ATK plus 39 and knock the target back.\nSecond Attack: Deal damage equal to 827% of ATK plus 44 and knock the target back.\nThird Attack: Deal damage equal to 1,142% of ATK plus 60 and knock the target back.\nFourth Attack: Deal damage up to 1,620% of ATK plus 85 and knock the target back.\nFifth Attack: Deal damage equal to 2,447% of ATK plus 129 and knock the target back."
+      },
+      {
+        "title": "Leap Combo",
+        "description": "While the Wanderer is airborne, use normal attack to launch 5 consecutive attacks in the air, consuming endurance.\nFirst Attack: Deal damage equal to 689% of ATK plus 36 and knock the target back.\nSecond Attack: Deal damage equal to 827% of ATK plus 44 and knock the target back.\nThird Attack: Deal damage equal to 1,142% of ATK plus 60 and knock the target back.\nFourth Attack: Deal damage up to 1,620% of ATK plus 85 and knock the target back.\nFifth Attack: Deal damage equal to 2,447% of ATK plus 129 and knock the target back."
+      },
+      {
+        "title": "Swift Twirl",
+        "description": "While using normal attack on the ground, tap and hold normal attack when using the first to second normal\nattacks to trigger Swift Twirl.\nPerform a rapid triangular sprint attack, dealing damage equal to 1,954% of ATK plus 103 to nearby targets."
+      },
+      {
+        "title": "Rhythm Wave",
+        "description": "While using normal attack on the ground, tap and hold normal attack when using the third to fourth normal attacks to trigger Rhythm Wave.\nLaunch a powerful attack forward after spinning for some time. Deals damage equal to 2,770% of ATK plus 146 to nearby targets."
+      },
+      {
+        "title": "Perfect Landing",
+        "description": "Tap and hold normal attack while airborne (tap when a target is available), or use normal attack while climbing, jumping backward, or using the Jetpack to trigger Perfect Landing.\nPlunge from the above, dealing damage equal to 527% of ATK plus 28 to hit enemies during the plunge. Upon landing, deals damage equal to 2,804% of ATK plus 148 to nearby targets."
+      }
+    ],
+    "dodges": [
+      {
+        "title": "Dodge",
+        "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area.\nBecome immune to hitstun while dodging."
+      },
+      {
+        "title": "Reversal Strike",
+        "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger Reversal Strike, dealing damage up to 1,474% of ATK plus 78 to targets ahead."
+      },
+      {
+        "title": "Swirl Sprint",
+        "description": "Use normal attack during the short period after dodging to trigger Swirl Sprint, dealing damage equal to 1,105% of ATK plus 58 to the hit target."
+      },
+      {
+        "title": "Slide Mode",
+        "description": "Hold the dodge button within the perfect dodge window (use the movement button before dodging) to activate Slide Mode (unavailable in Apex League), continuously consuming endurance. While in Slide Mode, pressing the jump button allows Lyncis to slide on the wall. During this mode, speed boost won't take effect."
+      }
+    ],
+    "skills": [
+      {
+        "title": "Graffiti Party",
+        "description": "Lyncis rides her skateboard in a circular motion, gaining speed until reaching the peak, then glides down to land, dealing damage equal to 4,454% of ATK plus 234 to nearby enemies, and gains Business Status, Hotspot Detector, and Hyperbody which lasts 25 seconds. Cooldown: 25 seconds. This is not affected by other cooldown clearing, resetting, or changing effects.\nBusiness Status: Increases final damage by 20% for 30 seconds.\nHotspot Detector: Grants the Hotspot Tracker effect for 25s (switching to another weapon will immediately end this status). Grants 1 Hotspot Index every 6s when Swish is on field. The kill is replaced by Focused Impact when owning Hotspot Index. Consume 1 Hotspot Index to cast Focused Impact, dealing damage equal to 3,600% of ATK to nearby enemies. Focused Impact can be cast up to once every 2 seconds. Up to 3 Hotspot Index can be obtained during each Hotspot Detector status.\nLyncis automatically casts Focused Impact after Hotspot Detector status ends, dealing damage equal to the unused Hotspot Index x 3,600% of ATK to nearby targets."
+      }
+    ],
+    "discharges": [
+      {
+        "title": "Lyncis's Realm",
+        "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon, remove all debuffs from the Authorizer and allow Lyncis to leap into the air to launch a strike from above, and then quickly slide on the ground, dealing damage equal to 6,814% of ATK plus 359 to nearby targets. During the skill, gains damage immunity for 1.5 seconds (unavailable in Apex League)."
+      }
+    ],
+    "scaling": "ATK_HP_CRIT",
+    "passives": [
+      {
+        "title": "Force Impact",
+        "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+      },
+      {
+        "title": "Fusion of Frost and Volt",
+        "description": "When the weapon deals damage, damage is calculated using the highest equipped frost/volt base ATK, the highest equipped frost/volt ATK percentage, and the highest equipped frost/volt damage boost, and the weapon is considered both a frost and volt weapon."
+      },
+      {
+        "title": "Frost Resonance",
+        "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. (Cannot stack with other Frost Resonance or Frost Reaction effects. Frost Resonance takes priority)."
+      },
+      {
+        "title": "Volt Resonance",
+        "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. (Cannot stack with other Volt Resonance or Volt Reaction effects. Volt Resonance takes priority)."
+      },
+      {
+        "title": "Skateboard: On-Field",
+        "description": "When landing any hit with Swish, it deals damage equal to 256% of frost ATK plus 3.6% of your Max HP plus 133% of the sum of all the Wanderer's resistance types plus 4.9% of crit. This effect can be triggered up to 1 time every 1.5s. Skateboard damage counts as normal attack damage. If there is 1 flame/physical weapon of any kind equipped, Skateboard damage is multiplied by 1.3 times. In addition, Chrono Coil damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+      }
+    ],
+    "advancements": [
+      "Graffiti Party inflicts 1 stack of the Exposed Fear effect on hit enemies, dealing damage equals to 360% of ATK every 1 second for 20 seconds.",
+      "Increase the current weapon's base ATK growth by 16%.",
+      "When Lyncis's HP is lower than 50%, she recovers 30% of Max HP immediately. Only triggers 1 time every 10 seconds.",
+      "Increase the current weapon's base ATK growth by 32%.",
+      "Ignores 15% of the target's frost/volt resistance (each element's total resistance ignored cannot exceed 50%). When Swish is on-field, deals 6% increased frost damage.",
+      "Increases final damage of Business Status to 34%, while granting 3% bonus frost damage."
+    ],
+    "matrices": {
+      "pc2": "Increases frost ATK by 26% / 28% / 30% / 32% and Focused Impact's damage to 5,250%. This set effect works in the off-hand slot, only the set with the highest star rating will take effect.",
+      "pc4": "Increases frost damage by 18% / 22% / 26% / 30%. Lyncis gains 10% extra frost damage for 30 seconds after casting the skill. This set effect works in the off-hand slot, only the set with the highest star rating will take effect."
+    },
+    "source": {
+      "simulacrumPage": "Lyncis",
+      "weaponPage": "Swish",
+      "matrixPage": "Lyncis (Matrix Set)",
+      "releaseVersion": "5.0",
+      "scrapedAt": "2026-03-23T23:31:04.866Z"
+    }
+  }
+]

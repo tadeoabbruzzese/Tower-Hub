@@ -1,0 +1,108 @@
+{
+  "id": "claudia-storm-eye",
+  "simulacrumName": "Claudia Storm Eye",
+  "weaponName": "Scarlet Gale",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "As a distinguished Federal Agent and elite member of the Spedial Security Investigation Unit, she's been instructed with the Federation's most classified operations, earning her place as one of Kyran's most reliable confidants.",
+  "element": "Physical/Flame",
+  "resonance": "Attack",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "Adjucation",
+    "description": "Increase final damage by 18%. When equipped with Scarlet Gale, increase physical damage by 30%."
+  },
+  "images": {
+    "character": "",
+    "weapon": "",
+    "matrix": ""
+  },
+  "attacks": [
+    {
+      "title": "Rapid Sweep",
+      "description": "While on the ground, use normal attack to launch 5 consecutive attacks.\nFirst Attack: Deal damage equal to 82% of ATK plus 4 and knock the target back.\nSecond Attack: Deal damage equal to 173% of ATK plus 9 and knock the target back.\nThird Attack: Deal damage equal to 235% of ATK plus 12 and knock the target back.\nFourth Attack: Deal damage up to 316% of ATK plus 17 and knock the target back.\nFifth Attack: Deal damage equal to 336% of ATK plus 18 and knock the target back."
+    },
+    {
+      "title": "Cyclone Blade",
+      "description": "While the wanderer is airborne, use normal attack to launch 5 consecutive attacks in the air, consuming endurance.\nFirst Attack: Deal damage equal to 82% of ATK plus 4 and knock the target back.\nSecond Attack: Deal damage equal to 173% of ATK plus 9 and knock the target back.\nThird Attack: Deal damage equal to 235% of ATK plus 12 and knock the target back.\nFourth Attack: Deal damage up to 316% of ATK plus 17 and knock the target back.\nFifth Attack: Deal damage equal to 336% of ATK plus 18 and knock the target back."
+    },
+    {
+      "title": "Furious Flurry",
+      "description": "While using normal attack on the ground, tap and hold normal attack when using the first to fourth normal attacks to trigger Furious Flurry.\nSwing Scarlet Gale, dealing damage equal to 309% of ATK plus 16 to nearby targets."
+    },
+    {
+      "title": "Gust Hunter",
+      "description": "While on the ground, tap and hold normal attack to trigger Gust Hunter.\nFire a shot at the target, dealing damage equal to 78% of ATK plus 4 to the target upon hit."
+    },
+    {
+      "title": "Thousand-Ton Slam",
+      "description": "Tap and hold normal attack while airborne (tap when a target is available), or use normal attack while climbing, jumping backward, or using a Jetpack to trigger Thousand-Ton Slam.\nFall down from mid-air. During the course of landing, each hit on an enemy deals damage equal to 186% of ATK plus 10. After landing, deal damage equal to 186% of ATK plus 10 to nearby targets."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area. Become immune to hitstun while dodging."
+    },
+    {
+      "title": "Glimmering Kick",
+      "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger Glimmering Kick, dealing damage equal to 223% of ATK plus 12 to targets ahead.\nBecome invincible for a short duration during Glimmering Kick."
+    },
+    {
+      "title": "Hail of Shadows",
+      "description": "Use normal attack during the short period after dodging to trigger Hail of Shadows, dealing damage equal to 146% of ATK plus 8 to the hit target."
+    },
+    {
+      "title": "Unseen Shadows",
+      "description": "Tap and hold normal attack right after dodging to trigger Unseen Shadows, dealing damage equal to 291% of ATK plus 15 to targets ahead."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Radiant Halo",
+      "description": "Deal damage equal to 1,075% of ATK plus 57 to nearby targets. Cooldown of 21s (this is not affected by other cooldown clearing, resetting, or changing effects).\nAfter using Radiant Halo, increase physical DMG by 12% for 30s. Blade of Unity is triggered 6s and 12s after using Radiant Halo, dealing area damage equal to 3,800% of ATK to the selected target."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Windcutting Thunder",
+      "description": "When weapon charge is full or Phantasia is triggered, upon switching to this weapon, remove all debuffs from the Wanderer and deal damage equal to 1,116% of ATK plus 59 to targets ahead. During this period, gain damage immunity for 1.5 seconds (unavailable in Apex League)."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Armor Dissolve",
+      "description": "When the weapon is fully charged, the next attack inflicts armor dissolve effect on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Mass and Flame",
+      "description": "When the weapon deals damage, damage is calculated using the currently equipped weapon's highest physical/flame base ATK, the highest equipped physical/flame ATK percentage, and the highest equipped physical/flame damage boost, and the weapon is considered both a physical and flame weapon."
+    },
+    {
+      "title": "Physical Resonance",
+      "description": "Increase Physical ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Physical weapons. This set effect works in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects, with Physical Resonance taking precedence."
+    },
+    {
+      "title": "Flame Resonance",
+      "description": "Increase Flame ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Flame weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence."
+    },
+    {
+      "title": "Scarlet Blade: Swift Cut",
+      "description": "When Scarlet Gale is equipped, any weapon's discharge skill will deal damage equal to 73.2% of physical ATK plus 1% of Max HP plus 36.6% of the sum of all the Wanderer's resistance types plus 134.3% of crit to nearby targets.\nWhile in combat, after every 0.5 seconds, the next Swift Cut DMG will be increased by an additional 1 time, up to a maximum of 30 times. When multiple Swift Cut damages exist, the highest initial value is used for calculation. Swift Cut DMG is counted as discharge skill DMG.\nIf there is 1 frost/volt weapon of any kind equipped, Scarlet Blade DMG is increased to 1.3 times. In addition, Scarlet Blade DMG is not affected by any DMG boost effects except from titan equipment's rare stats, and won't trigger additional attack effects.\nWhen Scarlet Gale is equipped in the main slot and the Wanderer takes lethal damage, performs Swift Lightning during which the Wanderer is immune to damage. The minimum trigger interval is 20 seconds."
+    }
+  ],
+  "advancements": [
+    "Blade of Unity is triggered at 5, 10, and 15 seconds.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "When Blade of Unity hits a target, apply Suppress effect for 4 seconds, decreasing the target's movement speed by 20% and dealing damage equal to 480% of ATK every second.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "When Blade of Unity is triggered, recover 25% of HP. If current HP is less than 50% of max HP, increase recovery to 50% (unaffected by healing bonus effects and unavailable in Apex League).",
+    "Increase physical damage boost from Radiant Halo to 40% for 30 seconds."
+  ],
+  "matrices": {
+    "pc2": "Increase physical ATK by 24% / 26% / 28% / 30% and Scarlet Gale damage to 4,800%. This set effect works in the off-hand slot, and only the set wit the highest star rating will take effect.",
+    "pc4": "Increase all elemental damage by 10% / 14% / 18% / 22%. When equipped with Scarlet Gale, increases final damage by 22%. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect."
+  }
+}

@@ -10,6 +10,7 @@ const AuthContext = createContext(null)
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [role, setRole] = useState(null)
+  const [profile, setProfile] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -17,19 +18,28 @@ export function AuthProvider({ children }) {
       if (!firebaseUser) {
         setUser(null)
         setRole(null)
+        setProfile(null)
         setLoading(false)
         return
       }
 
       setUser(firebaseUser)
 
-      // Leer role desde Firestore
-      const userRef = doc(db, "users", firebaseUser.uid)
-      const snap = await getDoc(userRef)
+      try {
+        // Leer role desde Firestore
+        const userRef = doc(db, "users", firebaseUser.uid)
+        const snap = await getDoc(userRef)
 
-      if (snap.exists()) {
-        setRole(snap.data().role)
-      } else {
+        if (snap.exists()) {
+          setProfile(snap.data())
+          setRole(snap.data().role)
+        } else {
+          setProfile(null)
+          setRole(null)
+        }
+      } catch (error) {
+        console.error("Error loading user role from Firestore:", error)
+        setProfile(null)
         setRole(null)
       }
 
@@ -39,8 +49,19 @@ export function AuthProvider({ children }) {
     return () => unsubscribe()
   }, [])
 
+  const normalizedProfile = profile
+    ? {
+        ...profile,
+        photoURL:
+          profile.photoURL ||
+          user?.photoURL ||
+          user?.providerData?.[0]?.photoURL ||
+          null,
+      }
+    : null
+
   return (
-    <AuthContext.Provider value={{ user, role, loading }}>
+    <AuthContext.Provider value={{ user, role, profile: normalizedProfile, loading }}>
       {children}
     </AuthContext.Provider>
   )

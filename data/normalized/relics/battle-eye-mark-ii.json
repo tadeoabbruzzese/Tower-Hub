@@ -1,0 +1,13 @@
+{
+  "name": "Battle Eye: Mark II",
+  "description": "Throws Battle Eye: Mark II forward. Deploys on landing, projecting an illusion that taunts nearby enemies for 3 seconds.Remains active for 10 seconds.Cooldown: 30 seconds.",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Draws in nearby enemies when Battle Eye: Mark II deploys or disappears.",
+    "Increases final damage by 9% while Battle Eye: Mark II is deployed.",
+    "Allows reactivation while Battle Eye: Mark II is active, teleporting its location and destroying it in the process.",
+    "Reduces frost damage received by 2%, even if not deployed. Unavailable in Apex League.",
+    "Increases final damage by an extra 6% while Battle Eye: Mark II is deployed."
+  ]
+}

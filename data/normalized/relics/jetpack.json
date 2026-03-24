@@ -1,0 +1,13 @@
+{
+  "name": "Jetpack",
+  "description": "Tap and hold to aim, then release to blast off in the target direction and glide. Consumes 10 endurance every second. Cooldown: 120 seconds (gliding is not affected by the cooldown timer). Jetpack can hold up to 2 charges.",
+  "rarity": "SR",
+  "image": "",
+  "advancements": [
+    "Replenish 1 charge every 100 seconds. Gliding no longer expends endurance.",
+    "Gliding for longer than 3 seconds empowers the user's next pummel attack to stun the target for 2 seconds.",
+    "Replenish 1 charge every 60 seconds.",
+    "Reduce physical damage received by 1.5%, even if not deployed. Unavailable in Apex League.",
+    "Store up to 3 charges."
+  ]
+}

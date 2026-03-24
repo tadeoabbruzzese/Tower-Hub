@@ -1,0 +1,13 @@
+{
+  "name": "Blocker Device",
+  "description": "Enabling the Blocker Device creates a wide-area effect around the caster. Healing received by enemies within this area is reduced by 75% for 15s (Unstackable).Cooldown: 45s.",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Duration is extended to 25 seconds.",
+    "Deals 4% bonus damage to affected enemies.Unstackable.",
+    "Cooldown is reduced to 25 seconds.",
+    "Reduces flame damage received by 2%, even if not deployed. Unapplicable in Apex League.",
+    "Deals an extra 4% bonus damage to affected enemies.Unstackable."
+  ]
+}

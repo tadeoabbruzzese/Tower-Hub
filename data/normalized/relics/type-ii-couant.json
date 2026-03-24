@@ -1,0 +1,13 @@
+{
+  "name": "Type II Couant",
+  "description": "Summon a Type II Couant and generate a shield for 5 seconds, which disappears after 5 seconds or after being struck once. Upon disappearing, the shield knocks back nearby enemies and deals damage equal to 100% of Attack + 50. If broken within 1 second of being generated, the shield will stun enemies for 2 seconds. Also boost damage based on the current HP for 10 seconds (up to 60% of the current HP). 30-second cooldown (shares cooldown with other Couants).",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Grant 100 energy immediately upon use if HP is greater than 90%. If HP is less than 90%, immediately grant 50 energy, then 50 more energy once the damage increase expires.",
+    "Increase the duration of damage boost to 12 seconds.",
+    "Every stack of blessing additionally increases final damage by 1% for 12 seconds.",
+    "Increase flame damage by 2%, even if not deployed. Unavailable in Apex League.",
+    "When there are a full 5 stacks of blessings, additionally increase final damage by 2.5% and reduce damage received by 5% for 12 seconds."
+  ]
+}

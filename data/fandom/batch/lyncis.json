@@ -1,0 +1,115 @@
+{
+  "id": "lyncis",
+  "simulacrumName": "Lyncis",
+  "weaponName": "Swish",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "Hey hey, I'm Lyncis, your go to outdoor streamer here in the OreZero. Wanna uncover the secret of Kailo? You're in the right place. From wild tales to heartpounding expeditions, just drop a message in the chat and tell me what you want to see. Oh and I run a little shop on the side so don't forget to swing by and show some love.[...]\n--Kailo Sector Special preview",
+  "element": "Frost/Volt",
+  "resonance": "Attack",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "Legend Streamer",
+    "description": "Increase final damage by 18%When equipped with Swish, deals 10% increased frost damage."
+  },
+  "images": {
+    "character": "https://static.wikia.nocookie.net/toweroffantasy/images/e/eb/Simulacrum_Lyncis_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250414123906",
+    "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/a/ac/Icon_Weapon_Swish.png/revision/latest/scale-to-width-down/268?cb=20250418180842",
+    "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/9/9b/Icon_Matrix_Lyncis.png/revision/latest/scale-to-width-down/268?cb=20250418180757"
+  },
+  "attacks": [
+    {
+      "title": "Gliding Combo",
+      "description": "While on the ground, use normal attack to launch 5 consecutive attacks.\nFirst Attack: Deal damage equal to 735% of ATK plus 39 and knock the target back.\nSecond Attack: Deal damage equal to 827% of ATK plus 44 and knock the target back.\nThird Attack: Deal damage equal to 1,142% of ATK plus 60 and knock the target back.\nFourth Attack: Deal damage up to 1,620% of ATK plus 85 and knock the target back.\nFifth Attack: Deal damage equal to 2,447% of ATK plus 129 and knock the target back."
+    },
+    {
+      "title": "Leap Combo",
+      "description": "While the Wanderer is airborne, use normal attack to launch 5 consecutive attacks in the air, consuming endurance.\nFirst Attack: Deal damage equal to 689% of ATK plus 36 and knock the target back.\nSecond Attack: Deal damage equal to 827% of ATK plus 44 and knock the target back.\nThird Attack: Deal damage equal to 1,142% of ATK plus 60 and knock the target back.\nFourth Attack: Deal damage up to 1,620% of ATK plus 85 and knock the target back.\nFifth Attack: Deal damage equal to 2,447% of ATK plus 129 and knock the target back."
+    },
+    {
+      "title": "Swift Twirl",
+      "description": "While using normal attack on the ground, tap and hold normal attack when using the first to second normal\nattacks to trigger Swift Twirl.\nPerform a rapid triangular sprint attack, dealing damage equal to 1,954% of ATK plus 103 to nearby targets."
+    },
+    {
+      "title": "Rhythm Wave",
+      "description": "While using normal attack on the ground, tap and hold normal attack when using the third to fourth normal attacks to trigger Rhythm Wave.\nLaunch a powerful attack forward after spinning for some time. Deals damage equal to 2,770% of ATK plus 146 to nearby targets."
+    },
+    {
+      "title": "Perfect Landing",
+      "description": "Tap and hold normal attack while airborne (tap when a target is available), or use normal attack while climbing, jumping backward, or using the Jetpack to trigger Perfect Landing.\nPlunge from the above, dealing damage equal to 527% of ATK plus 28 to hit enemies during the plunge. Upon landing, deals damage equal to 2,804% of ATK plus 148 to nearby targets."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area.\nBecome immune to hitstun while dodging."
+    },
+    {
+      "title": "Reversal Strike",
+      "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger Reversal Strike, dealing damage up to 1,474% of ATK plus 78 to targets ahead."
+    },
+    {
+      "title": "Swirl Sprint",
+      "description": "Use normal attack during the short period after dodging to trigger Swirl Sprint, dealing damage equal to 1,105% of ATK plus 58 to the hit target."
+    },
+    {
+      "title": "Slide Mode",
+      "description": "Hold the dodge button within the perfect dodge window (use the movement button before dodging) to activate Slide Mode (unavailable in Apex League), continuously consuming endurance. While in Slide Mode, pressing the jump button allows Lyncis to slide on the wall. During this mode, speed boost won't take effect."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Graffiti Party",
+      "description": "Lyncis rides her skateboard in a circular motion, gaining speed until reaching the peak, then glides down to land, dealing damage equal to 4,454% of ATK plus 234 to nearby enemies, and gains Business Status, Hotspot Detector, and Hyperbody which lasts 25 seconds. Cooldown: 25 seconds. This is not affected by other cooldown clearing, resetting, or changing effects.\nBusiness Status: Increases final damage by 20% for 30 seconds.\nHotspot Detector: Grants the Hotspot Tracker effect for 25s (switching to another weapon will immediately end this status). Grants 1 Hotspot Index every 6s when Swish is on field. The kill is replaced by Focused Impact when owning Hotspot Index. Consume 1 Hotspot Index to cast Focused Impact, dealing damage equal to 3,600% of ATK to nearby enemies. Focused Impact can be cast up to once every 2 seconds. Up to 3 Hotspot Index can be obtained during each Hotspot Detector status.\nLyncis automatically casts Focused Impact after Hotspot Detector status ends, dealing damage equal to the unused Hotspot Index x 3,600% of ATK to nearby targets."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Lyncis's Realm",
+      "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon, remove all debuffs from the Authorizer and allow Lyncis to leap into the air to launch a strike from above, and then quickly slide on the ground, dealing damage equal to 6,814% of ATK plus 359 to nearby targets. During the skill, gains damage immunity for 1.5 seconds (unavailable in Apex League)."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Force Impact",
+      "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Frost and Volt",
+      "description": "When the weapon deals damage, damage is calculated using the highest equipped frost/volt base ATK, the highest equipped frost/volt ATK percentage, and the highest equipped frost/volt damage boost, and the weapon is considered both a frost and volt weapon."
+    },
+    {
+      "title": "Frost Resonance",
+      "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. (Cannot stack with other Frost Resonance or Frost Reaction effects. Frost Resonance takes priority)."
+    },
+    {
+      "title": "Volt Resonance",
+      "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. (Cannot stack with other Volt Resonance or Volt Reaction effects. Volt Resonance takes priority)."
+    },
+    {
+      "title": "Skateboard: On-Field",
+      "description": "When landing any hit with Swish, it deals damage equal to 256% of frost ATK plus 3.6% of your Max HP plus 133% of the sum of all the Wanderer's resistance types plus 4.9% of crit. This effect can be triggered up to 1 time every 1.5s. Skateboard damage counts as normal attack damage. If there is 1 flame/physical weapon of any kind equipped, Skateboard damage is multiplied by 1.3 times. In addition, Chrono Coil damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+    }
+  ],
+  "advancements": [
+    "Graffiti Party inflicts 1 stack of the Exposed Fear effect on hit enemies, dealing damage equals to 360% of ATK every 1 second for 20 seconds.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "When Lyncis's HP is lower than 50%, she recovers 30% of Max HP immediately. Only triggers 1 time every 10 seconds.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "Ignores 15% of the target's frost/volt resistance (each element's total resistance ignored cannot exceed 50%). When Swish is on-field, deals 6% increased frost damage.",
+    "Increases final damage of Business Status to 34%, while granting 3% bonus frost damage."
+  ],
+  "matrices": {
+    "pc2": "Increases frost ATK by 26% / 28% / 30% / 32% and Focused Impact's damage to 5,250%. This set effect works in the off-hand slot, only the set with the highest star rating will take effect.",
+    "pc4": "Increases frost damage by 18% / 22% / 26% / 30%. Lyncis gains 10% extra frost damage for 30 seconds after casting the skill. This set effect works in the off-hand slot, only the set with the highest star rating will take effect."
+  },
+  "source": {
+    "simulacrumPage": "Lyncis",
+    "weaponPage": "Swish",
+    "matrixPage": "Lyncis (Matrix Set)",
+    "releaseVersion": "5.0",
+    "scrapedAt": "2026-03-23T23:31:04.866Z"
+  }
+}

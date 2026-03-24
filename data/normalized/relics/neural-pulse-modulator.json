@@ -1,0 +1,13 @@
+{
+  "name": "Neural Pulse Modulator",
+  "description": "Activates Neural Pulse Modulation, increasing Speed by 20% for 30s. Unstackable.Cooldown: 60s.",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Duration is extended to 60 seconds.",
+    "Increases Speed to 35% and restore 0.5% Max HP per second.",
+    "Increases Shatter by 25% and All Resistance by 15% upon use.",
+    "Increases Physical Damage by 2%, even if not deployed. Unavailable in Apex League.",
+    "Grants Invincibility for 5s upon use."
+  ]
+}

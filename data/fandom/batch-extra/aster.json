@@ -1,0 +1,143 @@
+{
+  "id": "aster",
+  "simulacrumName": "Aster",
+  "weaponName": "Twin Stars",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "A taciturn First Mate of the Asher, and Captain Hipper's capable right hand, Aster is renowned for her outstanding skills. Her quite nature gives her an aloof vibe, but those who know her well understand she's simply prone to drifting into daydreams.",
+  "element": "Physical/Flame",
+  "resonance": "Fortitude",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "Pioneer",
+    "description": "Increase final damage by 18%. Instantly restores 500 Endurance when hitting enemies with Meteor Rush or Flash Step."
+  },
+  "images": {
+    "character": "https://static.wikia.nocookie.net/toweroffantasy/images/4/4d/Simulacrum_Aster_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250603153110",
+    "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/2/23/Icon_Weapon_Twin_Stars.png/revision/latest/scale-to-width-down/268?cb=20250611134628",
+    "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/8/87/Icon_Matrix_Aster.png/revision/latest/scale-to-width-down/268?cb=20250611134718"
+  },
+  "attacks": [
+    {
+      "title": "Astral Slash",
+      "description": "While on the ground, use normal attack to launch five consecutive strikes.\nFirst strike: Deals 431% of ATK +2,722 damage, knocking targets back.\nSecond strike: Deals 388% of ATK +2,451 damage, knocking targets back.\nThird strike: Deals 561% of ATK +3,543 damage, knocking targets back.\nFourth strike: Deals damage up to 593% of ATK +3,745, knocking targets back.\nFifth strike: Deals 750% of ATK +4,737 damage, knocking targets back."
+    },
+    {
+      "title": "Cosmic Slash",
+      "description": "While the Wanderer is airborne, use normal attack to launch 5 consecutive attacks in the air, consuming endurance.\nFirst Attack: Deal damage equal to 431% of ATK plus 2,722 and knock the target back.\nSecond Attack: Deal damage equal to 388% of ATK plus 2,451 and knock the target back.\nThird Attack: Deal damage equal to 561% of ATK plus 3,543 and knock the target back.\nFourth Attack: Deal damage up to 593% of ATK plus 3,745 and knock the target back.\nFifth Attack: Deal damage equal to 750% of ATK plus 4,737 and knock the target back."
+    },
+    {
+      "title": "Pulse Pierce",
+      "description": "While on the ground and under Photon Surge, use normal attack to launch five consecutive strikes.\nFirst strike: Deals damage equal to 393% of ATK plus 2,482 to the target and knocks them back.\nSecond strike: Deals damage equal to 812% of ATK plus 5,128 to the target and knocks them back.\nThird strike: Deals damage equal to 873% of ATK plus 5,514 to the target and knocks them back.\nFourth strike: Deals damage up to 1,101% of ATK plus 6,954 to the target and knocks them back.\nFifth strike: Deals damage equal to 1,668% of ATK plus 10,535 to the target and knocks targets airborne."
+    },
+    {
+      "title": "Void Impact",
+      "description": "While airborne and under Photon Surge, use a normal attack to launch five consecutive strikes, consuming Endurance.\nFirst strike: Deals damage equal to 393% of ATK plus 2,482 to the target and knocks them back.\nSecond strike: Deals damage equal to 812% of ATK plus 5,128 to the target and knocks them back.\nThird strike: Deals damage equal to 873% of ATK plus 5,514 to the target and knocks them back.\nFourth strike: Deals damage up to 1,101% of ATK plus 6,954 to the target and knocks them back.\nFifth strike: Deals damage equal to 1,668% of ATK plus 10,535 to the target and knocks targets airborne."
+    },
+    {
+      "title": "Edge Grip",
+      "description": "Can be activated during Photon Surge. When Overnova is active, holding the skill button during any of the first five ground hits or holding the normal attack button will trigger the effect, consuming 1 Overnova stack. This effect can only trigger once per Photon Surge.\nDeals damage equal to 2,760% of ATK plus 17,432 to nearby enemies."
+    },
+    {
+      "title": "Boost Strike",
+      "description": "Can be activated during Photon Surge. While Overnova is active, holding the skill button during any of the first five ground hits or while casting Edge Grip, or holding the normal attack button, will trigger the effect and consume 1 Overnova stack. This effect can only trigger once per Photon Surge.\nDeals damage equal to 2,267% of ATK plus 14,318 to nearby enemies."
+    },
+    {
+      "title": "Driftstar Waltz",
+      "description": "Can be activated during Photon Surge. While Overnova is active, holding the skill button during any of the first five ground hits or while casting Boost Strike, or holding the normal attack button, will trigger the effect and consume 1 Overnova stack. This effect can only trigger once per Photon Surge.\nDeals damage equal to 4,435% of ATK plus 28,011 to nearby enemies."
+    },
+    {
+      "title": "Skyfall Verdict",
+      "description": "Hold the normal attack button while airborne, or use normal attack while climbing, jumping backward, or using Jetback to trigger Skyfall Verdict.\nDuring the fall, each hit on the target deals 832% of ATK + 5,255 damage. Upon landing, deal damage equal to 1,386% of ATK + 8,754 damage."
+    },
+    {
+      "title": "Meteor Rush",
+      "description": "During Meteor Realm, press normal attack while airborne to trigger Meteor Rush, dealing damage equal to 1,386% of ATK plus 8,754 to nearby targets and inflicting Starfall Shard. Restores a leap attempt upon a successful hit."
+    },
+    {
+      "title": "Flash Step",
+      "description": "During Meteor Realm, press and hold normal attack while airborne to trigger Flash Step, dealing damage equal to 1,386% of ATK plus 8,754 to nearby targets. Hitting non-Boss enemies inflicted with Starfall Shard will trigger an immediate execution (only effective in the World and not applicable to Mecha enemies). Restores a leap attempt upon a successful hit."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area.\nBecome immune to hitstun while dodging."
+    },
+    {
+      "title": "Glint Raid",
+      "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger a pre-dodge attack, dealing damage up to 832% of ATK plus 5,255 to targets ahead."
+    },
+    {
+      "title": "Flank Strike",
+      "description": "Use normal attack during the short period after dodging to trigger a post-dodge attack, dealing damage up to 1,238% of ATK plus 7,819 to targets ahead."
+    },
+    {
+      "title": "Rapid Deploy",
+      "description": "Hold the dodge button during the perfect dodge window (use the movement button before dodging) to activate Meteor Realm (unavailable in Apex League). Continuously consumes Endurance and gains Starflow. While Meteor Realm is active, speed boost won't take effect.\nDuring Meteor Realm, press the jump button to interrupt your current swing and instantly align your direction with the camera.\nWhile Meteor Realm is active, press the dodge button to continue swinging. At the start of the swing, the environment will be scanned. If a valid anchor point is detected, the swing does not consume Endurance. If none is found, Twin Stars will create an anchor from the void, and Endurance will be consumed as usual.\nDuring Meteor Realm, touching the water surface triggers a brief skipping state. Press dodge during this time to leap upward quickly.\nWhile in Meteor Realm, move toward a wall to enter wall glide mode. While gliding left or right, press jump to quickly leap off the surface.\nAll Starflow will be cleared when Meteor Realm ends."
+    },
+    {
+      "title": "Vector Leap",
+      "description": "Hold the jump button during Meteor Realm to enter Vector Leap, continuously consuming Starflow while active. While Vector Leap is active, speed boost won't take effect.\nDuring Vector Leap, moving the joystick while rotating the camera causes a rapid directional shift."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Field Mastery",
+      "description": "Enters Photon Surge and gains temporary invincibility, dealing damage equal to 2,458% of ATK plus 15,524 to nearby targets. Increases physical damage by 11% for 30 seconds and gains hyperbody. Cooldown: 21 seconds (this is not affected by other cooldown clearing, resetting, or changing effects.).\nDuring Photon Surge, using Twin Stars for normal or dodge attacks grants 1 Overnova every 3 seconds, up to 3 points during each Photon Surge. Reach 3 Overnovae while Field Mastery is on cooldown to gain Prism Blades. Removes all Overnovae when Photon Surge ends or Twin Stars is switched to the off-hand slot, and prevents gaining or casting Prism Blades."
+    },
+    {
+      "title": "Prism Blades",
+      "description": "Can be activated during Photon Surge. Deals damage equal to 7,240% of ATK plus 45,726 to nearby enemies.\nWhile Fortitude Resonance is active, Prism Blades forcefully taunts enemies within range for 5s. For each taunted target, grants nearby allies a 5% final damage bonus, up to 20% for 20s (If the effect is reapplied, only the highest bonus is applied.)."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Blast Whirlpool",
+      "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon from another, removes all debuffs from the player, dealing 9,410% of ATK +59,432 damage to nearby enemies. During the skill, gains damage immunity for 1.5s (not applicable in Apex League).\nGrants nearby allies damage immunity for 1.5s while Fortitude Resonance is active."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Armor Dissolve",
+      "description": "When the weapon is fully charged, the next attack inflicts armor dissolve effect on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Mass and Flame",
+      "description": "When the weapon deals damage, damage is calculated using the currently equipped weapon's highest physical/flame base ATK, the highest equipped physical/flame ATK percentage, and the highest equipped physical/flame damage boost, and the weapon is considered both a physical and flame weapon."
+    },
+    {
+      "title": "Physical Resonance",
+      "description": "Increase Physical ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Physical weapons. This set effect works in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects, with Physical Resonance taking precedence."
+    },
+    {
+      "title": "Flame Resonance",
+      "description": "Increase Flame ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Flame weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence."
+    },
+    {
+      "title": "Whispers: On-Field",
+      "description": "When landing any hit with Twin Stars, it deals damage to nearby targets equal to 256% of Physical ATK plus 3.6% of the player's Max HP plus 133% of the sum of all the player's Resistance Types plus 4.9% of Crit. This effect can be triggered up to 1 time every 1.5s. The On-Field damage counts as normal attack damage. If there is 1 Frost/Volt Weapon of any kind equipped, On-Field damage is multiplied by 1.3. In addition, On-Field damage is not affected by any damage boost effects except from Titan equipment's rare stats, and won't trigger additional attack effects."
+    }
+  ],
+  "advancements": [
+    "Instantly restores 50% HP after casting Field Mastery. Increases Prism Blades damage by 10,860%.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "Reduces Overnova cooldown to 1s. When Overnova is not active, switch to the off-hand slot: After 5s, consecutively attacks nearby enemies in a large area, dealing damage equal to 3,500% of ATK every second for 5s. Increase Physical Damage by 10% and Final Damage by 5% upon casting Field Mastery.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "Ignores targets' Physical Resistance by 15% (the total value of resistance ignored for any single element cannot exceed 50%). Gains 60% Damage Reduction upon casting Edge Grip, Boost Strike, Driftstar Waltz, or Prism Blades.",
+    "Increases Final Damage by 28%. When Fortitude Resonance is active, using Meteor Rush or Flash Step against a target with more than 90% HP reduces their HP to exactly 90% of Max HP."
+  ],
+  "matrices": {
+    "pc2": "Increase Physical ATK by 26% / 28% / 30% / 32%. Increase Final Damage by 3% for 60s for each target killed, up to 2 stacks. This set effect works in the off-hand, and only the set with the highest star rating will take effect.",
+    "pc4": "Increase all elemental damage by 21% / 25% / 29% / 33%. Increase Final Damage by an extra 14% when Twin Stars is deployed. Increase Shatter by 100% while Fortitude Resonance is active. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect."
+  },
+  "source": {
+    "simulacrumPage": "Aster",
+    "weaponPage": "Twin Stars",
+    "matrixPage": "Aster (Matrix Set)",
+    "releaseVersion": "5.1",
+    "scrapedAt": "2026-03-24T00:24:44.126Z"
+  }
+}

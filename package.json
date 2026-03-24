@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "scrape:fandom": "node scripts/scrape-tof-fandom.mjs",
+    "scrape:fandom:relics": "node scripts/scrape-tof-relics-fandom.mjs",
+    "normalize:fandom": "node scripts/normalize-simulacra-json.mjs",
+    "split:fandom": "node scripts/split-simulacra-json.mjs"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
     "firebase": "^12.8.0",
     "imagekit": "^6.0.0",
     "imagekitio-react": "^4.3.0",

@@ -1,0 +1,13 @@
+{
+  "name": "Heaven's Dice",
+  "description": "Roll all the dice, and different quantities of dice you cast have different effects. Every time you roll a die in battle, you will randomly gain 1 out of 10 buffs which is cleared after the battle. The buffs include: Frost damage +5%, flame damage +5%, volt damage +5%, physical damage +5%, altered damage +5%, frost damage received −5%, flame damage received −5%, volt damage received −5%, physical damage received −5%, and altered damage received −5%. Only 1 random buff can be gained when casting dice, and all effects are only stacked 1 time. A new dice are gained every 30 seconds, and up to 3 dice can be accumulated. When Couant or Type II Couant is deployed, no dice rolling would be allowed:",
+  "rarity": "C",
+  "image": "",
+  "advancements": [
+    "Reduce availability for each dice to 20 seconds.",
+    "Thermonuclear Damage Boost: Gain a 25% damage boost for 45 seconds.",
+    "After each roll of dice, there is a 50% chance of getting 1 die. Cooldown: 15 seconds.",
+    "Increase frost damage by 2%, even if not deployed. Unavailable in Apex League.",
+    "If the total scores of 3 dice rolled at one time are 14 or more, gain the Overclock effect."
+  ]
+}

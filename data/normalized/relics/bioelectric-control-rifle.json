@@ -1,0 +1,13 @@
+{
+  "name": "Bioelectric Control Rifle",
+  "description": "Launch an energy bullet to a specified location. When it hits a \"beast\" type enemy, it can be controlled as an ally (ineffective against bosses, and only effective in the Overworld) for 30 seconds. Cooldown: 60 seconds. If the energy bullet hits a controlled target again, you will lose control. The maximum number of controlled enemies is 1 with a maximum of 2 charges that can be stored.",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Control duration increased to 60 seconds, with a maximum of 3 charges that can be stored.",
+    "While Bioelectric Control Rifle is equipped, increase jump height by 10% and damage by 6%.",
+    "Reduce cooldown to 30 seconds.",
+    "Increase all frost damage by 2%. Effective even when undeployed.",
+    "The maximum number of simultaneously controlled enemies is increased to 2, and enemies beyond the control limit will be automatically released.Increase damage boost to 12%."
+  ]
+}

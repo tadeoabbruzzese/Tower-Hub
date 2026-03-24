@@ -1,0 +1,119 @@
+{
+  "id": "carrot",
+  "simulacrumName": "Carrot",
+  "weaponName": "SLAP",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "Unexpected Guests from Kailo. After the Asher was attacked by an unknown force, one of its crew members, Carrot, escaped in an escape pod and accidentally crashed-landed in Aesperia's Banges. There, she was found by Hilda.",
+  "element": "Flame/Physical",
+  "resonance": "Attack",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "Carrot Seed",
+    "description": "Increase final damage by 18%. SLAP casts Dodge: Haaa-yaa! with no cooldown remaining."
+  },
+  "images": {
+    "character": "https://static.wikia.nocookie.net/toweroffantasy/images/e/e8/Simulacrum_Carrot_Prototype.png/revision/latest/scale-to-width-down/267?cb=20250303074606",
+    "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/3/32/Icon_Weapon_SLAP.png/revision/latest/scale-to-width-down/268?cb=20250326065145",
+    "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/1/1b/Icon_Matrix_Carrot.png/revision/latest/scale-to-width-down/268?cb=20250327153123"
+  },
+  "attacks": [
+    {
+      "title": "Tornado SLAP",
+      "description": "Use normal attack to launch 5 consecutive attacks while on the ground.\nFirst Attack: Deals damage equal to 277% of ATK plus 15 and knocks the target back.\nSecond Attack: Deals damage equal to 509% of ATK plus 27 and knocks the target back.\nThird Attack: Deals damage equal to up to 254% of ATK plus 13 and knocks the target back.\nFourth Attack: Deals damage up to 1,155% of ATK plus 61 and knocks the target back.\nFifth Attack: Deals damage equal to 974% of ATK plus 51 and knocks the target back."
+    },
+    {
+      "title": "Soaring Palm",
+      "description": "While the Wanderer is airborne, use normal attack to launch 5 consecutive attacks in mid-air, consuming END.\nFirst Attack: Deal damage equal to 437% ATK plus 23 damage, and knock the target back.\nSecond Attack: Deal damage equal to 462% ATK plus 24 damage, and knock the target back.\nThird Attack: Deal damage equal to 1,194% ATK plus 63 damage, and knock the target back.\nFourth Attack: Deal damage equal to 616% ATK plus 32 damage, and knock the target back.\nFifth Attack: Deal damage equal to 1,487% ATK plus 78 damage, and knock the target back."
+    },
+    {
+      "title": "Lucky Wheel",
+      "description": "Tap and hold normal attack during the 1st to 4th normal attacks to trigger Lucky Wheel while on the ground.\nSLAP transforms to unleash Suppressing Fire in a cone-shaped area in front, dealing damage equal to up to 1,398% of ATK plus 74."
+    },
+    {
+      "title": "Frenzy Smack",
+      "description": "Tap and hold normal attack to trigger Frenzy Smack while on the ground.\nFires a shot in the aimed direction, dealing damage equal to 77% of ATK plus 4 to the target with each hit."
+    },
+    {
+      "title": "Super Glide",
+      "description": "Tap and hold normal attack while airborne (tap when a target is available), or use normal attack while climbing, jumping backward, or using a Jetpack to trigger Super Glide.\nFalls down from mid-air. During the course of landing, each hit on an enemy deals damage equal to 308% of ATK plus 16. Deals damage equal to 616% of ATK plus 32 to nearby targets after landing."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area. Become immune to hitstun while dodging."
+    },
+    {
+      "title": "Spinning Strike",
+      "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger Spinning Strike, dealing damage equal to 744% of ATK plus 39 to targets ahead."
+    },
+    {
+      "title": "Recoil Rush",
+      "description": "Use normal attack during the short period after dodging to trigger Recoil Rush, dealing damage equal to 616% of ATK plus 32 to targets ahead."
+    },
+    {
+      "title": "Flap & SLAP",
+      "description": "Hold Dodge to trigger Flap & SLAP, flying horizontally with SLAP."
+    },
+    {
+      "title": "Haaa-yaa!",
+      "description": "Tap and hold normal attack right after dodging to trigger Haaa-yaa! Aim the projection direction by rotating, then release normal attack to launch yourself."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Carrot Kombat",
+      "description": "Deals damage equal to 4,189% of ATK plus 220 to nearby targets. Cooldown: 25s (not affected by other cooldown clearing, resetting, or changing effects). Increases flame damage by 11% for 25s after casting Carrot Kombat, inflicting the locked target with Carrot Grenade for 25s. Launches a Loud Slap at the target with Carrot Grenade for every 60 instances of flame damage they take, dealing a large AoE explosion damage equal to 7,700% of ATK. Triggers up to twice."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Full Assault",
+      "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon from another, removes all debuffs from the Wanderer, dealing 4,404% of ATK +232 damage to nearby enemies. During the skill, gains damage immunity for 1.5 seconds (not applicable in Apex League)."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Armor Dissolve",
+      "description": "When the weapon is fully charged, the next attack inflicts Armor Dissolve on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Flame and Mass",
+      "description": "When the weapon deals damage, damage is calculated using the highest equipped physical/flame base ATK, the highest equipped physical/flame ATK percentage, and the highest equipped physical/flame damage boost, and the weapon is considered both a physical and flame weapon."
+    },
+    {
+      "title": "Physical Resonance",
+      "description": "Increases physical ATK by 15% and physical resistance by 25%. Activated by equipping 2 or more physical weapons. This set effect works in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects, with Physical Resonance taking precedence."
+    },
+    {
+      "title": "Flame Resonance",
+      "description": "Increases flame ATK by 15% and flame resistance by 25%. Activated by equipping 2 or more flame weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence."
+    },
+    {
+      "title": "Combustion: Swift Cut",
+      "description": "When SLAP is equipped, any weapon's discharge skill will deal damage equal to 73.2% of Flame ATK plus 1% of Max HP plus 36.6% of the sum of all the Wanderer's resistance types plus 134.3% of crit to nearby targets. While in combat, after every 0.5s, the next Swift Cut damage will be increased by an additional 1 time, up to a maximum of 30 times. When multiple Swift Cut damages exist, the highest initial value is used for calculation. Swift Cut damage is counted as discharge skill damage. If there is 1 frost/volt weapon of any kind equipped, Combustion damage is increased to 1.3 times. In addition, Combustion damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+    }
+  ],
+  "advancements": [
+    "Reduces the required flame damage taken to trigger Loud Slap to 45 times(s), while increasing the maximum trigger attempts to 3.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "Ignores 15% of target's resistances (each element's total resistance ignored cannot exceed 50%. SLAP's firearm attacks reduce enemy's speed by 70%for 0.2s. Does not apply to PvP or against Bosses.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "Loud Slap restores the your HP equal to the number of targets hit x 20%.",
+    "Increase final damage by 24%. Deals an additional strike in a small area to targets hit by Loud Slap, dealing damage equal to 1,050% of ATK."
+  ],
+  "matrices": {
+    "pc2": "Increases flame ATK by 26% / 28% / 30% / 32% and Loud Slap damage to 9800%. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect.",
+    "pc4": "Increases Flame damage by 24% / 28% / 32% / 36%. Increases final damage by an extra 10% for 30s after casting Carrot Kombat. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect."
+  },
+  "source": {
+    "simulacrumPage": "Carrot",
+    "weaponPage": "SLAP",
+    "matrixPage": "Carrot (Matrix Set)",
+    "releaseVersion": "4.8",
+    "scrapedAt": "2026-03-23T23:31:06.545Z"
+  }
+}

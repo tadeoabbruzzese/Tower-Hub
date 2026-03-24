@@ -1,0 +1,13 @@
+{
+  "name": "Buff Dealer",
+  "description": "",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Increase the damage reduction effect to 20% while in defensive form.",
+    "Increase the damage boost effect to 11% while in offensive form.",
+    "Reduce the trigger interval for blocking lethal damage to once every 120 seconds.",
+    "Increase Altered Resistance by 2%, even if not deployed. Unavailable in Apex League.",
+    "Increase the damage boost effect to 16% while in offensive form."
+  ]
+}

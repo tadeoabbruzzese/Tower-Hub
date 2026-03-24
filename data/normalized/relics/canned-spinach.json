@@ -1,0 +1,13 @@
+{
+  "name": "Canned Spinach",
+  "description": "After eating a can of empowering vegetables, the Wanderer will be unable to act for 6 seconds, but recover 2% of Max HP every second. When receiving damage during this time, restore the same value of HP as the damage received. Cooldown: 30 seconds.",
+  "rarity": "C",
+  "image": "",
+  "advancements": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ]
+}

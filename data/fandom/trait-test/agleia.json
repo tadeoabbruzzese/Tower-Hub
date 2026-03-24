@@ -1,0 +1,115 @@
+{
+  "id": "agleia",
+  "simulacrumName": "Agleia",
+  "weaponName": "Chrono Heart",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "Before the Cataclysm, Agleia ran away from home after a disagreement with her father. She took part in the Wednesday's operation to steal Aurora's classified documents. After the incident, she was sent to Kailo, which allowed her to escape the Cataclysm itself. But, in doing so, she lost nearly everyone she held dear.",
+  "element": "Frost/Volt",
+  "resonance": "Attack",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "Virtual Carry",
+    "description": "Increase final damage by 18%. Reduces stamina cost of flying around using Cluster Computation by 50%. Domain Veil's aim mode no longer costs stamina."
+  },
+  "images": {
+    "character": "https://static.wikia.nocookie.net/toweroffantasy/images/f/fc/Simulacrum_Agleia_Prototype.png/revision/latest/scale-to-width-down/267?cb=20260316152948",
+    "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/9/9a/Icon_Item_Chrono_Heart.png/revision/latest/scale-to-width-down/268?cb=20260316152728",
+    "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/9/9e/Icon_Matrix_Agleia.png/revision/latest/scale-to-width-down/268?cb=20260322165046"
+  },
+  "attacks": [
+    {
+      "title": "Protocol Decryption",
+      "description": "Press Normal Attack to launch four consecutive strikes while on the ground.\nFirst strike: Deals damage equal to 739% of ATK + 693 to targets and causes a short hitstun to those without Hyperbody;\nSecond strike: Deals damage equal to 1,024% of ATK + 961 to targets and slightly knocks back those without Hyperbody;\nThird strike: Deals damage equal to 985% of ATK + 924 to targets and slightly knocks back those without Hyperbody;\nFourth strike: Deals damage equal to 1,387% of ATK + 1,302 to targets and knocks back those without Hyperbody.\nUsing Protocol Decryption's second, third, and fourth strikes grants 2 Encrypted Data if Hostile Intruder is active. Press Normal Attack during the fourth strike to cancel the attack wind-down and launch the second strike."
+    },
+    {
+      "title": "Process Injection",
+      "description": "Press Normal Attack while airborne and Super Administrator is active to unleash three consecutive strikes in mid-air.\nFirst strike: Deals damage up to 2,003% of ATK + 1,880 to targets and causes a short hitstun to those without Hyperbody;\nSecond strike: Deals damage up to 1,860% of ATK + 1,745 to targets and knocks them back.\nThird strike: Deals damage up to 1,947% of ATK + 1,827 to targets and knocks them up.\nUsing Process Injection's first, second, and third strikes consumes 1 Target Address. If Super Administrator is active, press Normal Attack during the third strike to cancel the attack wind-down and launch the first strike"
+    },
+    {
+      "title": "Hot Patch Bomb",
+      "description": "Press Normal Attack while airborne, or use Normal Attack while climbing, jumping backward, or using Jetpack to trigger Falling Attack Hot Patch Bomb.\nDuring the fall, each hit on the target deals damage equal to 139% of ATK + 130.Upon landing, deals damage equal to 1,802% of ATK + 1,691 to nearby targets."
+    },
+    {
+      "title": "Domain Veil",
+      "description": "Hold Normal Attack while airborne and when Super Administrator is inactive to enter Aim Mode. Aim Mode consumes Endurance and locks onto targets within line of sight.\nIn Aim Mode movement is directed toward the aiming direction. A significant amount of Endurance is consumed when releasing Normal Attack without a locked target. A small amount of Endurance is consumed to inflict Digital Camouflage on a locked target. The ability tracks and redirects to the target's location while continuously consuming Endurance.\nSpecial Skill deactivates Digital Camouflage. It detonates System Loopholes on nearby enemies. It deals damage equal to 554% of ATK + 520. It ends target tracking and teleports the caster to the nearest reachable location.\nDigital Camouflage ends if the tracked player also enters Digital Camouflage. It ends if their Endurance is depleted. It ends if the tracked target is defeated or destroyed."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Address Spoofing",
+      "description": "Triggers Phantasia upon dodging before being hit, slowing the action speed of targets within range. Grants immunity to hitstun while dodging.\nInterrupts the Normal Attack sequence temporarily upon casting Address Spoofing during Protocol Decryption or Process Injection. The original sequence then determines the action during the upcoming Command Reload."
+    },
+    {
+      "title": "Command Reload",
+      "description": "Press Normal Attack during the short period after dodging to trigger Command Reload:\nIf there's no log from Address Spoofing and Super Administrator is inactive, the character will launch Protocol Decryption's first strike or Hot Patch Bomb depending on whether they are airborne or on the ground.\nIf there's no log from Address Spoofing and Super Administrator is active, the character will launch Process Injection's first strike.\nIf there's a Protocol Decryption log from Address Spoofing, the character will launch the next strike in the logged Protocol Decryption sequence.\nIf there's a Process Injection log from Address Spoofing and Super Administrator is active, the character will launch the next strike in the logged Process Injection sequence.\nIf there's a Process Injection log from Address Spoofing and Super Administrator is inactive, the character will launch Hot Patch Bomb."
+    },
+    {
+      "title": "Cluster Computation",
+      "description": "Hold Dodge during the perfect dodge window (using a directional dodge) to activate Cluster Computation and take flight (not applicable in Apex League). Use directional buttons to move in the air, continuously consuming Stamina; the character will hover in place if the buttons are released. Hold Jump to ascend quickly at an increased Stamina cost. The character is unaffected by any Speed bonuses while flying.\nPress Dodge during Cluster Computation flight to descend. Press Normal Attack during Cluster Computation flight while Super Administrator is active to launch Process Injection. Press Normal Attack during Cluster Computation flight while Super Administrator is inactive to launch Hot Patch Bomb."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Data Vortex",
+      "description": "Deals damage equal to 3,000% of ATK + 18,947 to targets in range and inflicts Force Impact on them.\nGrants Hyperbody for 25s and activates Hostile Intruder lasting for 25s. Cooldown: 25s.\nHostile Intruder grants 2 Encrypted Data upon the second, third, and fourth strike of Protocol Decryption.\nPermission Breach unlocks upon collecting 18 Encrypted Data. Press Normal Attack during Data Vortex to cancel the wind-down and launch Protocol Decryption's second strike.\nDeactivates Hostile Intruder and Permission Breach, and clears all Encrypted Data when Chrono Heart is switched to the off-hand slot."
+    },
+    {
+      "title": "Permission Breach",
+      "description": "Deals damage equal to 3,600% of ATK + 22,737 to targets in range and upgrades Hostile Intruder to Super Administrator, granting 12 Target Addresses. This skill will be removed upon taking effect. Press Normal Attack during Permission Breach while Super Administrator is active to cancel the skill wind-down and launch Process Injection.\nWhile Super Administrator is active, aerial attack upgrades to Process Injection. The first, second, and third strikes of Process Injection consume 1 Target Address upon hit. Grants 3 stacks of DLL Hijack, up to 6, for every 6 Target Addresses consumed. Every 3 stacks of DLL Hijack grants 1 use of Data Current.\nDeactivates 'Super Administrator', clears remaining 'Target Addresses' and 'DLL Hijack' stacks, and revokes 'Data Current' permissions when 'Chrono Heart' is switched to the off-hand slot."
+    },
+    {
+      "title": "Data Current",
+      "description": "Deals damage equal to 3,900% of ATK + 24,632 to targets in range. This skill removes 3 stacks of DLL Hijack upon use. While Super Administrator is active, press Normal Attack during Data Current to cancel the skill wind-down and launch Process Injection.\nPress Normal Attack while airborne and Super Administrator is active to unleash three consecutive strikes in mid-air.\nFirst strike: Deals damage up to 2,003% of ATK + 12,651 to targets and causes a short hitstun to those without Hyperbody\nSecond strike: Deals damage up to 1,860% of ATK + 11,747 to targets and knocks them back.\nThird strike: Deals damage up to 1% of ATK + 9 to targets and knocks them up."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Recursive Storm",
+      "description": "When weapon charge is full or Phantasia is triggered, switching to this weapon removes all debuffs from the caster and deals damage equal to 9,702% of ATK plus 9,105 to enemies in front. Also grants immunity for 5.4 seconds (not applicable in Apex League; removed when the Discharge Skill is cancelled).\nPress Skill during the short window after triggering this Discharge Skill to cancel it early and cast Data Vortex if it isn't on cooldown."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Force Impact",
+      "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Frost and Volt",
+      "description": "When the weapon deals damage, damage is calculated using the highest equipped frost/volt base ATK, the highest equipped frost/volt ATK percentage, and the highest equipped frost/volt damage boost, and the weapon is considered both a frost and volt weapon."
+    },
+    {
+      "title": "Frost Resonance",
+      "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. (Cannot stack with other Frost Resonance or Frost Reaction effects. Frost Resonance takes priority)."
+    },
+    {
+      "title": "Volt Resonance",
+      "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. (Cannot stack with other Volt Resonance or Volt Reaction effects. Volt Resonance takes priority)."
+    },
+    {
+      "title": "Zero Breach: On-field",
+      "description": "Deals damage equal to 256% of frost ATK plus 3.6% of your Max HP plus 133% of the sum of all the Wanderer's resistance types plus 4.9% of Crit Damage after landing any hit with Chrono Heart. This effect can be triggered up to 1 time every 1.5s. This damage counts as normal attack damage. If there is 1 flame/physical weapon of any kind equipped, this damage is multiplied by 1.3 times. In addition, Zero Breach damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+    }
+  ],
+  "advancements": [
+    "Increases Frost Damage by 9%. Launching the second, third, and fourth strikes of Protocol Decryption now grants 3 Encrypted Data instead of 2. Increases Data Vortex's damage multiplier to 5,400%.",
+    "Increases the current weapon's Base ATK growth by 16%.",
+    "Ignores 25% of the target's Resistances (up to 50% for any single Element) upon dealing damage. Recovers 5% of Max HP when Super Administrator is active.",
+    "Increases the current weapon's Base ATK growth by 32%.",
+    "Increases Frost Damage by 9%. Doubles the Target Addresses cost by the first, second, and third strikes of Process Injection. Increases Permission Breach's damage to 6,900%.",
+    "Increases Final Damage by 30% and Frost Damage by 9%. Chrono Heart's skills inflict a 2-second Freeze upon enemies on hit, as well as a 99% Phantasia Slow (only on monsters)."
+  ],
+  "matrices": {
+    "pc2": "Increases Frost ATK by 26% / 28% / 30% / 32% and Data Current's damage multiplier to 8100%.Active in the off-hand slot, and the only highest star rating effect is applied.",
+    "pc4": "Increases Frost damage by 35% / 46% / 58% / 70%. Equipping Chrono Heart grants an additional 15% Final Damage. Active in the off-hand slot, and the only highest star rating effect is applied."
+  },
+  "source": {
+    "simulacrumPage": "Agleia",
+    "weaponPage": "Chrono Heart",
+    "matrixPage": "Agleia (Matrix Set)",
+    "releaseVersion": "5.7",
+    "scrapedAt": "2026-03-23T23:29:53.468Z"
+  }
+}

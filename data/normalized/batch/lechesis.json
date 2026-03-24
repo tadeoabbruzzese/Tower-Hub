@@ -1,0 +1,108 @@
+{
+  "id": "lechesis",
+  "simulacrumName": "Lechesis",
+  "weaponName": "Eternal Salvation",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "A sweet, gentle nurse. That's the first impression every new patient has of her. Always smiling, endlessly patient, event wit hthe most difficult cases. But give it ten minutes, and the ysoon realize how wrong they are.",
+  "element": "Flame/Physical",
+  "resonance": "Benediction",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "Renascence",
+    "description": "Increase final damage by 18%. Increases Flame DMG by 7% when equipped with Eternal Salvation. Grants 7% Final Damage boost. When activating non-Benediction Resonance, and grants 10,000 basica All Attack when activating Benediction Resonance."
+  },
+  "images": {
+    "character": "",
+    "weapon": "",
+    "matrix": ""
+  },
+  "attacks": [
+    {
+      "title": "Twist Reverie",
+      "description": "While on the ground, use normal attack to launch five consecutive strikes.\nFirst strike: Deals up to 294% of ATK +15 damage, knocking targets back.\nSecond strike: Deals up to 582% of ATK +31 damage, knocking targets back.\nThird strike: Deals up to 833% of ATK +44 damage, knocking targets back.\nFourth strike: Deals up to 1,275% of ATK +67, knocking targets back.\nFifth strike: Deals up to 3,685% of ATK +194 damage, knocking targets back."
+    },
+    {
+      "title": "Aerial Prism",
+      "description": "While the Wanderer is airborne, use normal attack to launch 5 consecutive attacks in the air, consuming endurance.\nFirst strike: Deals up to 210% of ATK plus 11 and knock the target back.\nSecond strike: Deals up to 437% of ATK plus 23 and knock the target back.\nThird strike: Deals up to 833% of ATK plus 44 and knock the target back.\nFourth strike: Deals up to 1,159% of ATK plus 61 and knock the target back.\nFifth strike: Deals up to 3,422% of ATK plus 180 and knock the target back."
+    },
+    {
+      "title": "Wraith Dash",
+      "description": "Hold normal attack between the first and second ground attacks to trigger Wraith Dash. Persoms a rapid spinning slash forward, finishing with a downward diagonal strike, dealing damage equal to 1,979% of ATK plus 104 to nearby enemies."
+    },
+    {
+      "title": "Glint Assault",
+      "description": "Hold normal attack between the first and second ground attacks to trigger Glint Assault.\nDashes forward and slash after charging, dealing damage equal to 2,237% of ATK plus 118 to nearby enemies."
+    },
+    {
+      "title": "Neon Crash",
+      "description": "Hold normal attack while airborne (press when the target is available), or use normal attack while climbing, jumping backward, or using the Jetpack to trigger Neon Crash.\nPlunge from the above, dealing damage equal to 84% of ATK plus 4 to hit enemies during the plunge. Upon landing, deals damage equal to 1,196% of ATK plus 63 to nearby targets."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area.\nBecome immune to hitstun while dodging."
+    },
+    {
+      "title": "True Strike",
+      "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger True Strike, dealing damage up to 486% of ATK plus 26 to targets ahead."
+    },
+    {
+      "title": "Critical Flash",
+      "description": "Use normal attack during the short period after dodging to trigger Critical Flash, dealing damage up to 651% of ATK plus 34 to targets ahead."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Duskwave Slash",
+      "description": "Launches enemies upward, then performs rapid consecutive slashes forward, dealing damage equal to 5,265% of ATK plus 277 to nearby enemies and inflicting Armor Dissolve. Gains the Sever! Heart Lock state, granting Hyperbody for 25s. Cooldown: 25s (This is not affected by other cooldown clearing, resetting, or changing effects).\nSever! Heart Lock Status: Hold to trigger Love Rhapsody, while in Wraith Dash. After casting Love Rhapsody, hold again under Wraith Dash to trigger Prism Tide. Aster casting Prism Tide, hold once more under Wraith Dash to trigger Radiant Shock. (The Sever! Heart Lock status is removed when switching weapons.) These special attacks can be used a total of 3 times and last for 25s.\nLove Rhapsody: Strikes forward and upward after charging, dealing damage equal to 1,820% of ATK to nearby enemies.\nPrism Tide: Strike powerfully forward and upward after charging, dealing equal to 9,450% of ATK to nearby enemies.\nRadiant Shock: Strike powerfully forward and upward after charging, dealing damage equal to 14,000% of ATK to nearby enemies."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Nightmare Crusher",
+      "description": "When the weapon is fully charged or Phantasia is triggered, upon switching to this weapon from another, removes all debuffs from the Authorizer. Launches a heart-shaped energy wave forward, then slashes the charged wave upon full charge. The wave explodes, dealing damage equal to 5,885% of ATK +310 to nearby enemies. Gains damage immunity for 1.5s during the skill (not applicable in Apex League)."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Armor Dissolve",
+      "description": "When the weapon is fully charged, the next attack inflicts armor dissolve effect on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Flame and Mass",
+      "description": "When the weapon deals damage, damage is calculated using the currently equipped weapon's highest physical/flame base ATK, the highest equipped physical/flame ATK percentage, and the highest equipped physical/flame damage boost, and the weapon is considered both a physical and flame weapon."
+    },
+    {
+      "title": "Flame Resonance",
+      "description": "Increase Flame ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Flame weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence."
+    },
+    {
+      "title": "Physical Resonance",
+      "description": "Increase Physical ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Physical weapons. This set effect works in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects, with Physical Resonance taking precedence."
+    },
+    {
+      "title": "Eternal Salvation: On-Field",
+      "description": "When landing any hit with Eternal Salvation, it deals damage to nearby targets equal to 256% of Flame ATK plus 3.6% of the Authorizer's Max HP plus 133% of the sum of all the Authorizer's Resistance Types plust 4.9% of Crit. This effect can be triggered up to once every 1.5s. The Eternal Salvation damage counts as Normal Attack damage. If there is 1 Frost/Volt weapon of any kind equipped, Eternal Salvation damage is multiplied by 1.3. In addition, Eternal Salvation damage is not affected by any damage boost effects except from Titan Equipment's rare stats."
+    },
+    {
+      "title": "Exclusive Weapon Passive",
+      "description": "Damage\nTriggers when Eternal Salvation is equipped and battle begins, dealing Flame DMG equal to 17.5% of ATK to nearby enemies every 0.5s. The effect is also active in the off-hand slot and lasts until leaving combat.\nSupport\nTriggers when Eternal Salvation is equipped and battle begins, causing Little Spring to release a light wave every 5s, restoring HP equal to 100% of ATK to allies within range. Lasts until leaving combat."
+    }
+  ],
+  "advancements": [
+    "Increases Final Damage by 8%. Little Spring's light wave deals Flame DMG equal to 21% of current attribute ATK to enemies. Eternal Salvation restores 2% HP to the caster with each normal or dodge attack.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "Unlocks Prism Tide instantly under Sever! Heart Lock status, allowing a total of 2 special attacks. Converts overhealed Little Spring's healing into a shield, up to 30% of Max HP.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "Increases Final Damage by 5%. Shortens Little Spring's Light wave interval to every 3s. When Benediction Resonance is active: targets hit by Little Spring's light wave gain Moral Booster, receiving 22% All Elemental Damage boost for 5s (Unstackable).",
+    "Increases Flame DMG by 22%. When Benediction Resonance is active, Duskwave Slash, Love Rhapsody, Prism Tide, and Radiant Shock execute enemies with less than 16% HP."
+  ],
+  "matrices": {
+    "pc2": "Increases flame ATK by 26% / 28% / 30% / 32%, and increases the damage multiplier of Radiant Shock to 19,075%. Increases healing effect by 25%. This set effect works in the off-hand slot, and only the set wit hthe highest star rating will take effect.",
+    "pc4": "Increases Flame damage by 16% / 20% / 24% / 28% when Eternal Salvation is equipped. While non-Benediction Resonance is active, increase all elemental damage by 14%.\nWhile Benediction Resonance is active, increase Final Damage equal to Lechesis' highest attribute base Attack divided by 200,000, capped at 30% across the team (Heartlight Radiance buff)"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Speedwalkers",
+  "description": "Speedwalkers can be used to enter the zephyr state, allowing you to move freely on the wall and jump to quickly cover a short distance for 15 seconds. Cooldown: 90 seconds. Speedwalkers are only usable in Domain 9.",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Zephyr duration is extended to 30 seconds.",
+    "In the zephyr state, speed on the ground and walls is increased by 15% and jump height is increased.",
+    "Speedwalkers can store up to 2 charges.",
+    "Reduce physical damage received by 2%, even if not deployed. Unavailable in Apex League.",
+    "During zephyr, aerial attacks recover dodge attempts and aerial dodges recover all endurance."
+  ]
+}

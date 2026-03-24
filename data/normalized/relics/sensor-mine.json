@@ -1,0 +1,13 @@
+{
+  "name": "Sensor Mine",
+  "description": "Plant a proximity mine in the ground in front of you that will last 180 seconds. It explodes when stepped on by enemies, dealing 1,200 area damage and launching them into the air. Cooldown: 30 seconds.",
+  "rarity": "C",
+  "image": "",
+  "advancements": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ]
+}

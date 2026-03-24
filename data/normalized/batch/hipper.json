@@ -1,0 +1,116 @@
+{
+  "id": "hipper",
+  "simulacrumName": "Hipper",
+  "weaponName": "AF-010 Servion",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "The youngest captain in the Hope Fleet and an elite from the OreZero Zone. Though still a rookie within the Fleet, people easily find themselves compelled by her decisive, commanding presence to follow orders without question.",
+  "element": "Volt/Frost",
+  "resonance": "Attack",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "",
+    "description": ""
+  },
+  "images": {
+    "character": "",
+    "weapon": "",
+    "matrix": ""
+  },
+  "attacks": [
+    {
+      "title": "Swift Pursuit",
+      "description": "While on the ground, use normal attack to launch five consecutive strikes.\nFist strike: Deals 151% of ATK + 954 damage.\nSecond strike: Deals up to 333% of ATK + 2,103 damage.\nThird strike: Deals up to 950% of ATK + 6,000 damage.\nFourth strike: Deals up to 916% of ATK + 5,785 damage, launching the target.\nFifth strike: Deals up to 832% of ATK + 5,255 damage launching the target."
+    },
+    {
+      "title": "Swift Pierce",
+      "description": "While airborne, use a normal attack to unleash five consecutive strikes, consuming endurance.\nFirst strike: Deals up to 151% of ATK + 954 damage.\nSecond strike: Deals up to 333% of ATK + 2,103 damage.\nThird strike: Deals up to 950% of ATK + 6,000 damage.\nFourth strike: Deals up to 916% of ATK + 5,785 damage, knocking the target back.\nFifth Strike: Deals up to 832% of ATK + 5,255 damage, knocking the target back."
+    },
+    {
+      "title": "March Sync",
+      "description": "While on the ground and under the Joint Combat, use the normal attack to launch five consecutive enhanced strikes.\nFirst strike: Deals 454% of ATK + 2,867 damage, knocking the target back a short distance.\nSecond strike: Deals up to 998% of ATK + 6,303 damage, knocking the target back a short distance.\nThird strike: Deals up to 2,160% of ATK + 13,642 damage, knocking the target back a short distance.\nFourth strike: Deals up to 2,298% of ATK + 14,514 damage, launching the target.\nFifth strike: Deals up to 2,614% of ATK + 16,509 damage, launching the target."
+    },
+    {
+      "title": "Aerial Aria",
+      "description": "While airborne and under the Joint Combat, use a normal attack to launch five consecutive strikes, consuming Endurance.\nFirst strike: Deals 454% of ATK + 2,867 damage, knocking the target back a short distance.\nSecond strike: Deals up to 998% of ATK + 6,303 damage, knocking the target back a short distance.\nThird strike: Deals up to 2,160% of ATK + 13,642} damage, knocking the target back a short distance.\nFourth strike: Deals up to 2,298% of ATK + 14,514 damage, knocking the target back.\nFifth strike: Deals up to 2,614% of ATK + 16,509 damage, knocking the target back."
+    },
+    {
+      "title": "Stride Lance",
+      "description": "While on the ground, tap and hold the normal attack button during the first to third normal attacks to trigger Stride Lance, Danges to the front of the target, dealing 2,298% of ATK plus 14,514 damage."
+    },
+    {
+      "title": "Starfall Moon",
+      "description": "Tap and hold normal attack while airborne, or use normal attack while climbing, jumping backwards, or using Jetback to trigger Starfall Moon. During the fall, each hit on the target deals 130% of ATK + 821 damage. Upon landing, deal damage equal to 518% of ATK + 3,272 damage to nearby targets."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area.\nBecome immune to hitstun while dodging."
+    },
+    {
+      "title": "Bolt Thrust",
+      "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger Bold Thrust, dealing up to 743% of ATK plus 4,693 damage to enemies in front."
+    },
+    {
+      "title": "Blink Strike",
+      "description": "Use normal attack during the short period after dodging to trigger Blink Strike, dealing up to 743% of ATK plus 4,693 damage to enemies in front."
+    },
+    {
+      "title": "Spiral Waltz",
+      "description": "When Instant Raid effect is active, using a normal attack during dodge attack triggers a Spiral Waltz, dealing up to 2,799% of ATK plus 17,678 damage to enemies in front (counts as skill damage). And using a normal attack while casting Spiral Waltz triggers the fifth enhanced normal attack effect."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Field Sync",
+      "description": "Grants temporary invincibility and deals 3,007% of ATK plus 18,992 damage to nearby targets, then enters Joint Combat status for 22 seconds (Cooldown: 21s). Joint Combat: Grants Hyperbody. When AF-010 Servion is equipped, normal attacks are replaced by March Sync, summoning a mecha to assist in combat and providing additional strike instances. After entering Joint Combat for 9 seconds, gains the Instant Raid effect, enabling the dodge attack skill Spiral Waltz and unlocking the Swish Combo. (Switching AF-010 Servion to the off-hand slot removes both Joint Combat and Instance Raid.)"
+    },
+    {
+      "title": "Swish Combo",
+      "description": "Can be activated during the Instant Raid. Deals damage up to 6,048% of ATK plus 38,198 damage to nearby targets. Removes Instant Raid and Joint Combat effects when the skill ends."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Savage Spiral",
+      "description": "When the weapon charge is full or Phantasia is triggered, upon switching to this weapon, removes all debuffs from the Authorizer, dealing damage up to 7,344% of ATK plus 46,383 to all targets in front. During this period, gains damage immunity for 1.5 seconds (unavailable in Apex League)."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Force Impact",
+      "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Volt-Frost Fusion",
+      "description": "When the weapon deals damage, damage is calculated using the highest equipped volt/frost base ATK, the highest equipped volt/frost ATK percentage, and the highest equipped volt/frost damage boost, and the weapon is considered both a volt and frost weapon."
+    },
+    {
+      "title": "Volt Resonance",
+      "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. Cannot stack with other Volt Resonance or Volt Reaction effects, with Volt Resonance taking precedence."
+    },
+    {
+      "title": "Frost Resonance",
+      "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. Cannot stack with other Frost Resonance or Frost Reaction effects, with Frost Resonance taking precedence."
+    },
+    {
+      "title": "Magfield: On-Field",
+      "description": "When AF-010 Servion hits a target, deals damage to nearby enemies equal to 256% of Volt ATK, plus 3.6% of the Authorizer's Max HP, plus 133% of total resistance, and 4.9% of Crit. Can trigger once every 1.5 seconds. This damage counts ad normal attack damage. For each Physical or Flame weapon equipped, On-Field damage is multiplied by 1.3. On-Field damage is unaffected by damage boosts (except rare stats from Titan Equipment) and does not trigger additional attack effects."
+    }
+  ],
+  "advancements": [
+    "Reduces the recharge time for Instant Raid from 9s to 3s. The fifth normal attack places and electrifying stack on enemies hit, which can be triggered by Swish Combo to deal 3,000% additional damage.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "Increase volt damage by 15%. Each volt damage hit grants a stack of 10% damage reduction, up to 20%, lasting 5 second(s).",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "Ignores 15% of the target's Volt Resistance (each element's total resitance ignored cannot exceed 50%). Continuously restores 2% HP for a duration equal to the time AF-010 Servion was deployed on the field, triggered after switching to another weapon. Max Recovery: 40%.",
+    "Increases Final Damage by 26%. Increases Swish Combo's total damage to 12,528%."
+  ],
+  "matrices": {
+    "pc2": "Increases volt ATK by 26% / 28% / 30% / 32%. Increase the damage of AF-010 Servion's fifth normal attack to 1,588%. Increase the multiplier of the fifth enhanced normal attack to 4,990%.",
+    "pc4": "Increases Volt DMG by 11% / 13% / 15% / 17%. When equipped with AF-010 Servion, increase Crit DMG by 11% / 13% / 15% / 17% and Final DMG by 13%."
+  }
+}

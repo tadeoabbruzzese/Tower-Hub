@@ -1,0 +1,13 @@
+{
+  "name": "Flight Apparatus",
+  "description": "Instructions to control the Flight Apparatus and launch a spatial anchoring module that extends energy tethers into the air, allowing free movement between the ground and sky.Ground Movement: Launch a spatial anchoring module ahead using the Flight Apparatus and use the momentum to propel yourself forward, consuming 15 energy.Aerial Movement: Generate a spatial anchoring module in the air using the Flight Apparatus, then swing forward using the momentum, consuming 12 energy. After swinging through a certain distance in the arc, press again to trigger mid-air acceleration, propelling you forward a distance.The maximum energy is 100, with a regeneration rate of 0.75 energy per second.",
+  "rarity": "SSR",
+  "image": "",
+  "advancements": [
+    "Increase energy capacity to 120.",
+    "The condition for triggering mid-air acceleration is reduced and swing speed is increased.",
+    "After triggering mid-air acceleration, gain an additional 3 energy.",
+    "Reduce volt damage received by 2%, even if not deployed. Unavailable in Apex League.",
+    "Increase energy recovery to 1.5 per second."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "asurada",
+  "simulacrumName": "Asurada",
+  "weaponName": "Hellfire",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "The youngest cover figure of Aesperia's premier Business Weekly, the confirmed future heir of the Todd family, a business elite who is the focus of the business community. He's holding the influential media company \"Auth Inc.\" and the top 3 social app \"ECHO\" in the Federation, earning the trust of many subordinates with his decisive and effective leadership... Such praises have never stopped echoing since Asurada joined Auth Inc.",
+  "element": "Flame/Physical",
+  "resonance": "Attack",
+  "shatter": 14,
+  "charge": 15,
+  "trait": {
+    "title": "Dramatism",
+    "description": "Increase final damage by 18%.When equipped with Hellfire, increase flame damage by 14%."
+  },
+  "images": {
+    "character": "",
+    "weapon": "",
+    "matrix": ""
+  },
+  "attacks": [
+    {
+      "title": "Burning Sacrifice",
+      "description": "While on the ground, use normal attack to attack 5 times in a row.\nFirst Attack: Deal damage equal to 78% of ATK plus 493.\nSecond Attack: Deal damage equal to 145% of ATK plus 916.\nThird Attack: Deal damage equal to 278% of ATK plus 1,756.\nFourth Attack: Deal damage equal to 394% of ATK plus 2,488.\nFifth Attack: Deal damage equal to 418% of ATK plus 2,640."
+    },
+    {
+      "title": "Heavenly Fire",
+      "description": "While airborne, use normal attack to attack 4 times in a row in the air, consuming endurance.\nFirst Attack: Deal damage equal to 67% of ATK plus 423.\nSecond Attack: Deal damage equal to 124% of ATK plus 783.\nThird Attack: Deal damage equal to 210% of ATK plus 1,326.\nFourth Attack: Deal damage equal to 496% of ATK plus 3,133."
+    },
+    {
+      "title": "Scorch the Land",
+      "description": "While on the ground, tap and hold normal attack when using the first to third normal attacks to spin ahead a short distance, dealing damage equal to 207% of ATK plus 1,307 and entering Anticipation state:\nWhile in Anticipation state, release normal attack to trigger Rising Slash, dealing damage equal to 106% of ATK plus 669 to nearby targets and suspending targets midair as the Wanderer leaps into the air. After triggering Rising Slash, tap normal attack again to trigger Heavenly Fire.\nAfter 1.2 seconds in Anticipation state, continue holding normal attack to trigger Turbulence, each slash consuming endurance and dealing damage equal to 42% of ATK plus 265 to nearby targets, spreading 25% of Turbulence's damage among targets when multiple are hit (damage is not spread if over 5 targets). During Turbulence, release normal attack to trigger Cross Slash, dealing damage equal to 246% of ATK plus 1,554 to nearby targets."
+    },
+    {
+      "title": "Executioner's Judgement",
+      "description": "While airborne, tap and hold normal attack when using the first to third normal attacks to trigger Executioner's Judgement.\nQuickly land on the ground, dealing damage equal to 159% of ATK plus 1,004 to nearby targets."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area. Become immune to hitstun while dodging."
+    },
+    {
+      "title": "Phantom Under the Blade",
+      "description": "Use normal attack during the short perfect dodge window (tap an arrow button before dodging) to trigger Phantom Under the Blade, dealing damage equal to 186% of ATK plus 1,175 to targets ahead.\nHold normal attack instead of tapping it to also trigger Scorch the Land after Phantom Under the Blade."
+    },
+    {
+      "title": "Walking Through Fire",
+      "description": "Use normal attack right after dodging backward to trigger Walking Through Fire, shooting forward 2 sword auras that deal damage equal to 250% of ATK plus 1,579.\nAfter triggering Walking Through Fire, tap normal attack to trigger the third attack of Burning Sacrifice."
+    },
+    {
+      "title": "Fanning the Flames",
+      "description": "Tap dodge twice to quickly dash forward, dealing damage equal to 333% of ATK plus 2,103 to targets ahead.\nWhen in the Role Play state, Fanning the Flames is replaced with Up to the Skies: Quickly leap high into the air and draw in nearby targets, dealing damage equal to 394% of ATK plus 2,488 and suspending the targets in air, while all Afterimages also trigger Unstoppable Momentum once.\nAfter triggering Up to the Skies, tap normal attack to trigger Falling Star Impact: Quickly land on the ground and deal damage equal to 418% of ATK plus 2,640 to nearby targets, while all Afterimages also trigger Unstoppable Momentum once."
+    },
+    {
+      "title": "Unstoppable Momentum",
+      "description": "(DMG from the skill's effect and debuff triggered counts as normal attack damage.) While on the ground, hold dodge to start charging and release to trigger Unstoppable Momentum, dashing forward and dealing damage equal to 394% of ATK plus 2,488 to targets ahead. When using Unstoppable Momentum, every Afterimage on the field will unleash an additional Unstoppable Momentum attack toward the Wanderer, after which the Afterimages will quickly disappear. If the target is killed, duration of the Afterimage is reset and it can affect the next Unstoppable Momentum."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Dream Within a Dream",
+      "description": "Enter Flame Soul state, increasing final damage by 10% for 25 seconds. The Wanderer moves back, throws their weapon, and summons flame phantom slashes, dealing damage equal to 833% of ATK plus 5,261 to nearby targets. After the phantoms combine, the Wanderer dashes forward and attacks with the flame phantoms, dealing damage equal to 444% of ATK plus 2,804 to nearby targets launching them into the air. This has a cooldown of 25 seconds. The Wanderer also enters Role Play state for 21 seconds.\nRole Play: In this state, the Wanderer gains hyperbody; when normal attack or dodge attack (excluding attacks that trigger Unstoppable Momentum) hits a target, the Wanderer generates an Afterimage that can perform a coordinate attack, dealing damage equal to 50% of the current attack's damage. Afterimages last for 30 seconds, with up to 5 able to exist on the field at any given time. Afterimages count as summons."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Deserved Death",
+      "description": "When weapon charge is full or Phantasia is triggered, switching to this weapon from another removes all debuffs from the Wanderer and quickly charge an attack with three swords. After charging, perform a flurry of slashes in front, dealing damage equal to 1,173% of ATK plus 7,408 to all nearby targets and reducing the healing received of hit targets by 60% for 30 seconds. During this period, gain damage immunity for 1.5 seconds (unavailable in Apex League)"
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Armor Dissolve",
+      "description": "When the weapon is fully charged, the next attack inflicts armor dissolve effect on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Mass and Flame",
+      "description": "When the weapon deals damage, damage is calculated using the currently equipped weapon's highest physical/flame base ATK, the highest equipped physical/flame ATK percentage, and the highest equipped physical/flame damage boost, and the weapon is considered both a physical and flame weapon."
+    },
+    {
+      "title": "Physical Resonance",
+      "description": "Increase Physical ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Physical weapons. This set effect works in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects, with Physical Resonance taking precedence."
+    },
+    {
+      "title": "Flame Resonance",
+      "description": "Increase Flame ATK by 15% and Physical Resistance by 25%. Activate by equipping 2 or more Flame weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence."
+    },
+    {
+      "title": "Blaze: On-Field:",
+      "description": "When hitting any target with Hellfire, deal damage equal to 256% of flame ATK plus 3.6% of Max HP plus 133% of the sum of all the Wanderer's resistance types plus 4.9% of crit to nearby targets. Can be triggered up to 1 time every 1.5 seconds. Blaze damage counts as normal attack damage. If any 1 frost or volt weapon is equipped, Blaze Damage is multiplied by 1.3. In addition, Blaze damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+    }
+  ],
+  "advancements": [
+    "Increase coordinated attack damage of Role Play to 100% of the damage of the damage dealt by the attack.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "For every 1 Afterimage on the field, increase the damage of Unstoppable Momentum by 10%. If there are 5 Afterimages on the field, increase the damage of Unstoppable Momentum to 100%.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "For every Afterimage consumed by triggering Unstoppable Momentum, Provide the Wanderer with a shield equal to 6% of Max HP for 30 seconds, up to 60%.",
+    "Increase final damage boost provided by Flame Soul to 33%."
+  ],
+  "matrices": {
+    "pc2": "Increase flame damage by 26% / 28% / 30% / 32% and Unstoppable Momentum multiplier to 525.4%. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect.",
+    "pc4": "Increase all elemental damage by 16% / 18% / 20% / 22%. When equipped with Hellfire, increase final damage by an additional 16% / 18% / 20% / 22%. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect."
+  }
+}

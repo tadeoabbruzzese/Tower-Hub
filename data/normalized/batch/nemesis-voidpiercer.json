@@ -1,0 +1,128 @@
+{
+  "id": "nemesis-voidpiercer",
+  "simulacrumName": "Nemesis Voidpiercer",
+  "weaponName": "Star of Oblivion",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "With the help of the Dimensional Quantum Supercomputer framework, the Super Artificial Intelligence: Gesthos Network began evolving into self-awareness.",
+  "element": "Altered",
+  "resonance": "Attack",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "The Authorizer",
+    "description": "Increase final damage by 18% and gain 12% of elemental damage boost based on the current stat of Star of Oblivion. When using Star of Oblivion, if other equipped weapons are also altered weapons, increase crit damage by 16% and reduce damage taken by 15%."
+  },
+  "images": {
+    "character": "",
+    "weapon": "",
+    "matrix": ""
+  },
+  "attacks": [
+    {
+      "title": "Void Shredder",
+      "description": "While on the ground, use normal attack to launch 5 consecutive attacks.\nFirst Attack: Deal damage equal to 197% of ATK plus 1,244, inflicting 1 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nSecond Attack: Deal damage equal to 633% of ATK plus 3,988, inflicting 1 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nThird Attack: Deal damage equal to 291% of ATK plus 1,838, inflicting 2 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nFourth Attack: Deal damage equal to 844% of ATK plus 5,331, inflicting 2 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nFifth Attack: Deal damage equal to 861% of ATK plus 5,438, inflicting 3 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nWhen a Pursuit Pray target is present, use normal attack to trigger Pursuit, diving near the target dealing damage equal to 622% of ATK plus 3,928. On hit, grant 1 stack of Frenzy, inflicting 2 stacks of Entropic Surge on hit targets when Dark Star: Chaos is triggered. Pursuit can be triggered up to 1 time every 4.5 seconds."
+    },
+    {
+      "title": "Reckoning of Shadow",
+      "description": "While airborne, use normal attack to launch 5 consecutive attacks in mid-air, consuming endurance.\nFirst Attack: Deal damage equal to 197% of ATK plus 1,244, inflicting 1 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nSecond Attack: Deal damage equal to 633% of ATK plus 3,998, inflicting 1 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nThird Attack: Deal damage equal to 291% of ATK plus 1,838, inflicting 2 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nFourth Attack: Deal damage equal to 844% of ATK plus 5,331, inflicting 2 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nFifth Attack: Deal damage equal to 861% of ATK plus 5,438, inflicting 3 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered.\nWhen a Pursuit Pray target is present, use normal attack to trigger Pursuit, diving near the target dealing damage equal to 622% of ATK plus 3,928. On hit, grant 1 stack of Frenzy, inflicting 2 stacks of Entropic Surge on hit targets when Dark Star: Chaos is triggered. Pursuit can be triggered up to 1 time every 4.5 seconds."
+    },
+    {
+      "title": "Chase of Nought",
+      "description": "Tap and hold normal attack or hold during the first to third normal attack on the ground to backflip and trigger Star of Oblivion, hitting up to 2 times. Each hit deals damage equal to 320% of ATK plus 2,021 to the target and fires bullets that deal damage equal to 240% of ATK plus 1,516, marking locked-on targets with Pursuit Prey.\nWhen Dark Star: Chaos is triggered, Chase of Nought inflicts 1 stack of Entropic Surge on hit targets. When Frenzy reaches 3 stacks, Chase of Nought is replaces with Dimensional Seal. Tap and hold normal attack to teleport in front of the locked-on target, capturing its afterimage into the Black Hole (iimune to damage from target during Dimensional Seal), and triggering an explosion that deals damage equal to 1,556% of ATK plus 9,827 to targets in a wide area."
+    },
+    {
+      "title": "Descent of Stillness",
+      "description": "While airborne, tap and hole normal attack to use Descent of Stillness.\nPlunges toward the ground, dealing damage equal to 655% of ATK plus 4,137 to nearby targets."
+    },
+    {
+      "title": "Echo of Infinity",
+      "description": "When Boundary Zone is used, Void Shredder is replaces with Echo of Infinity. While on the ground, use normal attack to launch 5 consecutive attacks.\nFirst Attack: Deal damage equal to 191% of ATK plus 1,206, inflicting 1 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nSecond Attack: Deal damage equal to 446% of ATK plus 2,817, inflicting 1 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nThird Attack: Deal damage equal to 704% of ATK plus 4,446, inflicting 2 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nFourth Attack: Deal damage equal to 819% of ATK plus 5,173, inflicting 2 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nFifth Attack: Deal damage equal to 1,609% of ATK plus 10,162, inflicting 3 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nWhen a Pursuit Pray target is present, use normal attack to trigger Pursuit, diving near the target dealing damage equal to 1,041% of ATK plus 6,575. On hit, grant 1 stack of Frenzy, inflicting 2 stacks of Entropic Surge on hit targets when Dark Star: Chaos is triggered. Pursuit can be triggered up to 1 time every 4.5 seconds."
+    },
+    {
+      "title": "Silent End",
+      "description": "When Boundary Zone is used, Reckoning of Shadow is replaces with Silent End. While airborne, use normal attack to launch 5 consecutive attacks in mid-air, consuming endurance.\nFirst Attack: Deal damage equal to 191% of ATK plus 1,206, inflicting 1 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nSecond Attack: Deal damage equal to 446% of ATK plus 2,817, inflicting 1 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nThird Attack: Deal damage equal to 626% of ATK plus 3,954, inflicting 2 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nFourth Attack: Deal damage equal to 774% of ATK plus 4,888, inflicting 2 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nFifth Attack: Deal damage equal to 1,485% of ATK plus 9,379, inflicting 3 stack of Entropic Surge on the hit target when Dark Star: Chaos is triggered.\nWhen a Pursuit Pray target is present, use normal attack to trigger Pursuit, diving near the target dealing damage equal to 1,041% of ATK plus 6,575. On hit, grant 1 stack of Frenzy, inflicting 2 stacks of Entropic Surge on hit targets when Dark Star: Chaos is triggered. Pursuit can be triggered up to 1 time every 4.5 seconds."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Dodge",
+      "description": "Dodge right before getting hit to trigger Phantasia, reducing the speed of targets within the area. Become immune to hitstun while dodging."
+    },
+    {
+      "title": "Shattering Leap",
+      "description": "Use normal attack during the short period after dodging to trigger Shattering Leap, dashing forward to strike targets and dealing damage equal to 510% of ATK plus 3,221, which inflicts 1 stack of Entropic Surge when Dark Star: Chaos is active."
+    },
+    {
+      "title": "Echo of Emptiness",
+      "description": "When Boundary Zone is used, Shattering Leap is replaced with Echo of Emptiness. Use normal attack during this short period after dodging to launch missiles, dealing damage equal to 420% of ATK plus 2,653 to hit targets, marking locked-on targets with Pursuit of Prey, and inflicting 1 stack of Entropic Surge on hit targets when Dark Star: Chaos is triggered."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Starfall Cleave",
+      "description": "Tap skill to leap forward, summoning Star of Oblivion Blades the pierce the ground. The initial strike deals 1,365% of ATK plus 8,621 damage, followed by a dark explosion dealing 2,129% of ATK plus 13,446 damage to enemies in range. Grants Dark Star with effects based on Star of Oblivion's current stat:\nDark Star: Retrograde: with flame-physical stat, Starfall Cleave ignites targets, dealing35% flame damage per second for 20 seconds while boosting flame damage by 17% for 25 seconds Hits grand 1 Chaos stack (max 1 per second). At 6 stacks, resets and launches 6 homing projectiles at random targets, each dealing 570% of ATK damage and restoring 2% Max HP. Multiple hits on locked targets inflict 100% Slow for 1 second, decaying over duration. Cooldown: 25 seconds. (this is not affected by other cooldown clearing, resetting, or changing effects).\nDark Star: Frozen: With frost-volt stat, boost Star of Oblivion's final damage by 55% for 25 seconds. Restores 10% Max HP after each Pursuit. When Star of Oblivion is in the off-hand slot, deals 600% frost damage per seconds to nearby targets. Cooldown: 25 seconds (this is not affected by other cooldown clearing, resetting, or changing effects).\nDark Star: Chaos: With physical-flame stat, boosts Star of Oblivbion's final damage by 25% for 20 seconds. On hit, inflicts Entropic Surge to the target. Upon reaching 10 stacks, resets all stacks and triggers an explosion that deals damage equal to 525% of ATK to nearby targets. When targets marked with Entropic Surge die, their stacks spread to nearby enemies. When using Obliteration Blade, removes all Entropic Surge marks within the range and triggers and explosion. When Star of Oblivion is in the off-hand slot, deals damage equal to 735% of ATK per seconds and inflicts 1 Entropic Surge to nearby targets. Cooldown 21 seconds (this is not affected by other cooldown cleaning, resetting, or changing effects).\nDark Star: Pulse: With volt-frost stat, increases Star of Oblivion's volt damage by 6% for 20 seconds. Gain 10 Charge stacks. hits consume 1 stack (max 1 per seconds)) to deal damage equal to 500% of ATK to nearby targets. At 0 stack, deals and additional damage equal to 1200% of ATK and restores 25% of Max HP per target hit. Cooldown: 20 seconds (this is not affected by other cooldown clearing, resetting, or changing effects)."
+    },
+    {
+      "title": "Void Pursuit",
+      "description": "Tap and hold skill to create a Boundary Zone after a brief charge, slowing all enemies within. While the Boundary Zone is active, switching to Star of Oblivion allows using Void Annihilation without charge cost. Launches missiles dealing damage equal to 737% of ATK plus 4,655, marking hit targets for Pursuit while gaining the Dark Star effect matrching the Starfall Cleave's element. With altered element, Void Pursuit triggers Dark Star: Rebirth:\nDark Star: Rebirth: While Boundary Zone is active, stores all damage dealt. When Boundary Zone is terminated by Oblitaration Blade or Void Annihilation, unleash a 100% of stored damage to all targets in range (capped at ATK x 2,000 in solo mode, ATK x 5,000 in team mode. Only affected by titan equipment's rare stats, and won't trigger additional attack effects)."
+    },
+    {
+      "title": "Obliteration Blade",
+      "description": "After 10 seconds in the Boundary Zone or completing the final strike of Echo of Infinity, the skill is replaces with Obliteration Blade. Summon Voidpiercer to dash forward, placing a Singularity in her wake. After a brief charge, pierces through the Singularity, dealing damage equal to 661% of ATK plus 4,175 to enemies in her path. The Singularity immobilzes enemies withing range, expanding to its maximum range before collapsing in a slashing attack that deals damage equal to 1,802% of ATK plus 11,381, ending the Boundary Zone."
+    },
+    {
+      "title": "Divine Arrival",
+      "description": "With Star of Oblivion, Wanderers can view the survival status of all world bosses on the map. When equipped with Star of Oblivion, tap on previously defeated world bosses on the map to trigger Divine Arrival, transmitting above the boss to strike. Upon landing, deal damage equal to 655% of ATK plus 4,137 to nearby targets. Transmission via Divine Arrival remains available during boss respawn. Can be triggered up to 1 time every minute."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Void Annihilation",
+      "description": "When weapon charge is full or Phantasia is triggered, upon switching to this weapon, remove all debuffs from the Wanderer transforms into Voidpiercer, and unleash a gigantic Black Hole, inflicting a 100% Slowing effect on targets in the area. Compress and unleash the Black Hole from hands, triggering an explosion, dealing damage up to 3,474% of ATK plus 21,941. While the Boundary Zone is active, using Void Annihilation will terminate the Boundary Zone effect. During Void Annihilation, use skills to disengage from discharge with Voidpiercer completing the discharge, gaming damage immunity for 1.5 seconds (unavailable in Apax League)."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Altered Damage",
+      "description": "When the weapon is fully charged, the next attack will mark the target, causing an explosion after 5 seconds. Additionally inflict 25% of all damage received by the target during the duration of the mark, up to a total of 560% of your ATK. Only 1 mark can exist on a target at a time."
+    },
+    {
+      "title": "Force Impact",
+      "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Armor Dissolve",
+      "description": "When the weapon is fully charged, the next attack inflicts Armor Dissolve on the target for 45 seconds, increasing their flame and physical damage taken by 10% (and an additional 15% in team play). This effect will replace the grievous status on the target, and targets with this effect cannot become grievous. Physical attacks will stun targets under the dissolve effect for 2 seconds, and flame attacks will decrease the targets' speed by 50% for 5 seconds. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Elemental Resonance",
+      "description": "Based on the matched element of Star of Oblivion, the following Elemental Resonance can be activated:\nFlame: Increases Flame ATK by 15% and Flame Resistance by 25%. Activated by equipping 2 or more Flame Weapons. This set effect works in the off-hand slot. Cannot stack with other Flame Resonance or Flame Reaction effects, with Flame Resonance taking precedence.\nFrost: Increases Frost ATK by 15% and Frost Resistance by 25%. Activated by equipping 2 or more Frost Weapons. This set effect works in the off-hand slot. Cannot stack with other Frost Resonance or Frost Reaction effects, with Frost Resonance taking precedence.\nVolt: Increases Volt Attack by 15% and Volt Resistance by 25%. Activate by equipping 2 or more Volt weapons. Active in the off-hand slot. Cannot stack with other Volt Resonance or Volt Reaction effects, with Volt Resonance taking precedence.\nPhysical: Increases Physical ATK by 15% and Physical Resistance by 25%. Activated by equipping 2 or more Physical Weapons. Active in the off-hand slot. Cannot stack with other Physical Resonance or Physical Reaction effects. Physical Resonance takes precedence."
+    },
+    {
+      "title": "Elemental Tuning",
+      "description": "When equipped with Star of Oblivion, if the elements of the other two weapons match, Star of Oblivion's element adopts with the same element. Otherwise, it shifts to the altered element."
+    },
+    {
+      "title": "Chaotic Wave",
+      "description": "Three altered weapons reduce the hit enemies' final damage by 15% for 5 seconds."
+    },
+    {
+      "title": "Evernal Shadow: Unload",
+      "description": "After using Starfall Cleave, deal damage equal to 137% of altered ATK plus 19.5% of the Wanderer's Max HP plus 70% of the sum of all the Wanderer's resistance types plus 246% of crit to targets hit every second for 30 seconds. Multiple Unload damage cannot be stacked.\nEternal Shadow damage counts as skill damage. If there is 1 physical/flame/frost/volt weapon of any kind equipped, Eternal Shadow damage is multplied by 1.3 times. In addition, Eternal Shadow damage is not affected by damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+    }
+  ],
+  "advancements": [
+    "Normal Attack: Pursuit's damage doubles, inflicting a bried 70% Slow effect on hit.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "During Dark Star, the Wanderer will ignore 15% of the target's resistance (each element's total resistance ignored cannot exceed 50%). Upon entering the combat state, switching to Star of Oblivion for the first time allows using Void Annihilation without charge cost.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "When the Dark Star is triggered, the Wanderer obtains a shield equal to 60% of Max HP. This shield can stack with other shields, but the total shield value cannot exceed 100% of Max HP. Any excess witll be converted to equivalent healing.",
+    "Increase final damage by 16%, all elemental damage boosted by 16%. This set effect works in the off-hand slot."
+  ],
+  "matrices": {
+    "pc2": "Increase all elemental ATK by 26% / 28% / 30% / 32%, and ignore 35% of the target's shield when equipped with Star of Oblivion. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect.",
+    "pc4": "Increase final damage by 10% / 14% / 18% / 22%. When equipped with Star of Oblivion, increases the final damage by 8% and Crit damage by 15%. This set effect works in the off-hand slot and only the set with the highest star rating will take effect."
+  }
+}

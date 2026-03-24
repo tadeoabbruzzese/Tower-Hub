@@ -1,0 +1,131 @@
+{
+  "id": "gray-fox",
+  "simulacrumName": "Gray Fox",
+  "weaponName": "The Witch's Key",
+  "rarity": "SSR",
+  "releaseDate": "",
+  "description": "A cold-faced tech geek who tends to ignore everyone and only speaks at critical moments or when it's absolutely necessary to reply. She may come as rebellious, but once you get to know her, you'll see her gentle, inner world.[...]--Story Concept Card",
+  "element": "Frost/Volt",
+  "resonance": "Benediction",
+  "shatter": 16,
+  "charge": 14,
+  "trait": {
+    "title": "Anonymous Assault",
+    "description": "Increase final damage by 18%. When Benediction Resonance is active: Upon using Magic Transmutation at full Power Scale stacks, increase final damage of the Wanderer and nearby teammates by 10% for 30 seconds (this effect does not stack)."
+  },
+  "images": {
+    "character": "https://static.wikia.nocookie.net/toweroffantasy/images/0/01/Simulacrum_Gray_Fox_Prototype.png/revision/latest/scale-to-width-down/268?cb=20241024061701",
+    "weapon": "https://static.wikia.nocookie.net/toweroffantasy/images/9/92/Icon_Weapon_The_Witch%27s_Key.png/revision/latest/scale-to-width-down/268?cb=20241028155536",
+    "matrix": "https://static.wikia.nocookie.net/toweroffantasy/images/9/97/Icon_Matrix_Gray_Fox.png/revision/latest/scale-to-width-down/268?cb=20241024134245"
+  },
+  "attacks": [
+    {
+      "title": "Magic Unleashed",
+      "description": "While on the ground, use normal attack to launch 4 attacks in a row.\nFirst Attack: Deal damage equal to 270% of ATK plus 14 and knock the target back, gaining 1 Power Scale stack.\nSecond Attack: Deal damage equal to 374% of ATK plus 20 and knock the target back, gaining 1 Power Scale stack.\nThird Attack: Deal damage equal to 386% of ATK plus 20 and knock the target back, gaining 2 Power Scale stacks.\nFourth Attack: Deal damage equal to up to 594% of ATK plus 31 to the target and knock the target back, gaining 2 Power Scale stacks.\nEach hit of Magic Unleashed adds 1 Temporal Fallacy stack to the target, decreasing all attack of the target by 3% for 10 seconds, stacking up to 4 times (this decrease will not be reflected on the Wanderer's stats)."
+    },
+    {
+      "title": "Aerial Waltz",
+      "description": "While the Wanderer is airborne, use normal attack to launch 4 consecutive attacks, consuming endurance.\nFirst Attack: Deal damage equal to 270% of ATK plus 14 and knock the target back, gaining 1 Power Scale stack.\nSecond Attack: Deal damage equal to 374% of ATK plus 20 and knock the target back, gaining 1 Power Scale stack.\nThird Attack: Deal damage equal to 386% of ATK plus 20 and knock the target back, gaining 2 Power Scale stacks.\nFourth Attack: Deal damage equal to up to 594% of ATK plus 31 to the target and knock the target back, gaining 2 Power Scale stacks.\nEach hit of Magic Unleashed adds 1 Temporal Fallacy stack to the target, decreasing all attack of the target by 3% for 10 seconds, stacking up to 4 times (this decrease will not be reflected on the Wanderer's stats)."
+    },
+    {
+      "title": "Fated Wheel",
+      "description": "While using normal attack on the ground, tap and hold normal attack when using the third to fourth normal attacks to trigger Fated Wheel.\nDeal damage equal to 1,000% of ATK plus 53 to nearby targets and knock the targets back.\nAfter Fated Wheel hits, enhances Temporal Fallacy to decrease all attack of the target by 5% (this decrease is not reflected on the Wanderer's stats) and also inflict a 10% Slow effect for 10 seconds."
+    },
+    {
+      "title": "Glacial Surge",
+      "description": "Under the Witch of Time state, while on the ground, use normal attack to launch 4 consecutive attacks, consuming endurance.\nFirst Attack: Deal damage equal to 308% of ATK plus 16 and knock the target back, gaining 2 Power Scale stacks.\nSecond Attack: Deal damage equal to 452% of ATK plus 24 and knock the target back, gaining 2 Power Scale stacks.\nThird Attack: Deal damage equal to 606% of ATK plus 32 and draw in the target, gaining 2 Power Scale stacks.\nFourth Attack: Deal damage equal to up to 2,073% of ATK plus 109 to the target and launch the target, gaining 3 Power Scale stacks."
+    },
+    {
+      "title": "Frozen Comet",
+      "description": "Under the Witch of Time state, use normal attack to launch 4 consecutive attacks, consuming endurance.\nFirst Attack: Deal damage equal to 308% of ATK plus 16 and knock the target back, gaining 2 Power Scale stacks.\nSecond Attack: Deal damage equal to 452% of ATK plus 24 and knock the target back, gaining 2 Power Scale stacks.\nThird Attack: Deal damage equal to 606% of ATK plus 32 and draw in the target, gaining 2 Power Scale stacks.\nFourth Attack: Deal damage equal to up to 2,073% of ATK plus 109 to the target and launch the target, gaining 3 Power Scale stacks."
+    },
+    {
+      "title": "Stagnant Stream",
+      "description": "When under the Witch of Time state and with 12 Power Scale stacks, tap and hold normal attack or hold during normal attack on the ground to consume all Power Scale stacks and trigger Stagnant Stream, dealing damage equal to 2,095% of ATK plus 110 to nearby targets.\nWhen Benediction Resonance is active:\nNearby teammates recover all HP lost in the past 3.5 seconds and additional HP equal to 200% of ATK. Also remove debuffs and control effects (including Graying Bite effect) from the Wanderer and nearby teammates."
+    },
+    {
+      "title": "Divebomb",
+      "description": "Tap and hold normal attack while airborne, or use normal attack while climbing, jumping backward, or using the Jetpack to trigger Divebomb.\nWhile falling, deal damage equal to 306% of ATK plus 16 each hit. After landing, deal damage equal to 706% of ATK plus 37 to nearby targets."
+    }
+  ],
+  "dodges": [
+    {
+      "title": "Mystic Repulsion",
+      "description": "Use normal attack during the short perfect dodge window (use a directional button before dodging) to trigger a pre-dodge attack, dealing damage up to 625% of ATK plus 33 to targets ahead."
+    },
+    {
+      "title": "Retribution's Light",
+      "description": "Use normal attack during the short period after dodging to trigger a post-dodge attack, dealing damage up to 600% of ATK plus 32 to targets ahead."
+    },
+    {
+      "title": "Airborne Fantasy",
+      "description": "Hold dodge to enter Airborne Fantasy, increasing speed and continuously consuming endurance. Upon ending Airborne Fanatasy, deal up to damage equal to 858% of ATK plus 45 to targets ahead."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Magic Transmutation",
+      "description": "Consume all Power Scale stacks to deal damage equal to 2,093% of ATK plus 110 to nearby targets.\nEnter the Witch of Time state, in which some normal attack modes change and the Wanderer increases frost damage by 1% for 30 seconds for each Power Scale stack consumed. While in this state, using Stagnant Stream grants a new skill, Sub-Zero Beam (only can be obtained and used 1 time in each Witch of Time state, and switching weapons during this state will prevent obtaining or using it). Cooldown of 30 seconds. (This is not affected by other cooldown clearing, resetting, or changing effects.)"
+    },
+    {
+      "title": "Sub-Zero Beam",
+      "description": "Can be used while in the Witch of Time state, dealing damage equal to 1,261% of ATK plus 66 to nearby targets and freezing them for 2 seconds. Also recover HP equal to 400% of ATK for nearby teammates and gain 12 Power Scale stacks."
+    }
+  ],
+  "discharges": [
+    {
+      "title": "Spacetime Spark",
+      "description": "When weapon charge is full or Phantasia is triggered, upon switching to this weapon, remove all debuffs from the Wanderer, gain 12 Power Scale stacks, and gain Hyperbody for 30 seconds, dealing damage equal to 4,500% of ATK plus 237 to nearby targets. During this period, gain damage immunity for 1.5 seconds (unavailable in Apex League).\nWhen Benediction Resonance is active:\nRemove debuffs and control effects (including Graying Bite) from the Wanderer and nearby teammates."
+    }
+  ],
+  "scaling": "ATK_HP_CRIT",
+  "passives": [
+    {
+      "title": "Force Impact",
+      "description": "When the weapon is fully charged, the next attack applies Force Impact on the enemy for 45 seconds, increasing their frost and volt damage taken by 10% (and an additional 15% in team play). Force Impact replaces the target's grievous status, and targets with Force Impact cannot become grievous. Frost attacks will freeze targets with Force Impact for 2 seconds, and volt attacks will remove the targets' buffs. This effect can only trigger 1 time every 15 seconds on the same target."
+    },
+    {
+      "title": "Fusion of Frost and Volt",
+      "description": "When the weapon deals damage, damage is calculated using the highest equipped frost/volt base ATK, the highest equipped frost/volt ATK percentage, and the highest equipped frost/volt damage boost, and the weapon is considered both a frost and volt weapon."
+    },
+    {
+      "title": "Frost Resonance",
+      "description": "Increase frost ATK by 15% and frost resistance by 25%. Activate by equipping 2 or more frost weapons. This set effect works in the off-hand slot. Cannot stack with other Frost Resonance or Frost Reaction effects, with Frost Resonance taking precedence."
+    },
+    {
+      "title": "Volt Resonance",
+      "description": "Increase volt ATK by 15% and volt resistance by 25%. Activate by equipping 2 or more volt weapons. This set effect works in the off-hand slot. Cannot stack with other Volt Resonance or Volt Reaction effects, with Volt Resonance taking precedence."
+    },
+    {
+      "title": "Magic Pool",
+      "description": "The wanderer can accumulate up to 12 power points, which can be used to enhance effects or unleash stronger charms. The power bar lasts for 60 seconds and disappears 15 seconds after leaving combat. Only the The Witch's Key has the power bar, and you can only accumulate power points if it is in the main slot."
+    },
+    {
+      "title": "Chrono Coil: Release",
+      "description": "After using Magic Transmutation, deal damage equal to 137% of frost ATK plus 19.5% of the Wanderer's Max HP plus 70% of the sum of all the Wanderer's resistance types plus 264% of crit to targets hit every second for 30 seconds. Release damage does not stack and Chrono Coil damage is counted as skill damage. If there is 1 flame/physical weapon of any kind equipped, Chrono Coil damage is multiplied by 1.3 times. In addition, Chrono Coil damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+    },
+    {
+      "title": "Reserve",
+      "description": "When The Witch's Key is in the main slot, can gain Power Scale to advance the clock progress of The Witch's Key, enhancing magic effects or releasing more powerful magic. Power Scale can stack up to 12 times, lasting for 60 seconds, and will be removed 15 seconds after exiting battle."
+    }
+  ],
+  "advancements": [
+    "Under the Witch of Time state and when The Witch's Key is in the main slot, gain an additional 1 stack of Power Scale every 1 seconds.\nAfter using Magic Transmutation, apply an additional Reverse Tide effect to the hit target for 12 seconds, stacking up to 1 time. While Reverse Tide is active, the Wanderer recovers HP equal to the number of nearby targets number of nearby targets affected by Reverse Tide times 80% of ATK every 1 seconds.",
+    "Increase the current weapon's base ATK growth by 16%.",
+    "Under the Witch of Time state, deal 775% of ATK as DMG to nearby targets every 1 seconds. When Benediction Resonance is active: Upon using Magic Transmutation at full Power Scale stacks, increase final damage of the Wanderer and nearby teammates by 25% for 30 seconds (this effect does not stack); in addition, targets affected by Reverse Tide will have their crit resistance reduced by 2% every 2 seconds for 10 seconds, up to 5 stacks.",
+    "Increase the current weapon's base ATK growth by 32%.",
+    "Increase healing by 15%. For every 12 Power Scale stacks consumed, gain 1 stack of Exemption Privilege: When taking lethal damage, consume 1 stack to prevent the lethal effect and recover 15% of Max HP, stacking up to 4 times (unavailable in Apex League). When Benediction Resonance is active: Exemption Privilege can be additionally granted to nearby teammates.",
+    "Upon entering the Witch of Time state, the frost elemental damage boost increases to 2.5% for every 1 Power Scale stack consumed.\nWhen Reverse Tide ends, deal additional damage equal to 50% of the total damage taken during this period to the target (does not exceed the Wanderer's ATK times 1,000 in solo mode and the Wanderer's ATK times 15,000 in team mode). Damage is not affected by any damage boost effects except from titan equipment's rare stats, and won't trigger additional attack effects."
+  ],
+  "matrices": {
+    "pc2": "When non-Benediction Resonance is active, increase frost ATK by 24% / 26% / 28% / 30%.\nWhen Benediction Resonance is active, increase all attack by 24% / 26% / 28% / 30%. Increase healing by 20%. When dealing damage for the first time in combat, gain 1000 weapon charge. This can only trigger once every 15 seconds. This set effect works in the off-hand slot, and only the set with the highest star rating will take effect.",
+    "pc4": "After using Spacetime Spark, increases Final Damage by 11% / 15% / 19% / 23%.\nIf Benediction Resonance is inactive, increases Frost Damage by 20%.\nIf Benediction Resonance is active, increases the Wanderer's and nearby allies' Crit Rate by 20% and Crit Damage by 12%. These effects last for 40 seconds. This set effect applies in the off-hand slot, and only the set with the highest star rating takes effect."
+  },
+  "source": {
+    "simulacrumPage": "Gray Fox",
+    "weaponPage": "The Witch's Key",
+    "matrixPage": "Gray Fox (Matrix Set)",
+    "releaseVersion": "4.4",
+    "scrapedAt": "2026-03-24T00:35:30.435Z"
+  }
+}
