@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const SECTIONS = [
   { id: "trait",        label: "Trait" },
@@ -15,22 +16,16 @@ export function SectionIndex({ theme }) {
 
   useEffect(() => {
     const observers = [];
-
     SECTIONS.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (!el) return;
-
       const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActive(id);
-        },
+        ([entry]) => { if (entry.isIntersecting) setActive(id); },
         { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
       );
-
       observer.observe(el);
       observers.push(observer);
     });
-
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
@@ -62,19 +57,12 @@ export function SectionIndex({ theme }) {
               `}
               style={isActive ? { borderLeftColor: "currentColor" } : {}}
             >
-              {/* Dot indicator */}
-              <span
-                className={`
-                  h-1.5 w-1.5 rounded-full flex-shrink-0 transition-all duration-200
-                  ${isActive ? `${theme.bar} scale-125` : "bg-gray-700 group-hover:bg-gray-500"}
-                `}
+              <motion.span
+                className={`h-1.5 w-1.5 rounded-full flex-shrink-0 ${isActive ? theme.bar : "bg-gray-700 group-hover:bg-gray-500"}`}
+                animate={{ scale: isActive ? 1.4 : 1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 20 }}
               />
               {label}
-
-              {/* Progress line activa — opcional decorativo */}
-              {isActive && (
-                <span className={`ml-auto h-px w-4 rounded-full opacity-60 ${theme.bar}`} />
-              )}
             </button>
           );
         })}

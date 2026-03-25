@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { SectionIndex } from "./SectionIndex";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ELEMENT_THEMES = {
   volt: {
@@ -310,16 +311,41 @@ function MovesetSection({ char }) {
         </span>
       </div>
 
-      {items.length > 0 ? (
-        <div className="space-y-2">
-          {items.map((item, index) => (
-            <MoveCard key={index} item={item} />
-          ))}
-        </div>
-      ) : (
-        <p className="text-sm italic text-gray-600">No moves registered for this category.</p>
-      )}
+     <AnimatePresence mode="wait">
+  <motion.div
+    key={activeTab}
+    initial={{ opacity: 0, y: 12 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -8 }}
+    transition={{ duration: 0.22, ease: "easeOut" }}
+  >
+    {items.length > 0 ? (
+      <div className="space-y-2">
+        {items.map((item, index) => (
+          <MoveCard key={index} item={item} />
+        ))}
+      </div>
+    ) : (
+      <p className="text-sm italic text-gray-600">No moves registered for this category.</p>
+    )}
+  </motion.div>
+</AnimatePresence>
     </section>
+  );
+}
+
+function FadeSection({ id, className, children }) {
+  return (
+    <motion.section
+      id={id}
+      className={className}
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
+    >
+      {children}
+    </motion.section>
   );
 }
 
@@ -351,61 +377,72 @@ export default function SimulacrumPage({ char }) {
 
   {/* Contenido */}
   <div className="relative z-10 mx-auto flex min-h-[100svh] lg:min-h-[90vh] max-w-7xl flex-col justify-end px-6 pb-14 pt-28 md:px-10 lg:px-12 lg:justify-center lg:pb-20 lg:pt-32">
-    <div className="max-w-xl">
+  <motion.div
+    className="max-w-xl"
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+  >
+    {/* Todo el contenido del hero sin cambios */}
+    <Link href="/simulacra" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-gray-500 transition-colors hover:text-white mb-8">
+      ← Simulacra Archive
+    </Link>
 
-      {/* Breadcrumb */}
-      <Link
-        href="/simulacra"
-        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-gray-500 transition-colors hover:text-white mb-8"
-      >
-        ← Simulacra Archive
-      </Link>
-
-      {/* Pills: elemento + resonancia */}
-      <div className="flex flex-wrap items-center gap-2 mb-5">
-        <span className={`rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] ${theme.pill}`}>
-          {char.element || "Unknown Element"}
-        </span>
-        <span className="rounded-full border border-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-gray-300">
-          {char.resonance || "Unknown Resonance"}
-        </span>
-      </div>
-
-      {/* Nombre */}
-      <h1 className="text-6xl font-black uppercase italic tracking-tight text-white md:text-7xl xl:text-8xl leading-none mb-3">
-        {char.simulacrumName}
-      </h1>
-
-      {/* Arma */}
-      <p className={`text-sm font-bold uppercase tracking-[0.2em] mb-6 ${theme.accent}`}>
-        {char.weaponName}
-      </p>
-
-      {/* Descripción */}
-      {char.description && (
-        <p className="text-sm leading-relaxed text-gray-400 max-w-md mb-10 md:text-base">
-          {char.description}
-        </p>
-      )}
-
-      {/* Stats: Shatter + Charge */}
-      <div className="flex items-center gap-4">
-        <div className={`rounded-2xl border bg-black/30 backdrop-blur-sm px-5 py-4 ${theme.softBorder}`}>
-          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-500 mb-1">Shatter</p>
-          <p className="font-mono text-2xl font-bold text-yellow-400">
-            {Number(char.shatter || 0).toFixed(2)}
-          </p>
-        </div>
-        <div className={`rounded-2xl border bg-black/30 backdrop-blur-sm px-5 py-4 ${theme.softBorder}`}>
-          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-500 mb-1">Charge</p>
-          <p className={`font-mono text-2xl font-bold ${theme.accentStrong}`}>
-            {Number(char.charge || 0).toFixed(2)}
-          </p>
-        </div>
-      </div>
-
+    <div className="flex flex-wrap items-center gap-2 mb-5">
+      <span className={`rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] ${theme.pill}`}>
+        {char.element || "Unknown Element"}
+      </span>
+      <span className="rounded-full border border-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-gray-300">
+        {char.resonance || "Unknown Resonance"}
+      </span>
     </div>
-  </div>
+
+    <motion.h1
+      className="text-6xl font-black uppercase italic tracking-tight text-white md:text-7xl xl:text-8xl leading-none mb-3"
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+    >
+      {char.simulacrumName}
+    </motion.h1>
+
+    <motion.p
+      className={`text-sm font-bold uppercase tracking-[0.2em] mb-6 ${theme.accent}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
+      {char.weaponName}
+    </motion.p>
+
+    {char.description && (
+      <motion.p
+        className="text-sm leading-relaxed text-gray-400 max-w-md mb-10 md:text-base"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+      >
+        {char.description}
+      </motion.p>
+    )}
+
+    <motion.div
+      className="flex items-center gap-4"
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.45 }}
+    >
+      <div className={`rounded-2xl border bg-black/30 backdrop-blur-sm px-5 py-4 ${theme.softBorder}`}>
+        <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-500 mb-1">Shatter</p>
+        <p className="font-mono text-2xl font-bold text-yellow-400">{Number(char.shatter || 0).toFixed(2)}</p>
+      </div>
+      <div className={`rounded-2xl border bg-black/30 backdrop-blur-sm px-5 py-4 ${theme.softBorder}`}>
+        <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-500 mb-1">Charge</p>
+        <p className={`font-mono text-2xl font-bold ${theme.accentStrong}`}>{Number(char.charge || 0).toFixed(2)}</p>
+      </div>
+    </motion.div>
+  </motion.div>
+</div>
 </section>
 
       <section className="relative">
@@ -430,7 +467,7 @@ export default function SimulacrumPage({ char }) {
 </aside>
 
           <div className="relative z-10 min-w-0 flex-1 space-y-14">
-            <section id="trait" className="scroll-mt-28">
+            <FadeSection id="trait" className="scroll-mt-28">
               <SectionTitle title="Simulacrum Trait" accentBarClass={theme.bar} />
               <TraitCard
                 title={char.trait?.title || "Trait"}
@@ -438,9 +475,9 @@ export default function SimulacrumPage({ char }) {
                 accentClass={theme.accentStrong}
                 borderClass={theme.border}
               />
-            </section>
+            </FadeSection>
 
-            <section id="weapon" className="scroll-mt-28">
+            <FadeSection id="weapon" className="scroll-mt-28">
               <SectionTitle title="Weapon Mechanics" accentBarClass="bg-cyan-500" />
 
               {char.images?.weapon && (
@@ -468,11 +505,13 @@ export default function SimulacrumPage({ char }) {
                   <p className="text-sm italic text-gray-500">No passive entries registered.</p>
                 )}
               </div>
-            </section>
+            </FadeSection>
 
-            <MovesetSection char={char} />
+            <FadeSection id="skills-wrapper" className="scroll-mt-28">
+  <MovesetSection char={char} />
+</FadeSection>
 
-            <section id="matrices" className="scroll-mt-28">
+            <FadeSection id="matrices" className="scroll-mt-28">
               <SectionTitle title="Recommended Matrices" accentBarClass="bg-yellow-500" />
               <div className="grid gap-6 md:grid-cols-3">
                 <div className="md:col-span-1">
@@ -496,9 +535,9 @@ export default function SimulacrumPage({ char }) {
                   <MatrixCard pieces={4} description={char.matrices?.pc4 || "No description"} />
                 </div>
               </div>
-            </section>
+            </FadeSection>
 
-            <section id="advancements" className="scroll-mt-28 pb-8">
+            <FadeSection id="advancements" className="scroll-mt-28 pb-8">
               <SectionTitle title="Advancements" accentBarClass="bg-orange-500" />
               <div className="space-y-4">
                 {char.advancements?.some(Boolean) ? (
@@ -509,7 +548,7 @@ export default function SimulacrumPage({ char }) {
                   <p className="text-sm italic text-gray-500">No advancements registered.</p>
                 )}
               </div>
-            </section>
+            </FadeSection>
           </div>
         </div>
       </section>
