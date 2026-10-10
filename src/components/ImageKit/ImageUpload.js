@@ -2,6 +2,8 @@
 
 import { IKContext, IKUpload } from "imagekitio-react"
 import { useState } from "react"
+import { auth } from "@/lib/firebase"
+import { requestImageKitAuthorization } from "@/lib/imagekit-client-auth.mjs"
 
 export default function ImageUpload({ 
   label, 
@@ -14,15 +16,7 @@ export default function ImageUpload({
   // Función de autenticación que llama a tu API Route (la que creamos antes)
   const authenticator = async () => {
     try {
-      const response = await fetch("/api/auth/imagekit")
-      
-      if (!response.ok) {
-        const errorText = await response.text()
-        throw new Error(`Request failed with status ${response.status}: ${errorText}`)
-      }
-      
-      const data = await response.json()
-      return data
+      return await requestImageKitAuthorization(auth)
     } catch (error) {
       console.error("Authentication error:", error)
       throw error
@@ -38,7 +32,6 @@ export default function ImageUpload({
 
   // Manejo de éxito
   const onSuccess = (res) => {
-    console.log("Subida exitosa:", res)
     setIsUploading(false)
     onChange(res.url) // Aquí le pasamos la URL al formulario padre
   }
@@ -119,7 +112,7 @@ export default function ImageUpload({
                   onUploadStart={onUploadStart}
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" // Truco: input invisible sobre el botón
                 />
-                <button className="px-4 py-2 bg-cyan-900/30 text-cyan-400 text-xs font-bold rounded border border-cyan-800 pointer-events-none">
+                <button type="button" className="px-4 py-2 bg-cyan-900/30 text-cyan-400 text-xs font-bold rounded border border-cyan-800 pointer-events-none">
                   Seleccionar Archivo
                 </button>
               </div>

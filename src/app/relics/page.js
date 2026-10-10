@@ -4,6 +4,7 @@ import React, { useMemo, useState } from "react";
 import { Search, Filter, Box, ChevronLeft, Loader2, Star } from "lucide-react";
 import Link from "next/link";
 import { useRelics } from "@/context/RelicsContext";
+import { splitDescription } from "@/lib/description-tokens.mjs";
 
 const RARITY_CONFIG = {
   SSR: {
@@ -32,8 +33,7 @@ const RARITY_CONFIG = {
 const formatDescription = (text) => {
   if (!text) return null;
 
-  const regex = /(\[.*?\]|Volt|Frost|Ice|Flame|Physical|\d+(?:\.\d+)?%?)/gi;
-  const parts = text.split(regex);
+  const parts = splitDescription(text);
 
   return parts.map((part, index) => {
     if (part.startsWith("[") && part.endsWith("]")) {
@@ -129,7 +129,7 @@ const RelicCard = ({ data }) => {
         ) : (
           <div className="flex flex-col items-center gap-2 text-muted-foreground opacity-50">
             <Box size={32} />
-            <span className="text-xs font-mono">NO IMAGE</span>
+            <span className="text-xs font-mono">Image not available</span>
           </div>
         )}
       </div>

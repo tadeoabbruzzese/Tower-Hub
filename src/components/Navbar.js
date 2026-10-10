@@ -10,9 +10,7 @@ import {
   Users,
   BarChart2,
   Shield,
-  BookOpen,
   ChevronRight,
-  ExternalLink,
   ShieldCheck,
   LogIn,
   LogOut,
@@ -35,7 +33,6 @@ const navSections = [
     items: [
       { name: "Simulacra", path: "/simulacra", icon: Users },
       { name: "Relics", path: "/relics", icon: Shield },
-      { name: "Guides & Wiki", path: "/guides", icon: BookOpen },
       { name: "Tier List", path: "/tierlist", icon: BarChart2 },
     ]
   },
@@ -108,6 +105,8 @@ export default function Navbar() {
       />
 
       <aside
+        inert={!isOpen}
+        aria-hidden={!isOpen}
         className={`
           fixed top-0 right-0 z-[70] h-full w-full sm:w-[400px]
           bg-card/95 backdrop-blur-xl border-l border-border shadow-2xl
@@ -125,6 +124,7 @@ export default function Navbar() {
             <p className="text-xs text-foreground/50 tracking-widest uppercase">Navigation System</p>
           </div>
           <button
+            aria-label="Close menu"
             onClick={() => setIsOpen(false)}
             className="p-2 rounded-full hover:bg-white/5 text-foreground/50 hover:text-error transition-colors"
           >
@@ -264,14 +264,6 @@ export default function Navbar() {
         </div>
 
         <div className="p-6 border-t border-border/50 bg-card">
-          <a
-            href="https://discord.gg/ejemplo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold transition-colors shadow-lg shadow-[#5865F2]/20"
-          >
-            Join the Discord <ExternalLink size={16} />
-          </a>
           <p className="text-center text-[10px] text-foreground/30 mt-4 uppercase tracking-widest">
             Tower Hub © 2026
           </p>

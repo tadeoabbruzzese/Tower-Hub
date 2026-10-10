@@ -35,7 +35,6 @@ export const metadata = {
     "Tower of Fantasy relics",
     "Tower of Fantasy news",
     "Tower of Fantasy builds",
-    "Tower of Fantasy guides",
     "Tower of Fantasy wiki",
   ],
   category: "gaming",
@@ -53,7 +52,7 @@ export const metadata = {
     ],
     shortcut: ["/favicon.ico"],
   },
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     url: "https://towerhub.online",

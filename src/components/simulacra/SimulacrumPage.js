@@ -12,6 +12,8 @@ import {
 import { SectionIndex } from "./SectionIndex";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { normalizeElements } from "@/lib/elements.mjs";
+import { splitDescription } from "@/lib/description-tokens.mjs";
 
 const ELEMENT_THEMES = {
   volt: {
@@ -72,15 +74,14 @@ const ELEMENT_THEMES = {
 };
 
 const getTheme = (element) => {
-  const key = element ? element.split("-")[0].toLowerCase() : "altered";
+  const key = (normalizeElements(element)[0] || "Altered").toLowerCase();
   return ELEMENT_THEMES[key] || ELEMENT_THEMES.altered;
 };
 
 function FormatDescription({ text }) {
   if (!text) return null;
 
-  const regex = /(\[.*?\]|Volt|Frost|Ice|Flame|Physical|\d+(?:\.\d+)?%?)/gi;
-  const parts = text.split(regex);
+  const parts = splitDescription(text);
 
   return parts.map((part, index) => {
     if (part.startsWith("[") && part.endsWith("]")) {
@@ -277,9 +278,11 @@ function MovesetSection({ char }) {
           return (
             <button
               key={cat.id}
+              aria-label={cat.label}
+              aria-pressed={isActive}
               onClick={() => setActiveTab(cat.id)}
               className={`
-                relative flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2.5
+                relative flex min-w-0 flex-1 items-center justify-center gap-1 sm:gap-2 rounded-lg px-1 sm:px-3 py-2.5
                 text-xs font-bold uppercase tracking-[0.15em] transition-all duration-200
                 ${isActive
                   ? `${cat.color} ${cat.activeBg} border ${cat.activeBorder}/40`

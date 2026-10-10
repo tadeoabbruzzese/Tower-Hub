@@ -3,6 +3,7 @@ import { doc, getDoc } from "firebase/firestore"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ChevronLeft, Box, Star, Layers } from "lucide-react"
+import { splitDescription } from "@/lib/description-tokens.mjs"
 
 // --- 1. FETCH DATA ---
 async function getRelic(id) {
@@ -31,9 +32,7 @@ const formatDescription = (text) => {
   if (!text) return null;
 
   // Regex para detectar: [Keyword], Elementos y Números/Porcentajes
-  const regex = /(\[.*?\]|Volt|Frost|Ice|Flame|Physical|\d+(?:\.\d+)?%?)/gi;
-
-  const parts = text.split(regex);
+  const parts = splitDescription(text);
 
   return parts.map((part, index) => {
     // A. Si es un Custom Keyword entre corchetes [] (Ej: [Cooldown])
@@ -114,7 +113,7 @@ export default async function RelicPage({ params }) {
                 ) : (
                   <div className="flex flex-col items-center gap-2 text-gray-700">
                     <Box size={40} />
-                    <span className="text-xs font-mono">NO VISUAL</span>
+                    <span className="text-xs font-mono">Image not available</span>
                   </div>
                 )}
               </div>

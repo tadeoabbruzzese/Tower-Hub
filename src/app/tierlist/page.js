@@ -3,6 +3,8 @@
 import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import { useSimulacra } from "@/context/SimulacraContext";
+import { normalizeElements } from "@/lib/elements.mjs";
+import { groupTierCharacters } from "@/lib/tier-search.mjs";
 import {
   ChevronLeft,
   Search,
@@ -65,25 +67,26 @@ const ELEMENT_ICONS = {
 };
 
 const TierCard = ({ char }) => {
-  const mainElement = char.element ? char.element.split("-")[0] : "Altered";
+  const mainElement = normalizeElements(char.element)[0] || "Altered";
   const borderColor = ELEMENT_COLORS[mainElement] || ELEMENT_COLORS.Altered;
   const ElementIcon = ELEMENT_ICONS[mainElement] || Sparkles;
 
   return (
     <Link
       href={`/simulacra/${char.id}`}
+      aria-label={`${char.simulacrumName} — ${char.weaponName}`}
       className={`
-        group relative w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden
+        group relative w-24 h-32 md:w-32 md:h-40 rounded-xl overflow-hidden
         border-2 ${borderColor} bg-card cursor-pointer transition-all duration-300
         hover:scale-110 hover:z-10 hover:shadow-[0_0_20px_rgba(0,0,0,0.5)]
       `}
     >
-      <div className="absolute inset-0 p-2 flex items-center justify-center bg-gradient-to-b from-gray-800 to-black">
+      <div className="absolute inset-0 bottom-9 p-2 flex items-center justify-center bg-gradient-to-b from-gray-800 to-black">
         {char.images?.weapon ? (
           <img
             src={char.images.weapon}
             alt={char.weaponName}
-            className="w-full h-full object-contain drop-shadow-2xl group-hover:blur-sm transition-all duration-300"
+            className="w-full h-full object-contain drop-shadow-2xl transition-all duration-300"
           />
         ) : (
           <span className="text-[10px] text-muted-foreground">NO IMG</span>
@@ -94,11 +97,10 @@ const TierCard = ({ char }) => {
         <ElementIcon size={10} className="text-white" />
       </div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 backdrop-blur-[2px]">
+      <div className="absolute bottom-0 inset-x-0 min-h-9 flex flex-col items-center justify-center bg-black/90 py-1">
         <span className="text-xs md:text-sm font-black text-white text-center uppercase tracking-wider px-2 leading-tight">
           {char.simulacrumName}
         </span>
-        <span className="text-[10px] text-gray-400 mt-1 font-mono">{char.weaponName}</span>
       </div>
     </Link>
   );
@@ -119,12 +121,12 @@ const TierRow = ({ tierLabel, characters }) => {
         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent pointer-events-none" />
       </div>
 
-      <div className="flex-1 p-6 flex flex-wrap gap-4 items-center content-center min-h-[120px]">
+      <div className="flex-1 min-w-0 p-4 md:p-6 flex flex-wrap gap-4 items-center content-center min-h-[120px]">
         {characters.length > 0 ? (
           characters.map((char) => <TierCard key={char.id} char={char} />)
         ) : (
           <span className="text-sm text-muted-foreground italic opacity-50 pl-4">
-            No characters in this tier yet.
+            No matching characters in this tier.
           </span>
         )}
       </div>
@@ -137,21 +139,9 @@ export default function TierListPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const tierData = useMemo(() => {
-    const grouped = { "S+": [], "S": [], "A": [], "B": [], "Unranked": [] };
-
-    characters.forEach((char) => {
-      const key = char.id || char.simulacrumName.toLowerCase().replace(" ", "_");
-      const tier = TIER_CONFIG[key] || "Unranked";
-
-      if (searchTerm === "" || char.simulacrumName.toLowerCase().includes(searchTerm.toLowerCase())) {
-        if (grouped[tier]) {
-          grouped[tier].push(char);
-        }
-      }
-    });
-
-    return grouped;
+    return groupTierCharacters(characters, TIER_CONFIG, searchTerm);
   }, [characters, searchTerm]);
+  const resultCount = Object.values(tierData).reduce((total, entries) => total + entries.length, 0);
 
   return (
     <div className="min-h-screen pt-20 pb-20 animate-fade-in bg-[radial-gradient(ellipse_at_top,_var(--color-card)_0%,_var(--color-background)_60%)]">
@@ -178,6 +168,7 @@ export default function TierListPage() {
 
           <div className="relative w-full md:w-96">
             <input
+              aria-label="Search tier list by character name"
               type="text"
               placeholder="Search character..."
               value={searchTerm}
@@ -195,13 +186,19 @@ export default function TierListPage() {
             <Loader2 className="animate-spin text-energy mb-4" size={40} />
             <p className="text-muted-foreground font-mono text-sm">Analyzing combat data...</p>
           </div>
+        ) : resultCount === 0 ? (
+          <div role="status" className="py-20 text-center">
+            <h2 className="text-xl font-bold mb-2">{searchTerm.trim() ? 'No characters found' : 'No characters available'}</h2>
+            <p className="text-muted-foreground">{searchTerm.trim() ? 'Try another name or clear your search.' : 'The tier list has no character data to display.'}</p>
+            {searchTerm.trim() && <button onClick={() => setSearchTerm('')} className="mt-6 text-energy font-bold hover:underline">Clear search</button>}
+          </div>
         ) : (
           <div className="space-y-4">
-            {TIER_ORDER.map((tier) => (
+            {TIER_ORDER.filter(tier => !searchTerm.trim() || tierData[tier].length > 0).map((tier) => (
               <TierRow key={tier} tierLabel={tier} characters={tierData[tier]} />
             ))}
 
-            {tierData.Unranked.length > 0 && searchTerm !== "" && (
+            {tierData.Unranked.length > 0 && searchTerm.trim() !== "" && (
               <div className="mt-12 opacity-70">
                 <h3 className="text-sm font-mono uppercase text-muted-foreground mb-4 border-b border-border pb-2">
                   Unranked Results
@@ -212,7 +209,7 @@ export default function TierListPage() {
           </div>
         )}
 
-        <div className="mt-12 pt-8 border-t border-border flex justify-between items-center text-xs text-muted-foreground font-mono uppercase">
+        <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-3 justify-between items-center text-xs text-muted-foreground font-mono uppercase">
           <span>Based on CN/Global Calculation</span>
           <span>UPDATED: JAN 2026</span>
         </div>

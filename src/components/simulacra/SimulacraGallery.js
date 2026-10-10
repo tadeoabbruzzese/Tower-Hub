@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useSimulacra } from "@/context/SimulacraContext";
+import { matchesElement, normalizeElements } from "@/lib/elements.mjs";
 
 const ELEMENT_CONFIG = {
   Altered: { color: "text-accent", bg: "bg-accent", border: "border-accent", icon: Sparkles },
@@ -39,6 +40,7 @@ const ROLE_CONFIG = {
 
 const FilterPill = ({ label, active, onClick, icon: Icon }) => (
   <button
+    aria-pressed={active}
     onClick={onClick}
     className={`
       flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 border
@@ -55,7 +57,8 @@ const FilterPill = ({ label, active, onClick, icon: Icon }) => (
 );
 
 const SimulacraCard = ({ data }) => {
-  const mainElement = data.element ? data.element.split('-')[0] : 'Altered';
+  const elements = normalizeElements(data.element);
+  const mainElement = elements[0] || 'Altered';
   const elConfig = ELEMENT_CONFIG[mainElement] || ELEMENT_CONFIG.Altered;
 
   let roleKey = data.resonance || "DPS";
@@ -98,13 +101,13 @@ const SimulacraCard = ({ data }) => {
           </span>
         </div>
 
-        <div className="transition-opacity duration-500 group-hover:opacity-0">
+        <div>
           <div className="flex items-center gap-2 mb-1">
             <span className={`p-1.5 rounded-full bg-${elConfig.bg}/20 ${elConfig.color} border ${elConfig.border}/30 backdrop-blur-md`}>
               <elConfig.icon size={14} />
             </span>
             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-              {mainElement} / {displayRole}
+              {elements.join(' / ') || 'Unknown element'} / {displayRole}
             </span>
           </div>
           <h3 className="text-3xl font-black text-white uppercase italic tracking-tighter">{data.simulacrumName}</h3>
@@ -114,16 +117,16 @@ const SimulacraCard = ({ data }) => {
         <div className={`h-0.5 w-full bg-gradient-to-r from-${elConfig.bg.split('-')[1]} to-transparent my-4 opacity-50 transition-opacity duration-500 group-hover:opacity-100`} />
 
         <div className="group-hover:opacity-0 transition-opacity duration-300 text-xs text-muted-foreground font-mono flex items-center gap-2">
-          <RoleIcon size={12} /> Release: {data.releaseDate}
+          <RoleIcon size={12} /> Release: {data.releaseDate || 'Date not recorded'}
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 pointer-events-none">
-          <p className="text-sm text-gray-200 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500 delay-75 ease-out line-clamp-3">
+        <div className="absolute top-0 left-0 right-0 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 ease-out flex flex-col p-6 bg-gradient-to-b from-black/90 to-transparent pointer-events-none">
+          <p className="text-sm text-gray-200 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 translate-y-3 group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-all duration-500 delay-75 ease-out line-clamp-3">
             {data.description || "No description available."}
           </p>
 
           <span
-            className={`opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500 delay-150 ease-out block text-center w-full py-2 rounded-md font-bold text-xs uppercase tracking-widest ${elConfig.bg} text-background hover:brightness-110`}
+            className={`opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 translate-y-3 group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-all duration-500 delay-150 ease-out block text-center w-full py-2 rounded-md font-bold text-xs uppercase tracking-widest ${elConfig.bg} text-background hover:brightness-110`}
           >
             View Full Profile
           </span>
@@ -146,11 +149,9 @@ const SimulacraGallery = () => {
       if (simRole === "Fortitude") simRole = "Tank";
       if (simRole === "Benediction") simRole = "Support";
 
-      const mainElement = sim.element ? sim.element.split('-')[0] : 'Altered';
-
       const matchRole = filterRole === 'All' || simRole === filterRole;
-      const matchElement = filterElement === 'All' || mainElement === filterElement || sim.element === filterElement;
-      const matchSearch = sim.simulacrumName.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchElement = matchesElement(sim.element, filterElement);
+      const matchSearch = (sim.simulacrumName || '').toLowerCase().includes(searchTerm.trim().toLowerCase());
 
       return matchRole && matchElement && matchSearch;
     });
@@ -175,6 +176,7 @@ const SimulacraGallery = () => {
 
           <div className="relative w-full md:w-96">
             <input
+              aria-label="Search simulacra by name"
               type="text"
               placeholder="Search by name..."
               value={searchTerm}
@@ -204,7 +206,7 @@ const SimulacraGallery = () => {
             ))}
           </div>
 
-          <div className="flex p-1 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 gap-1 overflow-x-auto">
+          <div role="group" aria-label="Filter by role" className="flex flex-wrap max-w-full min-w-0 p-1 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 gap-1">
             {['All', 'DPS', 'Tank', 'Support'].map((role) => {
               const config = ROLE_CONFIG[role] || ROLE_CONFIG.All;
               const Icon = config.icon;
@@ -213,6 +215,7 @@ const SimulacraGallery = () => {
               return (
                 <button
                   key={role}
+                  aria-pressed={isActive}
                   onClick={() => setFilterRole(role)}
                   className={`
                     relative px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 ease-out

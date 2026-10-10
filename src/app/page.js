@@ -423,17 +423,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 border-t border-border bg-gradient-to-b from-background to-black text-center">
-        <div className="container max-w-2xl">
-          <h2 className="text-3xl font-black text-white uppercase mb-6">Join the Community</h2>
-          <p className="text-muted-foreground mb-8 text-lg">
-            Help keep the database up to date. Join our Discord.
-          </p>
-          <button className="btn bg-[#5865F2] hover:bg-[#4752C4] text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-[#5865F2]/25">
-            Discord Server
-          </button>
-        </div>
-      </section>
     </main>
   )
 }
